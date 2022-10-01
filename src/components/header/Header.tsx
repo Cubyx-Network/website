@@ -4,13 +4,21 @@ import { NextSeo } from "next-seo";
 const Header = ({
   title,
   description,
+  disableNavigation = false,
+  noIndex = false,
 }: {
   title: string;
   description: string;
+  disableNavigation?: boolean;
+  noIndex?: boolean;
 }) => {
   return (
     <>
-      <NextSeo title={`${title} | Cubyx Network`} description={description} />
+      <NextSeo
+        title={`${title} | Cubyx Network`}
+        description={description}
+        noindex={noIndex}
+      />
       <div className="fixed top-0 left-0 z-40 flex w-full items-center justify-between p-4">
         <div className="flex items-center gap-4 text-4xl">
           <Image
@@ -21,9 +29,11 @@ const Header = ({
           />
           <h1 className="m-0 hidden font-bold md:block">Cubyx Network</h1>
         </div>
-        <div className="flex items-center gap-4">
-          Navigation comming soon...
-        </div>
+        {!disableNavigation && (
+          <div className="flex items-center gap-4">
+            Navigation comming soon...
+          </div>
+        )}
       </div>
     </>
   );

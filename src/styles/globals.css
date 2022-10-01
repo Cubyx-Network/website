@@ -60,7 +60,8 @@
 
 
 html,
-body {
+body,
+input {
     padding: 0;
     margin: 0;
     font-family: -apple-system, "Poppins", sans-serif;
@@ -92,4 +93,9 @@ a {
 
 .color-error {
     color: var(--error-text-color);
+}
+
+/*Custom*/
+.input {
+    @apply w-full rounded-md border border-gray-300 px-4 py-2;
 }
