@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Header from "../components/header/Header";
-import Image from "next/image";
 import CubyxImage from "../components/image/CubyxImage";
 
 const Home: NextPage = () => {
@@ -17,31 +16,31 @@ const Home: NextPage = () => {
       />
 
       <div>
-        <div className="flex items-center justify-between p-28 w-full h-screen">
-          <h1 className="text-8xl font-bold">
+        <div className="flex h-screen w-full items-center justify-center text-center md:justify-between md:p-28 md:text-left">
+          <h1 className="text-6xl font-bold md:text-8xl">
             Willkommen auf dem <br />{" "}
             <span className="color-secondary">Cubyx</span> Network!
           </h1>
-          <Image
-            src="/img/netzwerk.png"
-            alt="CubyxNetwork Logo"
-            width="500px"
-            height="500px"
+
+          <CubyxImage
+            src={"/img/netzwerk.png"}
+            alt={"CubyxNetwork Logo"}
+            className={"hidden w-1/2 md:block lg:w-1/4"}
           />
         </div>
 
-        <div className="p-16">
-          <div className="flex items-center flex-col">
+        <main className="p-16">
+          <section className="flex flex-col lg:items-center">
             <CubyxImage
               src={"/img/home/banner.png"}
               alt={"Schiff in einer Bucht"}
-              className={"w-1/2"}
+              className={"w-full md:w-1/2"}
             />
 
-            <h1 className="text-4xl font-bold mt-4">
+            <h1 className="mt-4 text-4xl font-bold">
               Was ist das Cubyx Network?
             </h1>
-            <p className="w-1/2 mt-4">
+            <p className="mt-4 w-full lg:w-1/2">
               Das Cubyx Network ist ein Minecraft Netzwerk, welches sich auf
               verschiedene Spielmodi spezialisiert hat. Wir bieten dir eine
               große Auswahl an Spielmodi, die du mit deinen Freunden spielen
@@ -49,8 +48,8 @@ const Home: NextPage = () => {
               deinen Freunden spielen kannst. Wir bieten dir eine große Auswahl
               an Spielmodi, die du mit deinen Freunden spielen kannst.
             </p>
-          </div>
-        </div>
+          </section>
+        </main>
       </div>
     </>
   );

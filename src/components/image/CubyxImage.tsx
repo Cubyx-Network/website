@@ -11,7 +11,7 @@ const CubyxImage = ({
 }) => {
   return (
     <picture className={className}>
-      <img src={src} alt={alt} {...props} />
+      <img src={src} alt={alt} {...props} className={"w-full h-full"} />
     </picture>
   );
 };

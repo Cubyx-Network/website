@@ -93,12 +93,3 @@ a {
 .color-error {
     color: var(--error-text-color);
 }
-
-/*Text*/
-.text-center {
-    text-align: center;
-}
-
-.text-right {
-    text-align: right;
-}
