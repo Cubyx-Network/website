@@ -1,15 +1,10 @@
 import type { NextPage } from "next";
-import Head from "next/head";
 import Header from "../components/header/Header";
 import CubyxImage from "../components/image/CubyxImage";
 
 const Home: NextPage = () => {
   return (
     <>
-      <Head>
-        <title>Cubyx</title>
-      </Head>
-
       <Header
         title={"Home"}
         description={"Willkommen auf dem Cubyx Network!"}
