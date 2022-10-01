@@ -25,24 +25,26 @@ const Home: NextPage = () => {
         </div>
 
         <main className="p-16">
-          <section className="flex flex-col lg:items-center">
+          <section className="flex flex-col lg:flex-row-reverse lg:items-center lg:gap-4">
             <CubyxImage
               src={"/img/home/banner.png"}
               alt={"Schiff in einer Bucht"}
-              className={"w-full md:w-1/2"}
+              className={"w-full md:w-1/2 lg:w-1/2"}
             />
 
-            <h1 className="mt-4 text-4xl font-bold">
-              Was ist das Cubyx Network?
-            </h1>
-            <p className="mt-4 w-full lg:w-1/2">
-              Das Cubyx Network ist ein Minecraft Netzwerk, welches sich auf
-              verschiedene Spielmodi spezialisiert hat. Wir bieten dir eine
-              große Auswahl an Spielmodi, die du mit deinen Freunden spielen
-              kannst. Wir bieten dir eine große Auswahl an Spielmodi, die du mit
-              deinen Freunden spielen kannst. Wir bieten dir eine große Auswahl
-              an Spielmodi, die du mit deinen Freunden spielen kannst.
-            </p>
+            <div className="flex-col lg:flex lg:w-1/2">
+              <h1 className="mt-4 text-4xl font-bold lg:float-left lg:text-6xl">
+                Was ist das Cubyx Network?
+              </h1>
+              <p className="mt-4 w-full lg:float-left lg:w-3/4 lg:text-lg">
+                Das Cubyx Network ist ein Minecraft Netzwerk, welches sich auf
+                verschiedene Spielmodi spezialisiert hat. Wir bieten dir eine
+                große Auswahl an Spielmodi, die du mit deinen Freunden spielen
+                kannst. Wir bieten dir eine große Auswahl an Spielmodi, die du
+                mit deinen Freunden spielen kannst. Wir bieten dir eine große
+                Auswahl an Spielmodi, die du mit deinen Freunden spielen kannst.
+              </p>
+            </div>
           </section>
         </main>
       </div>
