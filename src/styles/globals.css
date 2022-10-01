@@ -1,3 +1,7 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
 :root {
     --primary-background-color: #FFFFFF;
     --secondary-background-color: #D8D8D8;
@@ -19,21 +23,21 @@
 }
 
 @font-face {
-  font-family: 'Poppins';
-  font-weight: 300;
-  src: url("../../public/fonts/Poppins-Light.ttf") format("truetype");
+    font-family: 'Poppins';
+    font-weight: 300;
+    src: url("../../public/fonts/Poppins-Light.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Poppins';
+    font-family: 'Poppins';
     font-weight: 400;
-  src: url("../../public/fonts/Poppins-Regular.ttf") format("truetype");
+    src: url("../../public/fonts/Poppins-Regular.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Poppins';
-  font-weight: 500;
-  src: url("../../public/fonts/Poppins-Medium.ttf") format("truetype");
+    font-family: 'Poppins';
+    font-weight: 500;
+    src: url("../../public/fonts/Poppins-Medium.ttf") format("truetype");
 }
 
 @font-face {
@@ -73,3 +77,28 @@ a {
     box-sizing: border-box;
 }
 
+/*Color*/
+.color-primary {
+    color: var(--primary-text-color);
+}
+
+.color-secondary {
+    color: var(--secondary-text-color);
+}
+
+.color-third {
+    color: var(--third-text-color);
+}
+
+.color-error {
+    color: var(--error-text-color);
+}
+
+/*Text*/
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}

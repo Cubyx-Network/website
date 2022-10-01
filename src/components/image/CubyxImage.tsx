@@ -1,0 +1,19 @@
+const CubyxImage = ({
+  src,
+  alt,
+  className,
+  ...props
+}: {
+  src: string;
+  alt: string;
+  className: string;
+  props?: any;
+}) => {
+  return (
+    <picture className={className}>
+      <img src={src} alt={alt} {...props} />
+    </picture>
+  );
+};
+
+export default CubyxImage;
