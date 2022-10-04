@@ -1,27 +1,37 @@
 import Login from "../../components/login/Login";
-import { Election, User } from "@prisma/client";
+import { Candidate, Election, User, Vote } from "@prisma/client";
 import { GetServerSidePropsContext } from "next";
 import { userFromRequest } from "../../services/jwt";
 import superjson from "superjson";
 import prisma from "../../lib/prisma";
 import Header from "../../components/header/Header";
-import redaxios from "redaxios";
+import ElectionItem from "./components/ElectionItem";
 
 type Props = {
   user: User;
-  elections: Election[];
+  elections: (Election & {
+    votes: Vote[];
+    candidates: (Candidate & {
+      user: User;
+    })[];
+  })[];
 };
 
-function onClick() {
-  redaxios.delete("/api/sessions").then((r) => {
-    if (r.status === 200) {
-      window.location.href = "/";
-    }
-  });
-}
-
-const InternPage = ({ user }: Props) => {
+const InternPage = ({ user, elections }: Props) => {
   if (!user) return <Login />;
+
+  const time = new Date();
+  let greeting = "Guten Tag, "; // ☀️
+
+  if (time.getHours() < 12) {
+    greeting = "Guten Morgen, ️"; // ☕
+  } else if (time.getHours() < 13) {
+    greeting = "Mahlzeit, "; // 🍔
+  } else if (time.getHours() > 17) {
+    greeting = "Guten Abend, "; // 🌙
+  } else if (time.getHours() > 21) {
+    greeting = "Gute Nacht, "; // 💤
+  }
 
   return (
     <>
@@ -29,15 +39,37 @@ const InternPage = ({ user }: Props) => {
         title={"Intern"}
         description={"Interner Bereich"}
         noIndex={true}
+        isIntern={true}
+        user={user}
       />
 
-      <div className="flex h-screen w-full items-center">
-        <input
-          type={"button"}
-          onClick={onClick}
-          value={"Logout"}
-          className={"input"}
-        />
+      <div className="flex h-screen w-full flex-col items-center justify-center gap-16">
+        <div className="hidden w-full md:block">
+          <h1 className="text-center text-7xl font-bold ">
+            {greeting} <span className="color-secondary">{user.username}</span>.
+          </h1>
+          <div className="mt-8 flex h-0.5 justify-center rounded-3xl">
+            <div className="bg-text w-1/4"></div>
+          </div>
+        </div>
+        <div className="flex w-full items-center justify-center">
+          <section className="flex flex-col items-center">
+            <h1 className="text-4xl font-extrabold">Aktuelle Wahlen</h1>
+            {!elections || elections.length === 0 ? (
+              <p className="color-third mt-4">Aktuell gibt es keine Wahlen</p>
+            ) : (
+              <div className="mt-4">
+                {elections.map((election) => (
+                  <ElectionItem
+                    election={election}
+                    user={user}
+                    key={election.id}
+                  />
+                ))}
+              </div>
+            )}
+          </section>
+        </div>
       </div>
     </>
   );
@@ -52,6 +84,14 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
     where: {
       endsAt: {
         gt: new Date(),
+      },
+    },
+    include: {
+      votes: true,
+      candidates: {
+        include: {
+          user: true,
+        },
       },
     },
   });

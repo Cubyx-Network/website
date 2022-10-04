@@ -95,6 +95,19 @@ a {
     color: var(--error-text-color);
 }
 
+/*Background*/
+.bg-primary {
+    background-color: var(--primary-background-color);
+}
+
+.bg-secondary {
+    background-color: var(--secondary-background-color);
+}
+
+.bg-text {
+    background-color: var(--primary-text-color);
+}
+
 /*Custom*/
 .input {
     @apply w-full rounded-md border border-gray-300 px-4 py-2;
