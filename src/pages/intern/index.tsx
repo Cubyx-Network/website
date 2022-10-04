@@ -5,15 +5,13 @@ import { userFromRequest } from "../../services/jwt";
 import superjson from "superjson";
 import prisma from "../../lib/prisma";
 import Header from "../../components/header/Header";
-import ElectionItem from "./components/ElectionItem";
+import ElectionItem from "../../components/intern/electionitem/ElectionItem";
 
 type Props = {
   user: User;
   elections: (Election & {
     votes: Vote[];
-    candidates: (Candidate & {
-      user: User;
-    })[];
+    candidates: (Candidate & { user: User })[];
   })[];
 };
 

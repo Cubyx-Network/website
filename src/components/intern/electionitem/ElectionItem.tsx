@@ -8,9 +8,7 @@ const ElectionItem = ({
 }: {
   election: Election & {
     votes: Vote[];
-    candidates: (Candidate & {
-      user: User;
-    })[];
+    candidates: (Candidate & { user: User })[];
   };
   user: User;
 }) => {
