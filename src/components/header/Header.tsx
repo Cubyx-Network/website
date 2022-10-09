@@ -2,6 +2,8 @@ import Image from "next/image";
 import { NextSeo } from "next-seo";
 import redaxios from "redaxios";
 import { User } from "@prisma/client";
+import Link from "next/link";
+import HeaderLink from "./HeaderLink";
 
 function logout() {
   redaxios.delete("/api/sessions").then((r) => {
@@ -34,21 +36,25 @@ const Header = ({
         noindex={noIndex}
       />
       <div className="fixed top-0 left-0 z-40 flex w-full items-center justify-between p-4">
-        <div className="flex items-center gap-4 text-4xl">
-          <Image
-            src="/img/netzwerk.png"
-            alt="CubyxNetwork Logo"
-            width="70px"
-            height="70px"
-          />
-          <h1 className="m-0 hidden font-bold md:block">Cubyx Network</h1>
-        </div>
-        {!disableNavigation ||
-          (!isIntern && (
-            <div className="flex items-center gap-4">
-              Navigation comming soon...
+        <Link href={"/"}>
+          <a href={"/"}>
+            <div className="flex items-center gap-4 text-4xl hover:cursor-pointer">
+              <Image
+                src="/img/netzwerk.png"
+                alt="CubyxNetwork Logo"
+                width="70px"
+                height="70px"
+              />
+              <h1 className="m-0 hidden font-bold md:block">Cubyx Network</h1>
             </div>
-          ))}
+          </a>
+        </Link>
+        {!isIntern && (
+          <div className="flex items-center gap-4">
+            <HeaderLink link={"/"}>Home</HeaderLink>
+            <HeaderLink link={"/intern"}>Intern</HeaderLink>
+          </div>
+        )}
         {isIntern && (
           <div className="flex items-center justify-center gap-4">
             <span className="color-third">
