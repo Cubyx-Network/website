@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
+import CubyxImage from "../components/CubyxImage";
 import Header from "../components/header/Header";
-import CubyxImage from "../components/image/CubyxImage";
 
 const Home: NextPage = () => {
   return (

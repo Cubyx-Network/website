@@ -1,11 +1,11 @@
-import Login from "../../components/login/Login";
 import { Candidate, Election, User, Vote } from "@prisma/client";
 import { GetServerSidePropsContext } from "next";
 import { userFromRequest } from "../../services/jwt";
 import superjson from "superjson";
 import prisma from "../../lib/prisma";
 import Header from "../../components/header/Header";
-import ElectionItem from "../../components/intern/electionitem/ElectionItem";
+import ElectionItem from "../../components/intern/ElectionItem";
+import Login from "../../components/Login";
 
 type Props = {
   user: User;
