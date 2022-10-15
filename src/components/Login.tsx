@@ -1,8 +1,8 @@
 import { useForm } from "react-hook-form";
 import { useMutation } from "react-query";
 import axios from "redaxios";
-import useServerRefresher from "../../hooks/useServerRefresher";
-import Header from "../header/Header";
+import useServerRefresher from "../hooks/useServerRefresher";
+import InternHeader from "./intern/InternHeader";
 
 function Login() {
   const {
@@ -23,12 +23,7 @@ function Login() {
 
   return (
     <>
-      <Header
-        title={"Login"}
-        description={"Interner Bereich"}
-        disableNavigation={true}
-        noIndex={true}
-      />
+      <InternHeader title={"Login"} description={"Interner Bereich"} />
 
       <div className="flex h-screen w-full flex-col items-center justify-center gap-32 lg:gap-32 xl:flex-row">
         <h1 className="text-center text-6xl font-bold md:text-left">

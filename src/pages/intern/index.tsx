@@ -3,9 +3,9 @@ import { GetServerSidePropsContext } from "next";
 import { userFromRequest } from "../../services/jwt";
 import superjson from "superjson";
 import prisma from "../../lib/prisma";
-import Header from "../../components/header/Header";
 import ElectionItem from "../../components/intern/ElectionItem";
 import Login from "../../components/Login";
+import InternHeader from "../../components/intern/InternHeader";
 
 type Props = {
   user: User;
@@ -33,11 +33,9 @@ const InternPage = ({ user, elections }: Props) => {
 
   return (
     <>
-      <Header
+      <InternHeader
         title={"Intern"}
         description={"Interner Bereich"}
-        noIndex={true}
-        isIntern={true}
         user={user}
       />
 

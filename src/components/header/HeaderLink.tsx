@@ -1,7 +1,8 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const HeaderLink = ({ link, children }: { link: string; children: any }) => {
-  const isCurrentSite = window.location.pathname === link;
+  const isCurrentSite = useRouter().pathname === link;
 
   return (
     <Link href={link}>
