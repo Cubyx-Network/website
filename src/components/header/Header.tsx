@@ -2,6 +2,7 @@ import Image from "next/image";
 import { NextSeo } from "next-seo";
 import Link from "next/link";
 import HeaderLink from "./HeaderLink";
+import HeaderDropdown from "./HeaderDropdown";
 
 const Header = ({
   title,
@@ -35,7 +36,15 @@ const Header = ({
         </Link>
         <div className="flex items-center gap-4">
           <HeaderLink link={"/"}>Home</HeaderLink>
-          <HeaderLink link={"/intern"}>Intern</HeaderLink>
+          <HeaderLink link={"/projekte"}>Projekte</HeaderLink>
+          <HeaderDropdown link={"Partner"}>
+            {[
+              { href: "/partner/tts-craft", name: "TTS-Craft" },
+              { href: "/partner/expansehost", name: "Expansehost" },
+              { href: "/partner/rareloot", name: "Rareloot" },
+            ]}
+          </HeaderDropdown>
+          <HeaderLink link={"/impressum"}>Impressum</HeaderLink>
         </div>
       </div>
     </>
