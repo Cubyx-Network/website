@@ -3,6 +3,7 @@ import { useMutation } from "react-query";
 import axios from "redaxios";
 import useServerRefresher from "../hooks/useServerRefresher";
 import InternHeader from "./intern/InternHeader";
+import LoadingSpinner from "./loading/LoadingSpinner";
 
 function Login() {
   const {
@@ -42,12 +43,17 @@ function Login() {
             placeholder="Passwort"
             className={`input`}
           />
-          <input
-            type="submit"
-            value="Einloggen"
-            disabled={Object.keys(errors).length > 0 || isLoading}
-            className={`input`}
-          />
+
+          {!isLoading ? (
+            <input
+              type="submit"
+              value="Einloggen"
+              disabled={Object.keys(errors).length > 0 || isLoading}
+              className={`input`}
+            />
+          ) : (
+            <LoadingSpinner />
+          )}
 
           {isError && (
             <span className="text-red-700">

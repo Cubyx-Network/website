@@ -6,16 +6,17 @@ import prisma from "../../lib/prisma";
 import ElectionItem from "../../components/intern/ElectionItem";
 import Login from "../../components/Login";
 import InternHeader from "../../components/intern/InternHeader";
+import useUser from "../../hooks/useUser";
 
 type Props = {
-  user: User;
   elections: (Election & {
     votes: Vote[];
     candidates: (Candidate & { user: User })[];
   })[];
 };
 
-const InternPage = ({ user, elections }: Props) => {
+const InternPage = ({ elections }: Props) => {
+  const user = useUser();
   if (!user) return <Login />;
 
   const time = new Date();

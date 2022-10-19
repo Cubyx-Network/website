@@ -10,7 +10,7 @@ export interface LoginParams {
 /**
  * Tries to log in a user with the given email and password.
  * @param params {LoginParams}
- * @returns {Promise<User | null>} The user if the login was successful, null otherwise.
+ * @returns {Promise<User | null>} The user if the loading was successful, null otherwise.
  */
 export async function login(params: LoginParams): Promise<User | null> {
   const user = await prisma.user.findUnique({
