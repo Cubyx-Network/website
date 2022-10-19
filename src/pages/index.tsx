@@ -1,6 +1,8 @@
 import type { NextPage } from "next";
 import CubyxImage from "../components/CubyxImage";
 import Header from "../components/header/Header";
+import Footer from "../components/footer/Footer";
+import React from "react";
 
 const Home: NextPage = () => {
   return (
@@ -14,7 +16,7 @@ const Home: NextPage = () => {
         <div className="flex h-screen w-full items-center justify-center text-center md:justify-between md:p-28 md:text-left">
           <h1 className="text-6xl font-bold md:text-8xl">
             Willkommen auf dem <br />{" "}
-            <span className="color-secondary">Cubyx</span> Network!
+            <span className="text-text-secondary">Cubyx</span> Network!
           </h1>
 
           <CubyxImage
@@ -48,6 +50,8 @@ const Home: NextPage = () => {
           </section>
         </main>
       </div>
+
+      <Footer />
     </>
   );
 };

@@ -3,6 +3,7 @@ import { NextSeo } from "next-seo";
 import Link from "next/link";
 import HeaderLink from "./HeaderLink";
 import HeaderDropdown from "./HeaderDropdown";
+import LoginUser from "../intern/LoginUser";
 
 const Header = ({
   title,
@@ -20,7 +21,7 @@ const Header = ({
         description={description}
         noindex={noIndex}
       />
-      <div className="fixed top-0 left-0 z-40 flex w-full items-center justify-between p-4">
+      <header className="fixed top-0 left-0 z-40 flex w-full items-center justify-between p-4">
         <Link href={"/"}>
           <a href={"/"}>
             <div className="flex items-center gap-4 text-4xl hover:cursor-pointer">
@@ -41,6 +42,7 @@ const Header = ({
         <div className="hidden items-center gap-4 lg:flex">
           <HeaderLink link={"/"}>Home</HeaderLink>
           <HeaderLink link={"/projekte"}>Projekte</HeaderLink>
+          <HeaderLink link={"/team"}>Teamübersicht</HeaderLink>
           <HeaderDropdown link={"Partner"}>
             {[
               { href: "/partner/tts-craft", name: "TTS-Craft" },
@@ -48,9 +50,9 @@ const Header = ({
               { href: "/partner/rareloot", name: "Rareloot" },
             ]}
           </HeaderDropdown>
-          <HeaderLink link={"/impressum"}>Impressum</HeaderLink>
+          <LoginUser />
         </div>
-      </div>
+      </header>
     </>
   );
 };

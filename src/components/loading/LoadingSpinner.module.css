@@ -2,7 +2,7 @@
     margin: auto;
     border: 5px solid #EAF0F6;
     border-radius: 50%;
-    border-top: 5px solid var(--secondary-text-color);
+    @apply border-t-text-secondary;
     height: 3rem;
     width: 3rem;
     animation: spinner 1s ease-in-out infinite;

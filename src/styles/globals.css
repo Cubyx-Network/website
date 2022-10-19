@@ -2,26 +2,6 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-:root {
-    --primary-background-color: #FFFFFF;
-    --secondary-background-color: #D8D8D8;
-    --primary-text-color: #000000;
-    --secondary-text-color: #23AA08;
-    --third-text-color: #adadad;
-    --error-text-color: #FF0000;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --primary-background-color: #070707;
-        --secondary-background-color: #202020;
-        --primary-text-color: #FFFFFF;
-        --secondary-text-color: #23AA08;
-        --third-text-color: #adadad;
-        --error-text-color: #FF0000;
-    }
-}
-
 @font-face {
     font-family: 'Poppins';
     font-weight: 300;
@@ -65,8 +45,8 @@ input {
     padding: 0;
     margin: 0;
     font-family: -apple-system, "Poppins", sans-serif;
-    background-color: var(--primary-background-color);
-    color: var(--primary-text-color);
+    @apply bg-background-primary-light dark:bg-background-primary-dark;
+    @apply text-text-primary-light dark:text-text-primary-dark;
 }
 
 a {
@@ -76,36 +56,6 @@ a {
 
 * {
     box-sizing: border-box;
-}
-
-/*Color*/
-.color-primary {
-    color: var(--primary-text-color);
-}
-
-.color-secondary {
-    color: var(--secondary-text-color);
-}
-
-.color-third {
-    color: var(--third-text-color);
-}
-
-.color-error {
-    color: var(--error-text-color);
-}
-
-/*Background*/
-.bg-primary {
-    background-color: var(--primary-background-color);
-}
-
-.bg-secondary {
-    background-color: var(--secondary-background-color);
-}
-
-.bg-text {
-    background-color: var(--primary-text-color);
 }
 
 /*Custom*/

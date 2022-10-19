@@ -44,7 +44,7 @@ const InternHeader = ({
         </Link>
         {user && (
           <div className="flex items-center justify-center gap-4">
-            <span className="color-third">
+            <span className="text-text-third">
               {user ? user.username : "Unbekannter"}
             </span>
             <input

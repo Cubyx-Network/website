@@ -11,19 +11,30 @@ module.exports = {
       },
       accentColor: "#23AA08",
       colors: {
-        light: {
-          primary_text_color: "#000000",
-          secondary_text_color: "#23AA08",
-          third_text_color: "#adadad",
-          primary_background_color: "#FFFFFF",
-          secondary_background_color: "#D8D8D8",
+        text: {
+          primary: {
+            DEFAULT: "#000000",
+            light: "#000000",
+            dark: "#FFFFFF",
+          },
+          secondary: {
+            DEFAULT: "#23AA08",
+          },
+          third: {
+            DEFAULT: "#adadad",
+          },
         },
-        dark: {
-          primary_text_color: "#FFFFFF",
-          secondary_text_color: "#23AA08",
-          third_text_color: "#adadad",
-          primary_background_color: "#070707",
-          secondary_background_color: "#202020",
+        background: {
+          primary: {
+            DEFAULT: "#FFFFFF",
+            light: "#FFFFFF",
+            dark: "#070707",
+          },
+          secondary: {
+            DEFAULT: "#D8D8D8",
+            light: "#D8D8D8",
+            dark: "#202020",
+          },
         },
       },
     },

@@ -40,9 +40,9 @@ const ElectionItem = ({
   }
 
   return (
-    <div className="bg-secondary round-lg flex flex-col items-center rounded-xl p-4">
+    <div className="round-lg flex flex-col items-center rounded-xl bg-background-secondary p-4 dark:bg-background-secondary">
       <h1 className="text-2xl font-bold">{election.name}</h1>
-      <p className="color-third text-lg">{election.description}</p>
+      <p className="text-lg text-text-third">{election.description}</p>
       {vote === null ? (
         <>
           <ul>

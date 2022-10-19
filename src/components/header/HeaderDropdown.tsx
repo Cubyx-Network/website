@@ -25,7 +25,7 @@ const HeaderDropdown = ({
     <div>
       <span
         className={`m-0 flex items-center text-xl hover:cursor-pointer ${
-          isCurrentDropdown && "color-secondary"
+          isCurrentDropdown && "text-text-secondary"
         }`}
         onClick={toggleActive}
       >
@@ -38,13 +38,15 @@ const HeaderDropdown = ({
 
       {active && (
         <ul
-          className={`bg-secondary absolute mt-1 flex w-fit flex-col gap-2 rounded-lg p-4`}
+          className={`absolute mt-1 flex w-fit flex-col gap-2 rounded-lg bg-background-secondary p-4 dark:bg-background-secondary-dark`}
         >
           {children.map((child) => (
             <li key={child.href}>
               <a
                 href={child.href}
-                className={currentSite === child.href ? "color-secondary" : ""}
+                className={
+                  currentSite === child.href ? "text-text-secondary" : ""
+                }
               >
                 {child.name}
               </a>

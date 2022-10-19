@@ -43,17 +43,20 @@ const InternPage = ({ elections }: Props) => {
       <div className="flex h-screen w-full flex-col items-center justify-center gap-16">
         <div className="hidden w-full md:block">
           <h1 className="text-center text-7xl font-bold ">
-            {greeting} <span className="color-secondary">{user.username}</span>.
+            {greeting}{" "}
+            <span className="text-text-secondary">{user.username}</span>.
           </h1>
           <div className="mt-8 flex h-0.5 justify-center rounded-3xl">
-            <div className="bg-text w-1/4"></div>
+            <div className="w-1/4 bg-text-primary dark:bg-text-primary-dark"></div>
           </div>
         </div>
         <div className="flex w-full items-center justify-center">
           <section className="flex flex-col items-center">
             <h1 className="text-4xl font-extrabold">Aktuelle Wahlen</h1>
             {!elections || elections.length === 0 ? (
-              <p className="color-third mt-4">Aktuell gibt es keine Wahlen</p>
+              <p className="mt-4 text-text-third">
+                Aktuell gibt es keine Wahlen
+              </p>
             ) : (
               <div className="mt-4">
                 {elections.map((election) => (

@@ -7,7 +7,7 @@ const HeaderLink = ({ link, children }: { link: string; children: any }) => {
   return (
     <Link href={link}>
       <a href={link}>
-        <h1 className={`m-0 text-xl ${isCurrentSite && "color-secondary"}`}>
+        <h1 className={`m-0 text-xl ${isCurrentSite && "text-text-secondary"}`}>
           {children}
         </h1>
       </a>
