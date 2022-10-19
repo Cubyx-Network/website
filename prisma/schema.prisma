@@ -13,18 +13,38 @@ datasource db {
 enum Role {
     owner
     orga
-    user
+    member
 }
 
-model User {
+enum PositionType {
+    builder
+    developer
+    commander
+    creator
+    content
+    supporter
+}
+
+model TeamMember {
   id              String    @id @default(uuid())
   username        String    @unique
   email           String    @unique
   password        String
+  profile_picture Bytes
+  description     String?   @db.Text
+  discord_tag     String
+  mc_username     String?
+  position        Position[]
   createdAt       DateTime  @default(now())
-  role            Role      @default(user)
+  role            Role      @default(member)
   votes           Vote[]
   candidates      Candidate[]
+}
+
+model Position {
+  id              String       @id @default(uuid())
+  teamMember      TeamMember[]
+  positionType    PositionType
 }
 
 model Election {
@@ -42,14 +62,14 @@ model Candidate {
     id            String    @id @default(uuid())
     election      Election  @relation(fields: [electionId], references: [id])
     electionId    String
-    user          User      @relation(fields: [userId], references: [id])
+    user          TeamMember@relation(fields: [userId], references: [id])
     userId        String
     votes         Int       @default(0)
 }
 
 model Vote {
     id            String    @id @default(uuid())
-    user          User      @relation(fields: [userId], references: [id])
+    user          TeamMember@relation(fields: [userId], references: [id])
     userId        String
     election      Election  @relation(fields: [electionId], references: [id])
     electionId    String

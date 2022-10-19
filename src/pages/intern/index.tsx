@@ -1,4 +1,4 @@
-import { Candidate, Election, User, Vote } from "@prisma/client";
+import { Candidate, Election, TeamMember, Vote } from "@prisma/client";
 import { GetServerSidePropsContext } from "next";
 import { userFromRequest } from "../../services/jwt";
 import superjson from "superjson";
@@ -11,7 +11,7 @@ import useUser from "../../hooks/useUser";
 type Props = {
   elections: (Election & {
     votes: Vote[];
-    candidates: (Candidate & { user: User })[];
+    candidates: (Candidate & { user: TeamMember })[];
   })[];
 };
 
