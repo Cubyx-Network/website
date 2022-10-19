@@ -47,7 +47,7 @@ const Header = ({
             {[
               { href: "/partner/tts-craft", name: "TTS-Craft" },
               { href: "/partner/expansehost", name: "Expansehost" },
-              { href: "/partner/rareloot", name: "Rareloot" },
+              { href: "/partner/greatnewsde", name: "GreatNewsDE" },
             ]}
           </HeaderDropdown>
           <LoginUser />

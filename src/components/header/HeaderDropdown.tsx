@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Icon from "../icon/Icon";
 
 const HeaderDropdown = ({
@@ -21,10 +21,22 @@ const HeaderDropdown = ({
     (child) => child.href === currentSite
   );
 
+  useEffect(() => {
+    document.onmousedown = (e) => {
+      if (
+        e.target &&
+        (e.target as HTMLElement).classList.contains("dropdown")
+      ) {
+        return;
+      }
+      setActive(false);
+    };
+  });
+
   return (
-    <div>
+    <div className="dropdown">
       <span
-        className={`m-0 flex items-center text-xl hover:cursor-pointer ${
+        className={`dropdown m-0 flex items-center text-xl hover:cursor-pointer ${
           isCurrentDropdown && "text-text-secondary"
         }`}
         onClick={toggleActive}
@@ -32,20 +44,22 @@ const HeaderDropdown = ({
         {link}
         <Icon
           name="arrow-drop-down-line"
-          className={`ri-2x transition-all ${active && "rotate-180"}`}
+          className={`ri-2x dropdown transition-all ${active && "rotate-180"}`}
         />
       </span>
 
       {active && (
         <ul
-          className={`absolute mt-1 flex w-fit flex-col gap-2 rounded-lg bg-background-secondary p-4 dark:bg-background-secondary-dark`}
+          className={`dropdown absolute mt-1 flex w-fit flex-col gap-2 rounded-lg bg-background-secondary p-4 dark:bg-background-secondary-dark`}
         >
           {children.map((child) => (
             <li key={child.href}>
               <a
                 href={child.href}
                 className={
-                  currentSite === child.href ? "text-text-secondary" : ""
+                  currentSite === child.href
+                    ? "dropdown text-text-secondary"
+                    : "dropdown"
                 }
               >
                 {child.name}
