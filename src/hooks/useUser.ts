@@ -18,7 +18,7 @@ export default function useUser(): User | null {
       .catch((err) => {
         setUser(null);
       });
-  });
+  }, []);
 
   return user;
 }

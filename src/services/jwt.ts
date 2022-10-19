@@ -4,7 +4,7 @@ import { User } from "@prisma/client";
 import jwt from "jsonwebtoken";
 import { IncomingMessage } from "http";
 import { NextApiRequestCookies } from "next/dist/server/api-utils";
-import prisma from "../lib/prisma";
+import { prisma } from "../lib/prisma";
 
 const JWT_TOKEN_KEY = process.env.JWT_TOKEN_KEY;
 const cookieOptions = {

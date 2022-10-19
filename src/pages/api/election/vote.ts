@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import defaultHandler from "../_defaultHandler";
 import { userFromRequest } from "../../../services/jwt";
-import prisma from "../../../lib/prisma";
+import { prisma } from "../../../lib/prisma";
 
 const handler = defaultHandler<NextApiRequest, NextApiResponse>().post(
   async (req, res) => {

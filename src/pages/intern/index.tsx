@@ -2,7 +2,7 @@ import { Candidate, Election, User, Vote } from "@prisma/client";
 import { GetServerSidePropsContext } from "next";
 import { userFromRequest } from "../../services/jwt";
 import superjson from "superjson";
-import prisma from "../../lib/prisma";
+import { prisma } from "../../lib/prisma";
 import ElectionItem from "../../components/intern/ElectionItem";
 import Login from "../../components/Login";
 import InternHeader from "../../components/intern/InternHeader";
