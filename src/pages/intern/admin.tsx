@@ -26,6 +26,8 @@ const AdminPage = ({ user }: Props) => {
     null
   );
 
+  const [isLoading, setIsLoading] = useState(false);
+
   const router = useRouter();
 
   useEffect(() => {
@@ -36,14 +38,47 @@ const AdminPage = ({ user }: Props) => {
 
   if (!user) return <Login />;
 
-  function onRegister() {
+  async function onRegister() {
+    setIsLoading(true);
+    setRegistrationLink(null);
+
     if (!registrationUsername || !registrationEmail) {
       setRegistrationLink("Bitte fülle alle Felder aus!");
+      setIsLoading(false);
       return;
     }
 
     if (!registrationEmail.endsWith("@cubyx.eu")) {
       setRegistrationLink("Die E-Mail muss eine Cubyx E-Mail sein!");
+      setIsLoading(false);
+      return;
+    }
+
+    const userExist = await redaxios
+      .get(`/api/userExist/${registrationUsername}`)
+      .then((res) => {
+        if (res.status === 200) {
+          const response = {
+            user: res.data.user,
+            pterodactyl: res.data.pterodactyl,
+            mailcow: res.data.mailcow,
+            registration: res.data.registration,
+          };
+          setRegistrationLink(
+            `Der Nutzer existiert bereits! (Cubyx: ${response.user}, Pterodactyl: ${response.pterodactyl}, Mailcow: ${response.mailcow}, Registrierung: ${response.registration})`
+          );
+          return true;
+        }
+      })
+      .catch(() => {
+        return false;
+      })
+      .finally(() => {
+        return false;
+      });
+
+    if (userExist) {
+      setIsLoading(false);
       return;
     }
 
@@ -60,6 +95,8 @@ const AdminPage = ({ user }: Props) => {
       .catch((e) => {
         setRegistrationLink(`${e.status} ${e.statusText}`);
       });
+
+    setIsLoading(false);
   }
 
   return (
@@ -76,18 +113,26 @@ const AdminPage = ({ user }: Props) => {
             type="text"
             className="input"
             placeholder="Username"
-            onChange={(e) => setRegistrationUsername(e.target.value)}
+            onChange={(e) => {
+              setRegistrationUsername(e.target.value);
+              setRegistrationEmail(
+                `${(e.target.value || "").toLowerCase()}@cubyx.eu`
+              );
+            }}
           />
           <input
             type="email"
             className="input"
             placeholder="E-Mail (@cubyx.eu)"
             onChange={(e) => setRegistrationEmail(e.target.value)}
+            value={registrationEmail || ""}
           />
+
           <input
             type="button"
             className="input hover:cursor-pointer"
-            value="Erstellen"
+            value={!isLoading ? "Erstellen" : "Lädt..."}
+            disabled={isLoading}
             onClick={onRegister}
           />
         </form>

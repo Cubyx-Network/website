@@ -1,5 +1,5 @@
 const PterodactylClient = require("pterodactyl.js");
-import Pterodactyl from "pterodactyl.js";
+import Pterodactyl, { UserModel } from "pterodactyl.js";
 
 if (!process.env.PTERODACTYL_HOST)
   throw new Error("PTERODACTYL_HOST is not defined");
@@ -24,6 +24,17 @@ export function createPterodactylUser(
     firstName: username,
     lastName: "Cubyx",
   });
+}
+
+export async function getPterodactylUser(
+  username: string
+): Promise<Pterodactyl.User | null> {
+  const user = (await pterodactyl.getUsers()).find(
+    (user: UserModel) => user.username === username.toLowerCase()
+  );
+
+  if (!user) return null;
+  return await pterodactyl.getUser(user.id);
 }
 
 export default pterodactyl;

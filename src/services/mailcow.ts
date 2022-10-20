@@ -1,5 +1,5 @@
 import MailcowClient from "ts-mailcow-api";
-import { MailcowResponse } from "ts-mailcow-api/src/types";
+import { Mailbox, MailcowResponse } from "ts-mailcow-api/src/types";
 
 if (!process.env.MAILCOW_HOST) throw new Error("MAILCOW_HOST is not defined");
 if (!process.env.MAILCOW_TOKEN) throw new Error("MAILCOW_TOKEN is not defined");
@@ -26,6 +26,10 @@ export function createMailbox(
     force_pw_update: false,
     password2: password,
   });
+}
+
+export function getMailbox(email: string): Promise<Mailbox[]> {
+  return mailcow.mailbox.get(email);
 }
 
 export default mailcow;
