@@ -1,9 +1,9 @@
 import { useForm } from "react-hook-form";
 import { useMutation } from "react-query";
 import axios from "redaxios";
-import useServerRefresher from "../hooks/useServerRefresher";
 import InternHeader from "./intern/InternHeader";
 import LoadingSpinner from "./loading/LoadingSpinner";
+import { useRouter } from "next/router";
 
 function Login() {
   const {
@@ -17,7 +17,7 @@ function Login() {
     isError,
     mutate: loginMutation,
   } = useMutation((params) => axios.post("/api/sessions", params), {
-    onSuccess: useServerRefresher(),
+    onSuccess: useRouter().reload,
   });
 
   const onSubmit = async (params: any) => loginMutation(params);
