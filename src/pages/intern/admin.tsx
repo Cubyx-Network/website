@@ -48,7 +48,7 @@ const AdminPage = ({ user }: Props) => {
     }
 
     redaxios
-      .post("/api/register", {
+      .post("/api/createRegisterLink", {
         username: registrationUsername,
         email: registrationEmail,
       })

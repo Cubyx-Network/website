@@ -6,10 +6,10 @@ export interface UserParams {
   email: string;
   name: string;
   password: string;
-  description: string;
+  description?: string;
   profile_picture: Buffer;
   discord_tag: string;
-  position: PositionType[];
+  position?: PositionType[];
   mc_username?: string;
 }
 
@@ -32,13 +32,15 @@ export async function createUser(params: UserParams): Promise<TeamMember> {
       password,
       description: params.description,
       discord_tag: params.discord_tag,
-      position: {
+      position: params.position && {
         create: params.position.map((position) => ({ positionType: position })),
       },
       profile_picture: params.profile_picture,
       mc_username: params.mc_username,
     },
   });
+
+  // ToDo: Create user in pterodactyl and mailcow
 
   user.password = "";
 
