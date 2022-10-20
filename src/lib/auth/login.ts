@@ -1,5 +1,5 @@
-import prisma from "../prisma";
-import { User } from "@prisma/client";
+import { prisma } from "../prisma";
+import { TeamMember } from "@prisma/client";
 import { verifyPassword } from "./passwordUtils";
 
 export interface LoginParams {
@@ -10,10 +10,12 @@ export interface LoginParams {
 /**
  * Tries to log in a user with the given email and password.
  * @param params {LoginParams}
- * @returns {Promise<User | null>} The user if the loading was successful, null otherwise.
+ * @returns {Promise<TeamMember | null>} The user if the loading was successful, null otherwise.
  */
-export async function login(params: LoginParams): Promise<User | null> {
-  const user = await prisma.user.findUnique({
+export async function login(params: LoginParams): Promise<TeamMember | null> {
+  if (!prisma) return null;
+
+  const user = await prisma.teamMember.findUnique({
     where: { username: params.username },
   });
 

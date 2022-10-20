@@ -1,16 +1,16 @@
-import { User } from "@prisma/client";
+import { TeamMember } from "@prisma/client";
 import redaxios from "redaxios";
 import React, { useEffect } from "react";
 
-export default function useUser(): User | null {
-  const [user, setUser] = React.useState<User | null>(null);
+export default function useUser(): TeamMember | null {
+  const [user, setUser] = React.useState<TeamMember | null>(null);
 
   useEffect(() => {
     redaxios
       .get("/api/user")
       .then((res) => {
         if (res.status === 200) {
-          setUser(res.data as User);
+          setUser(res.data as TeamMember);
         } else {
           setUser(null);
         }

@@ -1,4 +1,4 @@
-import { Candidate, Election, User, Vote } from "@prisma/client";
+import { Candidate, Election, TeamMember, Vote } from "@prisma/client";
 import React, { useState } from "react";
 import redaxios from "redaxios";
 
@@ -8,9 +8,9 @@ const ElectionItem = ({
 }: {
   election: Election & {
     votes: Vote[];
-    candidates: (Candidate & { user: User })[];
+    candidates: (Candidate & { user: TeamMember })[];
   };
-  user: User;
+  user: TeamMember;
 }) => {
   const voted = election.votes.find(
     (vote) => vote.userId === user.id && vote.electionId === election.id

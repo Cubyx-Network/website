@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { NextSeo } from "next-seo";
 import redaxios from "redaxios";
-import { User } from "@prisma/client";
+import { TeamMember } from "@prisma/client";
 import Link from "next/link";
 
 function logout() {
@@ -19,7 +19,7 @@ const InternHeader = ({
 }: {
   title: string;
   description: string;
-  user?: User;
+  user?: TeamMember;
 }) => {
   return (
     <>

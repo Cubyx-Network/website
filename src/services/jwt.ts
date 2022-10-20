@@ -1,6 +1,6 @@
 import { serialize } from "cookie";
 import { NextApiResponse } from "next";
-import { User } from "@prisma/client";
+import { TeamMember } from "@prisma/client";
 import jwt from "jsonwebtoken";
 import { IncomingMessage } from "http";
 import { NextApiRequestCookies } from "next/dist/server/api-utils";
@@ -35,7 +35,7 @@ function setCookie(
  * @param res
  * @param user
  */
-export function authenticateUser(res: NextApiResponse, user: User): void {
+export function authenticateUser(res: NextApiResponse, user: TeamMember): void {
   if (!user) return;
 
   if (!JWT_TOKEN_KEY) {
@@ -72,7 +72,7 @@ export function clearUser(res: NextApiResponse): void {
  */
 export async function userFromRequest(
   req: IncomingMessage & { cookies: NextApiRequestCookies }
-): Promise<User | undefined> {
+): Promise<TeamMember | undefined> {
   const { session: token } = req.cookies;
 
   if (!token) return undefined;
@@ -86,7 +86,7 @@ export async function userFromRequest(
 
     if (!data) return undefined;
 
-    const user = await prisma.user.findUnique({
+    const user = await prisma.teamMember.findUnique({
       where: { username: (data as any).username },
     });
 

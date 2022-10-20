@@ -1,4 +1,4 @@
-import { User } from "@prisma/client";
+import { TeamMember } from "@prisma/client";
 import { GetServerSidePropsContext } from "next";
 import { userFromRequest } from "../../services/jwt";
 import superjson from "superjson";
@@ -6,7 +6,7 @@ import Login from "../../components/Login";
 import InternHeader from "../../components/intern/InternHeader";
 
 type Props = {
-  user: User;
+  user: TeamMember;
 };
 
 const AdminPage = ({ user }: Props) => {

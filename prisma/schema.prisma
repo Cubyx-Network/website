@@ -75,3 +75,9 @@ model Vote {
     electionId    String
     voted         Boolean   @default(false)
 }
+
+model Registration {
+    id            String   @id @default(uuid())
+    username      String
+    email         String
+}
