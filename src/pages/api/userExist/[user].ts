@@ -28,8 +28,8 @@ const handler = defaultHandler<NextApiRequest, NextApiResponse>().get(
       () => null
     );
 
-    const mailboxes = await getMailbox(`${username as string}@cubyx.eu`).catch(
-      () => [{}]
+    const mailbox = await getMailbox(`${username as string}@cubyx.eu`).catch(
+      () => {}
     );
 
     const registration = await prisma.registration.findFirst({
@@ -38,7 +38,7 @@ const handler = defaultHandler<NextApiRequest, NextApiResponse>().get(
       },
     });
 
-    const mailcow = !isEmptyObject(mailboxes[0]);
+    const mailcow = !isEmptyObject(mailbox);
 
     if (user || pterodactylUser || mailcow || registration) {
       return res.status(200).json({

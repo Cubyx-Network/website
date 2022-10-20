@@ -1,35 +1,44 @@
-import MailcowClient from "ts-mailcow-api";
-import { Mailbox, MailcowResponse } from "ts-mailcow-api/src/types";
+import redaxios, { Response } from "redaxios";
 
 if (!process.env.MAILCOW_HOST) throw new Error("MAILCOW_HOST is not defined");
 if (!process.env.MAILCOW_TOKEN) throw new Error("MAILCOW_TOKEN is not defined");
-
-const mailcow = new MailcowClient(
-  process.env.MAILCOW_HOST,
-  process.env.MAILCOW_TOKEN
-);
 
 export function createMailbox(
   username: string,
   email_firstpart: string,
   password: string
-): Promise<MailcowResponse> {
-  return mailcow.mailbox.create({
-    domain: "cubyx.eu",
-    password,
-    name: `${username} @ Cubyx`,
-    active: 1,
-    local_part: email_firstpart,
-    quota: 2048,
-    tls_enforce_in: true,
-    tls_enforce_out: true,
-    force_pw_update: false,
-    password2: password,
-  });
+): Promise<Response<any>> {
+  return redaxios.post(
+    `${process.env.MAILCOW_HOST}/api/v1/add/mailbox`,
+    {
+      local_part: email_firstpart,
+      domain: "cubyx.eu",
+      name: `${username} @ Cubyx`,
+      quota: 2048,
+      password,
+      password2: password,
+      active: 1,
+      force_pw_update: 0,
+      tls_enforce_in: 1,
+      tls_enforce_out: 1,
+    },
+    {
+      headers: {
+        "X-API-Key": process.env.MAILCOW_TOKEN as string,
+      },
+    }
+  );
 }
 
-export function getMailbox(email: string): Promise<Mailbox[]> {
-  return mailcow.mailbox.get(email);
-}
+export async function getMailbox(email: string): Promise<any> {
+  const { data } = await redaxios.get(
+    `${process.env.MAILCOW_HOST}/api/v1/get/mailbox/${email}`,
+    {
+      headers: {
+        "X-API-Key": process.env.MAILCOW_TOKEN as string,
+      },
+    }
+  );
 
-export default mailcow;
+  return data;
+}
