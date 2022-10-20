@@ -13,5 +13,4 @@ const handler = defaultHandler<NextApiRequest, NextApiResponse>().get(
     }
   }
 );
-
 export default handler;

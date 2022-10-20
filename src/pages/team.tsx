@@ -21,7 +21,7 @@ const TeamPage = ({
     discord_tag: "Cubyx#0000",
     email: "cubyx.eu",
     createdAt: new Date(),
-    role: "owner",
+    isAdmin: false,
     profile_picture: Buffer.Buffer.from(""),
     mc_username: null,
     password: "123456",

@@ -36,7 +36,7 @@ model TeamMember {
   mc_username     String?
   position        Position[]
   createdAt       DateTime  @default(now())
-  role            Role      @default(member)
+  isAdmin         Boolean   @default(false)
   votes           Vote[]
   candidates      Candidate[]
 }
