@@ -42,6 +42,12 @@ const handler = defaultHandler<NextApiRequest, NextApiResponse>().post(
       return;
     }
 
+    await prisma.registration.delete({
+      where: {
+        id: registerId,
+      },
+    });
+
     await createUser({
       email: registration.email,
       name: registration.username,
@@ -51,12 +57,6 @@ const handler = defaultHandler<NextApiRequest, NextApiResponse>().post(
       description,
       position,
       mc_username,
-    });
-
-    await prisma.registration.delete({
-      where: {
-        id: registerId,
-      },
     });
 
     res.status(200).json("OK");
