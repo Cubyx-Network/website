@@ -2,6 +2,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { PositionType } from "@prisma/client";
 import defaultHandler from "../_defaultHandler";
 import { createUser } from "../../../lib/users";
+import { prisma } from "../../../lib/prisma";
 
 const handler = defaultHandler<NextApiRequest, NextApiResponse>().post(
   async (req, res) => {
