@@ -61,10 +61,13 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v3.1.1
         with:
-          path: ./out
+          # Artifact name
+          name: build_output
+          # A file, directory or wildcard pattern that describes what to upload
+          path: out/*
           
 
   # Deployment job
@@ -72,6 +75,13 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - name: Download a Build Artifact
+        uses: actions/download-artifact@v3.0.1
+        with:
+          # Artifact name
+          name: build_output
+          # Destination path
+          path: out/
       - name: SFTP Push
         uses: datanomi/SFTP-Push@v.1.2.2.1h
         env:
@@ -87,4 +97,5 @@ jobs:
           port: 2022
           # files will copy to under remote_path
           remote_path: /home/container/webroot
+          local_path: out/*
     
