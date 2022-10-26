@@ -1,5 +1,6 @@
 import defaultHandler from "./_defaultHandler";
 import { NextApiRequest, NextApiResponse } from "next";
+import { prisma } from "../../lib/prisma";
 
 const handler = defaultHandler<NextApiRequest, NextApiResponse>().post(
   async (req, res) => {

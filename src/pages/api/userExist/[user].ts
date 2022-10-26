@@ -3,6 +3,7 @@ import defaultHandler from "../_defaultHandler";
 import { getPterodactylUser } from "../../../services/pterodactyl";
 import { getMailbox } from "../../../services/mailcow";
 import { isEmptyObject } from "is-what";
+import { prisma } from "../../../lib/prisma";
 
 const handler = defaultHandler<NextApiRequest, NextApiResponse>().get(
   async (req, res) => {
