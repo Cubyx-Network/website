@@ -20,14 +20,14 @@ const Footer = () => {
             <h2 className="text-4xl font-extrabold">Cubyx Network</h2>
             <span>Dein demokratisches Bauteam aus Deutschland!</span>
             <div className="flex gap-2">
-              <SocialIcon icon={"discord-fill"} link={"https://discord.gg/"} />
-              <SocialIcon icon={"twitch-fill"} link={"https://discord.gg/"} />
-              <SocialIcon icon={"twitter-fill"} link={"https://discord.gg/"} />
-              <SocialIcon icon={"youtube-fill"} link={"https://discord.gg/"} />
-              <SocialIcon icon={"github-fill"} link={"https://discord.gg/"} />
-              <SocialIcon icon={"reddit-fill"} link={"https://discord.gg/"} />
-              <SocialIcon icon={"mastodon-fill"} link={"https://discord.gg/"} />
-              <SocialIcon icon={"earth-fill"} link={"https://discord.gg/"} />
+              <SocialIcon icon={"discord-fill"} link={"/r/discord"} />
+              <SocialIcon icon={"twitch-fill"} link={"/r/twitch"} />
+              <SocialIcon icon={"twitter-fill"} link={"/r/twitter"} />
+              <SocialIcon icon={"youtube-fill"} link={"/r/youtube"} />
+              <SocialIcon icon={"reddit-fill"} link={"/r/reddit"} />
+              <SocialIcon icon={"mastodon-fill"} link={"/r/mastodon"} />
+              <SocialIcon icon={"earth-fill"} link={"/r/planetmc"} />
+              <SocialIcon icon={"mic-fill"} link={"/r/anchor"} />
             </div>
           </div>
         </section>
