@@ -81,3 +81,9 @@ model Registration {
     username      String
     email         String
 }
+
+model Link {
+    id            String   @id @default(uuid())
+    name          String
+    url           String
+}
