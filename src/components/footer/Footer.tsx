@@ -1,17 +1,21 @@
 import Image from "next/image";
 import SocialIcon from "./SocialIcon";
+import Link from "next/link";
 
 const Footer = () => {
   return (
     <footer className="flex w-full flex-col items-center gap-8">
       <div className="flex w-5/6 items-center justify-between">
         <section className="flex items-center gap-8">
-          <Image
-            src="/img/netzwerk.png"
-            alt="CubyxNetwork Logo"
-            width="256px"
-            height="256px"
-          />
+          <div className="hidden lg:block">
+            <Image
+              src="/img/netzwerk.png"
+              alt="CubyxNetwork Logo"
+              width="256px"
+              height="256px"
+            />
+          </div>
+
           <div>
             <h2 className="text-4xl font-extrabold">Cubyx Network</h2>
             <span>Dein demokratisches Bauteam aus Deutschland!</span>
@@ -28,11 +32,25 @@ const Footer = () => {
           </div>
         </section>
       </div>
-      <p className="m-8 font-semibold">
-        (c) {new Date().getFullYear()}{" "}
-        <span className="text-text-secondary">Cubyx Network</span>・Quadratisch.
-        Praktisch. Gut.
-      </p>
+
+      <div>
+        <p className="mt-4 p-4 text-center font-semibold">
+          (c) {new Date().getFullYear()}{" "}
+          <span className="text-text-secondary">Cubyx Network</span>
+          ・Quadratisch. Praktisch. Gut.
+        </p>
+        <div className="mb-4 flex w-full items-center justify-center gap-4 text-text-third">
+          <Link href={"/impressum"}>
+            <a href={"/impressum"}>Impressum</a>
+          </Link>
+
+          <span>•</span>
+
+          <Link href={"/datenschutz"}>
+            <a href={"/datenschutz"}>Datenschutz</a>
+          </Link>
+        </div>
+      </div>
     </footer>
   );
 };

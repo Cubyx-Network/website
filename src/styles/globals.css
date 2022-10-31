@@ -62,3 +62,13 @@ a {
 .input {
     @apply w-full rounded-md border border-gray-300 px-4 py-2;
 }
+
+@layer utilities {
+    .icon-2xl {
+        font-size: 2em;
+    }
+
+    .icon-3xl {
+        font-size: 3em;
+    }
+}
