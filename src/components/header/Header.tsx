@@ -4,6 +4,7 @@ import Link from "next/link";
 import HeaderLink from "./HeaderLink";
 import HeaderDropdown from "./HeaderDropdown";
 import LoginUser from "../intern/LoginUser";
+import DarkLightModeSwitch from "./DarkLightModeSwitch";
 
 const Header = ({
   title,
@@ -49,6 +50,7 @@ const Header = ({
             ]}
           </HeaderDropdown>
           <LoginUser />
+          <DarkLightModeSwitch />
         </div>
       </header>
     </>

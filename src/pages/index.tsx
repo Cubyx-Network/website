@@ -21,7 +21,7 @@ const Home: NextPage = () => {
         <div className="flex h-screen w-full items-center justify-center text-center md:justify-between md:p-28 md:text-left">
           <h1 className="text-6xl font-bold md:text-8xl">
             Willkommen auf dem <br />{" "}
-            <span className="text-text-secondary">Cubyx</span> Network!
+            <span className="text-text-secondary">Cubyx</span> Network!{" "}
           </h1>
 
           <Image

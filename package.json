@@ -10,6 +10,7 @@
     "database": "prisma db push"
   },
   "dependencies": {
+    "@next/font": "^13.0.2",
     "@prisma/client": "^4.5.0",
     "@types/cookie": "^0.5.1",
     "@types/jsonwebtoken": "^8.5.9",
