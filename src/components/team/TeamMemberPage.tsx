@@ -41,7 +41,9 @@ const TeamMemberPage = ({
             alt={`${member.username} profile picture`}
             width={256}
             height={256}
-            className={"hidden h-auto w-64 rounded-full 2xl:block"}
+            className={
+              "hidden aspect-square h-full w-64 rounded-full 2xl:block"
+            }
           />
         </div>
       </section>

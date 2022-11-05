@@ -41,9 +41,11 @@ const TeamPage = ({
         description={"Ein Überblick über das Cubyx Team"}
       />
 
-      <main className="hidden h-screen w-full items-center gap-4 p-8 lg:flex">
+      <main className="hidden h-screen w-full items-center gap-4 p-8 md:flex">
         <div className="flex flex-col items-center gap-4 rounded-2xl bg-background-secondary p-6 dark:bg-background-secondary-dark">
-          <h2 className="text-xl font-semibold">Teammitglieder</h2>
+          <h2 className="hidden text-xl font-semibold md:block">
+            Teammitglieder
+          </h2>
           <ul className="flex flex-col gap-2">
             {teamMembers.map((member) => (
               <li onClick={() => setSelectedMember(member)} key={member.id}>
@@ -61,7 +63,7 @@ const TeamPage = ({
         </div>
       </main>
 
-      <main className="flex h-screen w-full items-center justify-center p-8 lg:hidden">
+      <main className="flex h-screen w-full items-center justify-center p-8 md:hidden">
         <h1 className="text-center font-black">
           Die Teamübersicht wird momentan noch nicht auf mobilen Endgeräten
           unterstützt! Wir bitten um Verständnis
