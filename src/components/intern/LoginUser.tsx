@@ -7,21 +7,21 @@ const LoginUser = () => {
 
   if (!user) {
     return (
-      <Link href={"/intern"}>
-        <a href={"/intern"} className="flex items-center">
-          <Icon name={"login-box-line"} className={"ri-2x"} />
-        </a>
-      </Link>
+      (<Link href={"/intern"} className="flex items-center">
+
+        <Icon name={"login-box-line"} className={"ri-2x"} />
+
+      </Link>)
     );
   }
 
   return (
-    <Link href={"/intern"}>
-      <a href={"/intern"} className={"flex items-center gap-2"}>
-        <span className="text-text-third">{user.username}</span>
-        <Icon name={"user-line"} className="ri-2x" />
-      </a>
-    </Link>
+    (<Link href={"/intern"} className={"flex items-center gap-2"}>
+
+      <span className="text-text-third">{user.username}</span>
+      <Icon name={"user-line"} className="ri-2x" />
+
+    </Link>)
   );
 };
 

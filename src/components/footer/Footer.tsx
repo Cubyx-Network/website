@@ -41,13 +41,13 @@ const Footer = () => {
         </p>
         <div className="mb-4 flex w-full items-center justify-center gap-4 text-text-third">
           <Link href={"/impressum"}>
-            <a href={"/impressum"}>Impressum</a>
+            Impressum
           </Link>
 
           <span>•</span>
 
           <Link href={"/datenschutz"}>
-            <a href={"/datenschutz"}>Datenschutz</a>
+            Datenschutz
           </Link>
         </div>
       </div>
