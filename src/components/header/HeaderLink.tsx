@@ -5,13 +5,11 @@ const HeaderLink = ({ link, children }: { link: string; children: any }) => {
   const isCurrentSite = useRouter().pathname === link;
 
   return (
-    (<Link href={link}>
-
+    <Link href={link}>
       <h1 className={`m-0 text-xl ${isCurrentSite && "text-text-secondary"}`}>
         {children}
       </h1>
-
-    </Link>)
+    </Link>
   );
 };
 

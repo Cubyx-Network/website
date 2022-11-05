@@ -143,8 +143,8 @@ const RegistrationByIdPage = ({
               <Image
                 src={profilePicture || "/img/netzwerk.png"}
                 alt={"profilbild"}
-                width={"256px"}
-                height={"256px"}
+                width={"256"}
+                height={"256"}
                 className={"rounded-full"}
               />
               <InputElement

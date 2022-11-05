@@ -11,8 +11,8 @@ const Footer = () => {
             <Image
               src="/img/netzwerk.png"
               alt="CubyxNetwork Logo"
-              width="256px"
-              height="256px"
+              width="256"
+              height="256"
             />
           </div>
 
@@ -40,15 +40,11 @@ const Footer = () => {
           ・Quadratisch. Praktisch. Gut.
         </p>
         <div className="mb-4 flex w-full items-center justify-center gap-4 text-text-third">
-          <Link href={"/impressum"}>
-            Impressum
-          </Link>
+          <Link href={"/impressum"}>Impressum</Link>
 
           <span>•</span>
 
-          <Link href={"/datenschutz"}>
-            Datenschutz
-          </Link>
+          <Link href={"/datenschutz"}>Datenschutz</Link>
         </div>
       </div>
     </footer>

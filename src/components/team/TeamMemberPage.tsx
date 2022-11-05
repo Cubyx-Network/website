@@ -11,8 +11,8 @@ const TeamMemberPage = ({
   isTemplate?: boolean;
 }) => {
   return (
-    <div className="flex flex-col items-center gap-4">
-      <section className="flex items-center gap-48">
+    <div className="flex w-1/2 max-w-3xl flex-col items-center gap-4">
+      <section className="flex w-full items-center justify-between gap-48">
         <div>
           <h2 className="text-4xl font-extrabold">{member.username}</h2>
           <div className="flex items-center gap-2 text-text-third">
@@ -39,9 +39,9 @@ const TeamMemberPage = ({
                 : "/img/netzwerk.png"
             }
             alt={`${member.username} profile picture`}
-            width="300px"
-            height="300px"
-            className={"rounded-full"}
+            width={256}
+            height={256}
+            className={"hidden h-auto w-64 rounded-full 2xl:block"}
           />
         </div>
       </section>
