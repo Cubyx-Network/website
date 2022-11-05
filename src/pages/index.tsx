@@ -7,6 +7,7 @@ import Image from "next/image";
 import banner from "../../public/img/home/banner.png";
 import logo from "../../public/img/netzwerk.png";
 import SectionHTLeftPRight from "../components/sections/SectionHTLeftPRight";
+import SectionHTRightPLeft from "../components/sections/SectionHTRightPLeft";
 
 const Home: NextPage = () => {
   return (
@@ -34,6 +35,7 @@ const Home: NextPage = () => {
           <SectionHTLeftPRight
             headline={"Was ist das Cubyx Network?"}
             image={banner}
+            alt={"Schiff in einer Bucht"}
           >
             Das Cubyx Network ist ein Minecraft Netzwerk, welches sich auf
             verschiedene Spielmodi spezialisiert hat. Wir bieten dir eine große
@@ -42,6 +44,19 @@ const Home: NextPage = () => {
             Freunden spielen kannst. Wir bieten dir eine große Auswahl an
             Spielmodi, die du mit deinen Freunden spielen kannst.
           </SectionHTLeftPRight>
+
+          <SectionHTRightPLeft
+            headline={"Was zeichnet uns aus?"}
+            image={banner}
+            alt={"Netzwerk Logo"}
+          >
+            Das Cubyx Network ist ein Minecraft Netzwerk, welches sich auf
+            verschiedene Spielmodi spezialisiert hat. Wir bieten dir eine große
+            Auswahl an Spielmodi, die du mit deinen Freunden spielen kannst. Wir
+            bieten dir eine große Auswahl an Spielmodi, die du mit deinen
+            Freunden spielen kannst. Wir bieten dir eine große Auswahl an
+            Spielmodi, die du mit deinen Freunden spielen kannst.
+          </SectionHTRightPLeft>
         </main>
       </div>
 
