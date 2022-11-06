@@ -43,12 +43,7 @@ const ProjectCard = ({
 
       <div className="order-last h-1/2 w-full flex-wrap p-4">
         <h2 className="text-2xl font-semibold">{project.name}</h2>
-        <p className="line-clamp-4">
-          {project.description} Lorem Ipsum dolor sit amet. Lorem Ipsum dolor
-          sit amet.Lorem Ipsum dolor sit amet.Lorem Ipsum dolor sit amet.Lorem
-          Ipsum dolor sit amet.Lorem Ipsum dolor sit amet.Lorem Ipsum dolor sit
-          amet.Lorem Ipsum dolor sit amet.Lorem Ipsum dolor sit amet.
-        </p>
+        <p className="line-clamp-4">{project.description}</p>
 
         {project.download_link && (
           <a
