@@ -1,7 +1,7 @@
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
 
-const Home = () => {
+const Impressum = () => {
   return (
     <>
       <Header title={"Impressum"} description={"Impressum"} />
@@ -67,4 +67,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Impressum;
