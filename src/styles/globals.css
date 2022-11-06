@@ -8,6 +8,7 @@ input {
     padding: 0;
     margin: 0;
     font-family: -apple-system, "Poppins", sans-serif;
+    transition: all 0.2s;
     @apply bg-background-primary-light dark:bg-background-primary-dark;
     @apply text-text-primary-light dark:text-text-primary-dark;
 }
@@ -27,6 +28,10 @@ a {
 }
 
 @layer utilities {
+    .icon-xl {
+        font-size: 1em;
+    }
+
     .icon-2xl {
         font-size: 2em;
     }
