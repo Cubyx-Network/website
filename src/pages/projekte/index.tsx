@@ -37,7 +37,7 @@ const ProjectPage = ({
             ))}
         </div>
         <h2 className="text-3xl font-bold">Abgeschlossene Projekte</h2>
-        <div className="flex w-full justify-center gap-4">
+        <div className="flex w-full flex-wrap justify-center gap-4">
           {projects
             .filter((p) => new Date(p.releaseDate).getTime() < Date.now())
             .map((project) => (

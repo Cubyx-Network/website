@@ -10,7 +10,7 @@ const ProjectCard = ({
   const imageUrl = project.image_url || "/img/netzwerk.png";
 
   return (
-    <div className="group flex h-96 w-48 flex-col overflow-hidden rounded-lg bg-background-secondary shadow-xl transition-all duration-500 ease-in-out hover:w-96 hover:cursor-pointer dark:bg-background-secondary-dark">
+    <div className="group flex h-96 w-48 flex-col overflow-x-auto rounded-lg bg-background-secondary shadow-xl transition-all duration-500 ease-in-out hover:w-96 hover:cursor-pointer dark:bg-background-secondary-dark sm:overflow-hidden">
       <div className="flex aspect-square h-1/2 w-96 items-center justify-center">
         <div className="h-full w-1/2 p-4">
           <Image
