@@ -1,5 +1,6 @@
 import { JsonObject } from "type-fest";
 
-export interface ProjectPageInterface<T> {
-  parse(json: JsonObject): T;
+export interface ProjectPageInterface {
+  type: string;
+  parse(json: JsonObject): any;
 }

@@ -1,24 +1,19 @@
 import { JsonObject } from "type-fest";
-import ProjectPageModule from "../ProjectPageModule";
 import { ProjectPageInterface } from "../interfaces/ProjectPageInterface";
 
 export type m_001 = {
   embedUrl: string;
 };
 
-class M_001_CLASS
-  extends ProjectPageModule
-  implements ProjectPageInterface<m_001>
-{
-  constructor() {
-    super("m_001");
+class M_001_CLASS implements ProjectPageInterface {
+  public embedUrl: string = "";
+
+  parse(json: JsonObject): this {
+    this.embedUrl = json.embedUrl as string;
+    return this;
   }
 
-  parse(json: JsonObject): m_001 {
-    return {
-      embedUrl: json.embedUrl as string,
-    };
-  }
+  type: string = "m_001";
 }
 
 export default M_001_CLASS;

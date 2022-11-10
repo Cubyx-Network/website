@@ -1,10 +1,5 @@
 import { JsonObject } from "type-fest";
-import { getByType, ProjectPageModuleType } from "./ProjectPageIndex";
-
-type ProjectModule = {
-  type: string;
-  module: ProjectPageModuleType;
-};
+import { getByType, ProjectModule } from "./ProjectPageIndex";
 
 export type ProjectPage = {
   id: string;
@@ -31,7 +26,7 @@ export function parseJson(json: JsonObject): ProjectPage {
     const type = c.type as string;
     const m = getByType(type);
     if (m) {
-      components.push({ type, module: m.parse(c.options as JsonObject) });
+      components.push(m.parse(c.options as JsonObject));
     }
   }
 

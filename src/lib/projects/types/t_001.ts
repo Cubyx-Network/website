@@ -1,26 +1,22 @@
 import { ProjectPageInterface } from "../interfaces/ProjectPageInterface";
 import { JsonObject } from "type-fest";
-import ProjectPageModule from "../ProjectPageModule";
 
 export type t_001 = {
   text: string;
   imageUrl: string;
 };
 
-class T_001_CLASS
-  extends ProjectPageModule
-  implements ProjectPageInterface<t_001>
-{
-  constructor() {
-    super("t_001");
+class T_001_CLASS implements ProjectPageInterface {
+  public text: string = "";
+  public imageUrl: string = "";
+
+  parse(json: JsonObject): this {
+    this.text = json.text as string;
+    this.imageUrl = json.imageUrl as string;
+    return this;
   }
 
-  parse(json: JsonObject): t_001 {
-    return {
-      text: json.text as string,
-      imageUrl: json.imageUrl as string,
-    };
-  }
+  type: string = "t_001";
 }
 
 export default T_001_CLASS;

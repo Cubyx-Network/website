@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { parseJson, ProjectPage } from "../../lib/projects/ProjectPageUtils";
+import ProjectPageComponent from "../../components/projects/ProjectPage";
 
 const ProjectPage = () => {
   const router = useRouter();
@@ -22,17 +23,14 @@ const ProjectPage = () => {
         });
       });
     }
-  });
+  }, [projectId, router]);
+
+  console.log(projectPage);
 
   return (
     <div>
       {isLoading && <h1>Page is loading...</h1>}
-      {projectPage && (
-        <>
-          <h1>Project {projectPage.title}</h1>
-          <code>{projectPage.toString()}</code>
-        </>
-      )}
+      {projectPage && <ProjectPageComponent data={projectPage} />}
     </div>
   );
 };
