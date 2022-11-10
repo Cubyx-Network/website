@@ -1,7 +1,6 @@
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import React from "react";
-import styles from "./Projects.module.css";
 import { prisma } from "../../lib/prisma";
 import superjson from "superjson";
 import { Project, TeamMember } from "@prisma/client";
@@ -19,33 +18,26 @@ const ProjectPage = ({
         description={"Hier findest du alle Projekte von Cubyx!"}
       />
 
-      <div
-        className={
-          styles.hero + " " + "flex h-96 w-full items-center justify-center"
-        }
-      >
-        <h1 className="text-center text-6xl font-extrabold">Unsere Projekte</h1>
-      </div>
-
-      <main className="flex w-full flex-col items-center gap-8 p-8">
-        <h2 className="text-3xl font-bold">Aktuelle Projekte</h2>
-        <div className="flex w-full flex-wrap justify-center gap-4">
-          {projects
-            .filter((p) => new Date(p.releaseDate).getTime() > Date.now())
-            .map((project) => (
-              <ProjectCard project={project} key={project.id} />
-            ))}
+      <main className="flex h-screen w-full flex-col items-center gap-8 overflow-x-auto p-8 pt-48">
+        <div className="flex w-full flex-col gap-8 2xl:w-3/4">
+          <h1 className="text-center text-6xl font-extrabold">
+            Unsere Projekte
+          </h1>
+          <div className="flex w-full flex-wrap justify-center gap-4">
+            {projects
+              .sort((a, b) => {
+                return (
+                  new Date(b.releaseDate).getTime() -
+                  new Date(a.releaseDate).getTime()
+                );
+              })
+              .map((project) => (
+                <ProjectCard project={project} key={project.id} />
+              ))}
+          </div>
         </div>
-        <h2 className="text-3xl font-bold">Abgeschlossene Projekte</h2>
-        <div className="flex w-full flex-wrap justify-center gap-4">
-          {projects
-            .filter((p) => new Date(p.releaseDate).getTime() < Date.now())
-            .map((project) => (
-              <ProjectCard project={project} key={project.id} />
-            ))}
-        </div>
+        <Footer />
       </main>
-      <Footer />
     </>
   );
 };

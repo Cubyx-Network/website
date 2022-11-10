@@ -97,6 +97,7 @@ model Project {
     image_url     String
     authors       TeamMember[]
     releaseDate   DateTime
+    projectPage   Json
     createdAt     DateTime @default(now())
     updatedAt     DateTime @updatedAt
 }
