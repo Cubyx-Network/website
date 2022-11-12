@@ -22,12 +22,11 @@ const Footer = () => {
             <div className="flex gap-2">
               <SocialIcon icon={"discord-fill"} link={"/r/discord"} />
               <SocialIcon icon={"twitch-fill"} link={"/r/twitch"} />
-              <SocialIcon icon={"twitter-fill"} link={"/r/twitter"} />
               <SocialIcon icon={"youtube-fill"} link={"/r/youtube"} />
               <SocialIcon icon={"reddit-fill"} link={"/r/reddit"} />
               <SocialIcon icon={"mastodon-fill"} link={"/r/mastodon"} />
               <SocialIcon icon={"earth-fill"} link={"/r/planetmc"} />
-              <SocialIcon icon={"mic-fill"} link={"/r/anchor"} />
+              <SocialIcon icon={"spotify-fill"} link={"/r/anchor"} />
             </div>
           </div>
         </section>
