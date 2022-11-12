@@ -7,6 +7,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import redaxios from "redaxios";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const RegistrationByIdPage = ({
   registration,
@@ -101,9 +102,9 @@ const RegistrationByIdPage = ({
               Bitte fülle alle Felder aus, damit das System deinen Account
               erstellen kann. <br />
               Hinweise zum Datenschutz bei Cubyx findest du{" "}
-              <a href="/datenschutz" className="text-text-third">
+              <Link href="/datenschutz" className="text-text-third">
                 hier
-              </a>
+              </Link>
               .
             </span>
           </div>

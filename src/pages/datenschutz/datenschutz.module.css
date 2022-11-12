@@ -1,0 +1,11 @@
+.main h1 {
+    @apply m-0 text-4xl font-extrabold;
+}
+
+.main h2 {
+    @apply mt-4 text-3xl font-semibold;
+}
+
+.main h3 {
+    @apply mt-2 text-2xl font-bold;
+}
