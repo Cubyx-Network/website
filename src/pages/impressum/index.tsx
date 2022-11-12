@@ -20,13 +20,16 @@ const Impressum = () => {
               <span>Siedlung Roßweiner Straße 20</span>
               <span>Untermieter vom Baumhaus</span>
               <span>04720 Döbeln</span>
-              <span>l.master.rudolf[at]gmail.com </span>
+              <a href="mailto:l.master.rudolf@gmail.com">
+                l.master.rudolf@gmail.com
+              </a>
             </div>
 
             <div className="flex flex-col">
               <span>Maurice Reyher</span>
               <span>Ernstweg 4</span>
               <span>98716 Elgersburg</span>
+              <a href="mailto:z0eyby@cubyx.eu">z0eyby@cubyx.eu</a>
             </div>
           </div>
         </section>
@@ -40,8 +43,7 @@ const Impressum = () => {
           <h3 className="text-xl font-bold">Kontakt</h3>
           <div className="flex flex-col">
             <span>
-              E-Mail:{" "}
-              <a href="mailto:cubyxteam@gmail.com">cubyxteam@gmail.com</a>
+              E-Mail: <a href="mailto:cubyxteam@gmail.com">info@cubyx.eu</a>
             </span>
           </div>
         </section>
