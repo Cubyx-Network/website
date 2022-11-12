@@ -4,6 +4,14 @@ import Footer from "../footer/Footer";
 import Icon from "../icon/Icon";
 import t_001 from "../../lib/projects/types/t_001";
 import T001 from "./modules/T001";
+import T002 from "./modules/T002";
+import { t_002 } from "../../lib/projects/types/t_002";
+import T003 from "./modules/T003";
+import { t_003 } from "../../lib/projects/types/t_003";
+import T004 from "./modules/T004";
+import { t_004 } from "../../lib/projects/types/t_004";
+import { t_005 } from "../../lib/projects/types/t_005";
+import T005 from "./modules/T005";
 
 const ProjectPageComponent = ({ data }: { data: ProjectPage }) => {
   return (
@@ -24,10 +32,18 @@ const ProjectPageComponent = ({ data }: { data: ProjectPage }) => {
               {data.releaseDate.toLocaleDateString()}
             </span>
           </div>
-          <div className="flex w-3/4 flex-col items-center gap-4">
+          <div className="flex w-full flex-col items-center gap-4 lg:w-3/4">
             {data.components.map((module, index) => {
               if (module.type == "t_001") {
                 return <T001 data={module as t_001} key={index} />;
+              } else if (module.type == "t_002") {
+                return <T002 data={module as t_002} key={index} />;
+              } else if (module.type == "t_003") {
+                return <T003 data={module as t_003} key={index} />;
+              } else if (module.type == "t_004") {
+                return <T004 data={module as t_004} key={index} />;
+              } else if (module.type == "t_005") {
+                return <T005 data={module as t_005} key={index} />;
               }
             })}
           </div>

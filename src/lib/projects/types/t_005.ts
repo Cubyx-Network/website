@@ -1,14 +1,14 @@
 import { JsonObject } from "type-fest";
 import { ProjectPageInterface } from "../interfaces/ProjectPageInterface";
 
-export type t_004 = {
+export type t_005 = {
   title: string;
   text: string;
   imageUrl_1: string;
   imageUrl_2: string;
 };
 
-class T_004_CLASS implements ProjectPageInterface {
+class T_005_CLASS implements ProjectPageInterface {
   public title: string = "";
   public text: string = "";
   public imageUrl_1: string = "";
@@ -22,7 +22,7 @@ class T_004_CLASS implements ProjectPageInterface {
     return this;
   }
 
-  type: string = "t_004";
+  type: string = "t_005";
 }
 
-export default T_004_CLASS;
+export default T_005_CLASS;
