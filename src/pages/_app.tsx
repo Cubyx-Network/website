@@ -1,15 +1,10 @@
 import "../styles/globals.css";
+import "@fontsource/poppins/latin.css";
 import type { AppProps } from "next/app";
 import { QueryClient, QueryClientProvider } from "react-query";
 import React, { createContext, useEffect, useState } from "react";
-import { Poppins } from "@next/font/google";
 
 const queryClient = new QueryClient();
-
-const poppins = Poppins({
-  weight: ["400", "500", "600", "700", "800"],
-  subsets: ["latin-ext"],
-});
 
 const darkMode = createContext(false);
 
@@ -31,13 +26,11 @@ function CubyxWebsite({ Component, pageProps }: AppProps) {
   }, []);
 
   return (
-    <div id="wrapper" className={poppins.className}>
-      <darkMode.Provider value={isDark}>
-        <QueryClientProvider client={queryClient}>
-          <Component {...pageProps} />
-        </QueryClientProvider>
-      </darkMode.Provider>
-    </div>
+    <darkMode.Provider value={isDark}>
+      <QueryClientProvider client={queryClient}>
+        <Component {...pageProps} />
+      </QueryClientProvider>
+    </darkMode.Provider>
   );
 }
 
