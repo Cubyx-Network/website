@@ -9,7 +9,7 @@ const Datenschutz = () => {
 
       <main
         className={
-          "flex w-3/4 flex-col justify-center overflow-y-auto p-16 py-32 " +
+          "flex w-full flex-col justify-center overflow-y-auto break-words p-16 py-32 lg:w-3/4 " +
           styles.main
         }
       >
