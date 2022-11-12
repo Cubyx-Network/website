@@ -111,11 +111,23 @@ const Datenschutz = () => {
         </p>{" "}
         <p>Wir setzen folgende(n) Hoster ein:</p>
         <p>
+          <br />
           Vercel Inc.
           <br />
           340 S Lemon Ave #4133
           <br />
           Walnut, CA 91789
+        </p>
+        <p>
+          <br />
+          ExpanseHost
+          <br />
+          z.Hd. Félix Vogeley
+          <br />
+          Im Vogelgesang 13
+          <br />
+          64665 Alsbach-Hähnlein
+          <br />
         </p>
         <h2>3. Allgemeine Hinweise und Pflicht&shy;informationen</h2>
         <h3>Datenschutz</h3>{" "}
@@ -145,6 +157,7 @@ const Datenschutz = () => {
           Website ist:
         </p>{" "}
         <p>
+          <br />
           Rudolf M&uuml;ller
           <br />
           Siedlung Ro&szlig;weiner Stra&szlig;e 20
@@ -153,16 +166,22 @@ const Datenschutz = () => {
           <br />
           04720 D&ouml;beln
           <br />
-          l.master.rudolf[at]gmail.com
+          l.master.rudolf@gmail.com
           <br />
           <br />
           Maurice Reyher
           <br />
           Ernstweg 4<br />
           98716 Elgersburg
+          <br />
+          z0eyby@cubyx.eu
         </p>
-        <p>E-Mail: cubyxteam[at]gmail.com</p>
         <p>
+          <br />
+          Generelle Anfragen: info@cubyx.eu
+        </p>
+        <p>
+          <br />
           Verantwortliche Stelle ist die nat&uuml;rliche oder juristische
           Person, die allein oder gemeinsam mit anderen &uuml;ber die Zwecke und
           Mittel der Verarbeitung von personenbezogenen Daten (z.&nbsp;B. Namen,
@@ -494,68 +513,7 @@ const Datenschutz = () => {
           &ndash; insbesondere gesetzliche Aufbewahrungsfristen &ndash; bleiben
           unber&uuml;hrt.
         </p>
-        <h2>5. Soziale Medien</h2>
-        <h3>Twitter</h3>{" "}
-        <p>
-          Auf dieser Website sind Funktionen des Dienstes Twitter eingebunden.
-          Diese Funktionen werden angeboten durch die Twitter International
-          Company, One Cumberland Place, Fenian Street, Dublin 2, D02 AX07,
-          Irland.
-        </p>{" "}
-        <p>
-          Wenn das Social-Media-Element aktiv ist, wird eine direkte Verbindung
-          zwischen Ihrem Endger&auml;t und dem Twitter-Server hergestellt.
-          Twitter erh&auml;lt dadurch Informationen &uuml;ber den Besuch dieser
-          Website durch Sie. Durch das Benutzen von Twitter und der Funktion
-          &bdquo;Re-Tweet&ldquo; werden die von Ihnen besuchten Websites mit
-          Ihrem Twitter-Account verkn&uuml;pft und anderen Nutzern bekannt
-          gegeben. Wir weisen darauf hin, dass wir als Anbieter der Seiten keine
-          Kenntnis vom Inhalt der &uuml;bermittelten Daten sowie deren Nutzung
-          durch Twitter erhalten. Weitere Informationen hierzu finden Sie in der
-          Datenschutzerkl&auml;rung von Twitter unter:{" "}
-          <a
-            href="https://twitter.com/de/privacy"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            https://twitter.com/de/privacy
-          </a>
-          .
-        </p>{" "}
-        <p>
-          Soweit eine Einwilligung (Consent) eingeholt wurde, erfolgt der
-          Einsatz des o.&nbsp;g. Dienstes auf Grundlage von Art. 6 Abs. 1 lit. a
-          DSGVO und &sect; 25 TTDSG. Die Einwilligung ist jederzeit widerrufbar.
-          Soweit keine Einwilligung eingeholt wurde, erfolgt die Verwendung des
-          Dienstes auf Grundlage unseres berechtigten Interesses an einer
-          m&ouml;glichst umfassenden Sichtbarkeit in den Sozialen Medien.
-        </p>{" "}
-        <p>
-          Die Daten&uuml;bertragung in die USA wird auf die
-          Standardvertragsklauseln der EU-Kommission gest&uuml;tzt. Details
-          finden Sie hier:{" "}
-          <a
-            href="https://gdpr.twitter.com/en/controller-to-controller-transfers.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            https://gdpr.twitter.com/en/controller-to-controller-transfers.html
-          </a>
-          .
-        </p>{" "}
-        <p>
-          Ihre Datenschutzeinstellungen bei Twitter k&ouml;nnen Sie in den
-          Konto-Einstellungen unter{" "}
-          <a
-            href="https://twitter.com/account/settings"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            https://twitter.com/account/settings
-          </a>{" "}
-          &auml;ndern.
-        </p>
-        <h2>6. Plugins und Tools</h2>
+        <h2>5. Plugins und Tools</h2>
         <h3>YouTube mit erweitertem Datenschutz</h3>{" "}
         <p>
           Diese Website bindet Videos der Website YouTube ein. Betreiber der
@@ -616,70 +574,6 @@ const Datenschutz = () => {
             https://policies.google.com/privacy?hl=de
           </a>
           .
-        </p>
-        <h3>Spotify</h3>{" "}
-        <p>
-          Auf dieser Website sind Funktionen des Musik-Dienstes Spotify
-          eingebunden. Anbieter ist die Spotify AB, Birger Jarlsgatan 61, 113 56
-          Stockholm in Schweden. Die Spotify Plugins erkennen Sie an dem
-          gr&uuml;nen Logo auf dieser Website. Eine &Uuml;bersicht &uuml;ber die
-          Spotify-Plugins finden Sie unter:{" "}
-          <a
-            href="https://developer.spotify.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            https://developer.spotify.com
-          </a>
-          .
-        </p>{" "}
-        <p>
-          Dadurch kann beim Besuch dieser Website &uuml;ber das Plugin eine
-          direkte Verbindung zwischen Ihrem Browser und dem Spotify-Server
-          hergestellt werden. Spotify erh&auml;lt dadurch die Information, dass
-          Sie mit Ihrer IP-Adresse diese Website besucht haben. Wenn Sie den
-          Spotify Button anklicken, w&auml;hrend Sie in Ihrem Spotify-Account
-          eingeloggt sind, k&ouml;nnen Sie die Inhalte dieser Website auf Ihrem
-          Spotify Profil verlinken. Dadurch kann Spotify den Besuch dieser
-          Website Ihrem Benutzerkonto zuordnen.
-        </p>{" "}
-        <p>
-          Wir weisen darauf hin, dass bei der Nutzung von Spotify Cookies von
-          Google Analytics eingesetzt werden, sodass Ihre Nutzungsdaten bei der
-          Nutzung von Spotify auch an Google weitergegeben werden k&ouml;nnen.
-          Google Analytics ist ein Tool des Google-Konzerns zur Analyse des
-          Nutzerverhaltens mit Sitz in den USA. F&uuml;r diese Einbindung ist
-          allein Spotify verantwortlich. Wir als Websitebetreiber haben auf
-          diese Verarbeitung keinen Einfluss.
-        </p>{" "}
-        <p>
-          Die Speicherung und Analyse der Daten erfolgt auf Grundlage von Art. 6
-          Abs. 1 lit. f DSGVO. Der Websitebetreiber hat ein berechtigtes
-          Interesse an der ansprechenden akustischen Ausgestaltung seiner
-          Website. Sofern eine entsprechende Einwilligung abgefragt wurde,
-          erfolgt die Verarbeitung ausschlie&szlig;lich auf Grundlage von Art. 6
-          Abs. 1 lit. a DSGVO und &sect; 25 Abs. 1 TTDSG, soweit die
-          Einwilligung die Speicherung von Cookies oder den Zugriff auf
-          Informationen im Endger&auml;t des Nutzers (z.&nbsp;B.
-          Device-Fingerprinting) im Sinne des TTDSG umfasst. Die Einwilligung
-          ist jederzeit widerrufbar.
-        </p>{" "}
-        <p>
-          Weitere Informationen hierzu finden Sie in der
-          Datenschutzerkl&auml;rung von Spotify:{" "}
-          <a
-            href="https://www.spotify.com/de/legal/privacy-policy/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            https://www.spotify.com/de/legal/privacy-policy/
-          </a>
-          .
-        </p>{" "}
-        <p>
-          Wenn Sie nicht w&uuml;nschen, dass Spotify den Besuch dieser Website
-          Ihrem Spotify-Nutzerkonto zuordnen kann, loggen Sie sich bitte aus
-          Ihrem Spotify-Benutzerkonto aus.
         </p>
         <p>
           <br />
