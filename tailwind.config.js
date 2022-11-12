@@ -22,14 +22,14 @@ module.exports = {
             DEFAULT: "#23AA08",
           },
           third: {
-            DEFAULT: "#adadad",
+            DEFAULT: "#9d9d9d",
           },
         },
         background: {
           primary: {
-            DEFAULT: "#FFFFFF",
-            light: "#FFFFFF",
-            dark: "#070707",
+            DEFAULT: "#d0d0d0",
+            light: "#d0d0d0",
+            dark: "#0a0a0a",
           },
           secondary: {
             DEFAULT: "#D8D8D8",
