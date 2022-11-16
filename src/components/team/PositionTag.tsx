@@ -4,17 +4,19 @@ import Icon from "../icon/Icon";
 function positionTypeToString(position: PositionType) {
   switch (position) {
     case "developer":
-      return "Developer";
+      return "Developing";
     case "builder":
-      return "Builder";
-    case "creator":
-      return "Model- & Texturepackcreator";
+      return "Building";
+    case "resources":
+      return "Ressourcen-Creating";
+    case "socialmedia":
+      return "Social Media";
+    case "entertainment":
+      return "Entertainment";
+    case "administator":
+      return "Systemadministration";
     case "commander":
-      return "Commander";
-    case "content":
-      return "Content Creator";
-    case "supporter":
-      return "Supporter";
+      return "Commanding";
   }
 }
 
