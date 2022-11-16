@@ -1,13 +1,12 @@
-import Header from "../components/header/Header";
-import Footer from "../components/footer/Footer";
-import TeamMemberCard from "../components/team/TeamMemberCard";
-import { Position, TeamMember } from "@prisma/client";
-import TeamMemberPage from "../components/team/TeamMemberPage";
-import React from "react";
-import { prisma } from "../lib/prisma";
-import LoadingSpinner from "../components/loading/LoadingSpinner";
 import superjson from "superjson";
 import * as Buffer from "buffer";
+import { Position, TeamMember } from "@prisma/client";
+import LoadingSpinner from "../../components/loading/LoadingSpinner";
+import Header from "../../components/header/Header";
+import React from "react";
+import TeamMemberCard from "../../components/team/TeamMemberCard";
+import TeamMemberPage from "../../components/team/TeamMemberPage";
+import Footer from "../../components/footer/Footer";
 
 const TeamPage = ({
   teamMembers,
@@ -17,15 +16,16 @@ const TeamPage = ({
   const templateMember: TeamMember & { position: Position[] } = {
     id: "-1",
     username: "Cubyx Teamübersicht",
-    description: "Lorem Ipsum dolor sit amet.",
+    description:
+      "Dies ist einer Übersicht über alle Teammitglieder. Um mehr über ein Teammitglied zu erfahren, wähle es in der linken Seitenleiste aus.",
     discord_tag: "Cubyx#0000",
     email: "cubyx.eu",
     createdAt: new Date(),
     isAdmin: false,
     profile_picture: Buffer.Buffer.from(""),
     mc_username: null,
-    password: "123456",
-    position: [{ id: "1", positionType: "developer" }],
+    password: "",
+    position: [],
   };
 
   const [selectedMember, setSelectedMember] = React.useState<

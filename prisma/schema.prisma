@@ -20,9 +20,10 @@ enum PositionType {
     builder
     developer
     commander
-    creator
-    content
-    supporter
+    resources
+    socialmedia
+    entertainment
+    administator
 }
 
 model TeamMember {
