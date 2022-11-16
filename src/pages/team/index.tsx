@@ -7,6 +7,7 @@ import React from "react";
 import TeamMemberCard from "../../components/team/TeamMemberCard";
 import TeamMemberPage from "../../components/team/TeamMemberPage";
 import Footer from "../../components/footer/Footer";
+import { prisma } from "../../lib/prisma";
 
 const TeamPage = ({
   teamMembers,
