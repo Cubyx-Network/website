@@ -21,6 +21,24 @@ a {
     box-sizing: border-box;
 }
 
+img {
+    max-width: 100%;
+}
+
+@layer utilities {
+    .gradient {
+        background: linear-gradient(90deg, #23AB09 0%, #22F200 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .gradient-reverse {
+        background: linear-gradient(0deg, #23AB09 0%, #22F200 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
 /*Custom*/
 .input {
     @apply w-full rounded-md border border-gray-300 px-4 py-2;

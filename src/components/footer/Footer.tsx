@@ -35,7 +35,7 @@ const Footer = () => {
       <div>
         <p className="mt-4 p-4 text-center font-semibold">
           (c) {new Date().getFullYear()}{" "}
-          <span className="text-text-secondary">Cubyx Network</span>
+          <span className="gradient">Cubyx Network</span>
           ・Quadratisch. Praktisch. Gut.
         </p>
         <div className="mb-4 flex w-full items-center justify-center gap-4 text-text-third">

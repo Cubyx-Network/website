@@ -22,7 +22,7 @@ const Header = ({
         description={description}
         noindex={noIndex}
       />
-      <header className="fixed top-0 left-0 z-40 flex w-full items-center justify-between p-4">
+      <header className="fixed top-0 left-0 z-40 flex w-full items-center justify-between bg-background-primary p-4 dark:bg-background-primary-dark">
         <Link href={"/"}>
           <div className="flex items-center gap-4 text-4xl hover:cursor-pointer">
             <Image
@@ -31,13 +31,10 @@ const Header = ({
               width="70"
               height="70"
             />
-            <h1 className="m-0 hidden font-bold md:block">Cubyx Network</h1>
+            <h1 className="m-0 hidden font-bold sm:block">Cubyx Network</h1>
           </div>
         </Link>
 
-        {
-          //ToDo: Add Burger Menu for Mobile
-        }
         <div className="hidden items-center gap-4 lg:flex">
           <HeaderLink link={"/"}>Home</HeaderLink>
           <HeaderLink link={"/projekte"}>Projekte</HeaderLink>

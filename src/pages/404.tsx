@@ -23,7 +23,7 @@ const Page404 = () => {
           <div className="hidden h-48 w-1 rounded-2xl bg-text-primary dark:bg-text-primary-dark md:block"></div>
           <div>
             <h1 className="text-center text-6xl font-bold md:text-left">
-              Fehler 404
+              Fehler <span className="gradient">404</span>
             </h1>
             <p className="mt-4 text-center text-lg md:text-left">
               Diese Seite konnte nicht gefunden werden.
