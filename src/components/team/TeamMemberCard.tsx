@@ -1,19 +1,21 @@
-import { TeamMember } from "@prisma/client";
-import Image from "next/image";
+import { Position, TeamMember } from "@prisma/client";
+import { useEffect } from "react";
 
-const TeamMemberCard = ({ member }: { member: TeamMember }) => {
-  return (
-    <div className="flex items-center gap-2 rounded-2xl border border-text-primary p-2 transition-all hover:cursor-pointer dark:border-text-primary-dark md:w-60 md:hover:translate-x-4">
-      <Image
-        src={`/api/profilePicture/${member.id}`}
-        alt={`${member.username} profile picture`}
-        className="h-10 w-10 rounded-full"
-        width={100}
-        height={100}
-      />
-      <h3 className="hidden text-xl md:block">{member.username}</h3>
-    </div>
-  );
+const TeamMemberCard = ({
+  member,
+}: {
+  member: TeamMember & { position: Position[] };
+}) => {
+  const imageUrl = `/api/profilePicture/${member.id}`;
+
+  useEffect(() => {
+    const element = document.getElementById(`${member.id}`);
+    if (element) {
+      element.style.backgroundImage = `url(${imageUrl})`;
+    }
+  });
+
+  return <div className="aspect-square h-auto w-full rounded-2xl"></div>;
 };
 
 export default TeamMemberCard;

@@ -12,11 +12,7 @@ function CubyxWebsite({ Component, pageProps }: AppProps) {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
-    if (
-      localStorage.theme === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
+    if (localStorage.theme === "dark" || !("theme" in localStorage)) {
       document.documentElement.classList.add("dark");
       setIsDark(true);
     } else {
