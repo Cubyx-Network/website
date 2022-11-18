@@ -12,6 +12,7 @@
   "dependencies": {
     "@fontsource/poppins": "^4.5.10",
     "@prisma/client": "^4.6.1",
+    "@tailwindcss/line-clamp": "^0.4.2",
     "@types/cookie": "^0.5.1",
     "@types/jsonwebtoken": "^8.5.9",
     "argon2": "^0.30.2",

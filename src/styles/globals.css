@@ -45,6 +45,10 @@ img {
 }
 
 @layer utilities {
+    .icon-xl {
+        font-size: 1em;
+    }
+
     .icon-2xl {
         font-size: 2em;
     }

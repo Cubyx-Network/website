@@ -4,6 +4,7 @@ import { Position, TeamMember } from "@prisma/client";
 import LoadingSpinner from "../../components/loading/LoadingSpinner";
 import React from "react";
 import Footer from "../../components/footer/Footer";
+import { prisma } from "../../lib/prisma";
 import Header from "../../components/header/Header";
 
 const TeamPage = ({

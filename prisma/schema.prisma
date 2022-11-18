@@ -40,6 +40,7 @@ model TeamMember {
   isAdmin         Boolean   @default(false)
   votes           Vote[]
   candidates      Candidate[]
+  projects        Project[]
 }
 
 model Position {
@@ -87,4 +88,17 @@ model Link {
     id            String   @id @default(uuid())
     name          String
     url           String
+}
+
+model Project {
+    id            String   @id @default(uuid())
+    name          String
+    description   String
+    download_link String
+    image_url     String
+    authors       TeamMember[]
+    releaseDate   DateTime
+    projectPage   Json
+    createdAt     DateTime @default(now())
+    updatedAt     DateTime @updatedAt
 }
