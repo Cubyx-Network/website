@@ -3,20 +3,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { prisma } from "../../lib/prisma";
 
 let lastCache: Date = new Date();
-let cache: { discord: number; teamMembers: number; projects: number };
-
-function requestDiscord() {
-  return fetch(
-    "https://discord.com/api/v10/guilds/665917454626717746/members?limit=1000",
-    {
-      headers: {
-        Authorization: `Bot ${process.env.DISCORD_TOKEN}`,
-      },
-    }
-  )
-    .then((res) => res.json())
-    .then((res) => res.filter((member: any) => !member.user.bot).length);
-}
+let cache: { teamMembers: number; projects: number };
 
 function requestTeamMembers() {
   return fetch(
@@ -41,11 +28,10 @@ const handler = defaultHandler<NextApiRequest, NextApiResponse>().get(
       return res.json(cache);
     }
 
-    const discord = await requestDiscord();
     const teamMembers = await requestTeamMembers();
     const projects = await prisma.project.count();
 
-    cache = { discord, teamMembers, projects };
+    cache = { teamMembers, projects };
 
     res.json(cache);
   }

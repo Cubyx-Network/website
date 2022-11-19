@@ -31,21 +31,6 @@ const TeamPage = ({
               ))}
           </ul>
         </section>
-
-        <h2 className="mt-8 text-center text-2xl font-extrabold">
-          Ehemalige Teammitglieder
-        </h2>
-        <section className="flex justify-center">
-          <ul className="mt-4 grid justify-items-center gap-4 p-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {teamMembers
-              .filter((t) => t.isInactive)
-              .map((teamMember) => (
-                <li key={teamMember.id}>
-                  <TeamMemberCard member={teamMember} />
-                </li>
-              ))}
-          </ul>
-        </section>
       </main>
 
       <Footer />
