@@ -13,7 +13,6 @@ export interface UserParams {
   profile_picture: string;
   discord_tag: string;
   position?: PositionType[];
-  mc_username?: string;
 }
 
 /**
@@ -43,7 +42,6 @@ export async function createUser(params: UserParams): Promise<TeamMember> {
           })),
         },
         profile_picture: params.profile_picture,
-        mc_username: params.mc_username,
       },
     })
     .catch((err) => {
