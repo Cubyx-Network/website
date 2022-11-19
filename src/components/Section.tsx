@@ -27,6 +27,7 @@ const Section = ({
       initial={{ x: -40, opacity: 0 }}
       whileInView={{ x: 0, opacity: 1 }}
       viewport={{ once: true }}
+      transition={{ delay: 0.2 }}
       className={`grid-cols-${colCount} place-items-center gap-4 md:grid`}
     >
       {rightImage && (
