@@ -10,15 +10,18 @@
     "database": "prisma db push"
   },
   "dependencies": {
+    "@badrap/bar-of-progress": "^0.2.2",
     "@fontsource/poppins": "^4.5.10",
     "@prisma/client": "^4.6.1",
     "@tailwindcss/line-clamp": "^0.4.2",
     "@types/cookie": "^0.5.1",
     "@types/jsonwebtoken": "^8.5.9",
+    "@types/minio": "^7.0.14",
     "argon2": "^0.30.2",
     "cookie": "^0.5.0",
     "framer-motion": "^7.6.7",
     "jsonwebtoken": "^8.5.1",
+    "minio": "^7.0.32",
     "next": "13.0.3",
     "next-connect": "^0.13.0",
     "next-seo": "^5.14.1",

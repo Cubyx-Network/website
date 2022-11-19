@@ -4,6 +4,7 @@ import React from "react";
 import Footer from "../../components/footer/Footer";
 import { prisma } from "../../lib/prisma";
 import Header from "../../components/header/Header";
+import TeamMemberCard from "../../components/team/TeamMemberCard";
 
 const TeamPage = ({
   teamMembers,
@@ -17,8 +18,34 @@ const TeamPage = ({
         description={"Ein Überblick über das Cubyx Team"}
       />
 
-      <main className="flex min-h-screen min-w-full items-center justify-center">
-        <h1>Work in Progress...</h1>
+      <main className="py-32">
+        <h1 className="text-center text-6xl font-extrabold">Das Cubyx Team</h1>
+        <section className="flex justify-center">
+          <ul className="mt-8 grid justify-items-center gap-4 p-4 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
+            {teamMembers
+              .filter((t) => !t.isInactive)
+              .map((teamMember) => (
+                <li key={teamMember.id}>
+                  <TeamMemberCard member={teamMember} />
+                </li>
+              ))}
+          </ul>
+        </section>
+
+        <h2 className="mt-8 text-center text-2xl font-extrabold">
+          Ehemalige Teammitglieder
+        </h2>
+        <section className="flex justify-center">
+          <ul className="mt-4 grid justify-items-center gap-4 p-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {teamMembers
+              .filter((t) => t.isInactive)
+              .map((teamMember) => (
+                <li key={teamMember.id}>
+                  <TeamMemberCard member={teamMember} />
+                </li>
+              ))}
+          </ul>
+        </section>
       </main>
 
       <Footer />

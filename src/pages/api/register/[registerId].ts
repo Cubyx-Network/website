@@ -3,6 +3,8 @@ import { PositionType } from "@prisma/client";
 import defaultHandler from "../_defaultHandler";
 import { createUser } from "../../../lib/users";
 import { prisma } from "../../../lib/prisma";
+import { uploadFile } from "../../../lib/minio";
+import { randomUUID } from "crypto";
 
 const handler = defaultHandler<NextApiRequest, NextApiResponse>().post(
   async (req, res) => {
@@ -43,6 +45,13 @@ const handler = defaultHandler<NextApiRequest, NextApiResponse>().post(
       return;
     }
 
+    const userid = randomUUID();
+
+    const imageLink = uploadFile(
+      Buffer.from(profile_picture),
+      `profile_pictures/${userid}.png`
+    );
+
     await prisma.registration.delete({
       where: {
         id: registerId,
@@ -50,11 +59,12 @@ const handler = defaultHandler<NextApiRequest, NextApiResponse>().post(
     });
 
     await createUser({
+      id: userid,
       email: registration.email,
       name: registration.username,
       password,
       discord_tag,
-      profile_picture: Buffer.from(profile_picture),
+      profile_picture: imageLink,
       description,
       position,
       mc_username,

@@ -27,20 +27,25 @@ enum PositionType {
 }
 
 model TeamMember {
-  id              String    @id @default(uuid())
-  username        String    @unique
-  email           String    @unique
-  password        String
-  profile_picture Bytes
-  description     String?   @db.Text
-  discord_tag     String
-  mc_username     String?
-  position        Position[]
-  createdAt       DateTime  @default(now())
-  isAdmin         Boolean   @default(false)
-  votes           Vote[]
-  candidates      Candidate[]
-  projects        Project[]
+  id                String    @id @default(uuid())
+  username          String    @unique
+  email             String    @unique
+  password          String
+  profile_picture   String?
+  description       String?   @db.Text
+  discord_tag       String
+  youtube_username  String?
+  twitch_username   String?
+  github_username   String?
+  mastodon_username String?
+  reddit_username   String?
+  position          Position[]
+  createdAt         DateTime  @default(now())
+  isAdmin           Boolean   @default(false)
+  isInactive        Boolean   @default(false)
+  votes             Vote[]
+  candidates        Candidate[]
+  projects          Project[]
 }
 
 model Position {

@@ -6,9 +6,9 @@ const HeaderLink = ({ link, children }: { link: string; children: any }) => {
 
   return (
     <Link href={link}>
-      <h1 className={`m-0 text-xl ${isCurrentSite && "gradient"}`}>
+      <h2 className={`m-0 text-xl ${isCurrentSite && "gradient"}`}>
         {children}
-      </h1>
+      </h2>
     </Link>
   );
 };

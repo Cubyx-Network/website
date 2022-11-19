@@ -37,6 +37,14 @@ img {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+
+    .background-gradient {
+        background: linear-gradient(90deg, #23AB09 0%, #22F200 100%);
+    }
+
+    .background-gradient-reverse {
+        background: linear-gradient(0deg, #23AB09 0%, #22F200 100%);
+    }
 }
 
 /*Custom*/

@@ -5,11 +5,12 @@ import { createMailbox } from "../services/mailcow";
 import { createPterodactylUser } from "../services/pterodactyl";
 
 export interface UserParams {
+  id: string;
   email: string;
   name: string;
   password: string;
   description?: string;
-  profile_picture: Buffer;
+  profile_picture: string;
   discord_tag: string;
   position?: PositionType[];
   mc_username?: string;
@@ -30,6 +31,7 @@ export async function createUser(params: UserParams): Promise<TeamMember> {
   const user = await prisma.teamMember
     .create({
       data: {
+        id: params.id,
         email: params.email,
         username: params.name,
         password,
