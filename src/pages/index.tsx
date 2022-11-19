@@ -8,6 +8,7 @@ import logo from "../../public/img/netzwerk.png";
 import banner from "../../public/img/home/banner.png";
 import Section from "../components/Section";
 import { motion } from "framer-motion";
+import Stats from "../components/stats/Stats";
 
 const Home: NextPage = () => {
   return (
@@ -69,6 +70,8 @@ const Home: NextPage = () => {
           spielen kannst. Wir bieten dir eine große Auswahl an Spielmodi, die du
           mit deinen Freunden spielen kannst.
         </Section>
+
+        <Stats />
 
         <Section
           headline={"Was zeichnet uns aus?"}
