@@ -50,7 +50,6 @@ const RegistrationByIdPage = ({
       password: (form[0] as HTMLInputElement).value,
       password_wdh: (form[1] as HTMLInputElement).value,
       discord_tag: (form[2] as HTMLInputElement).value,
-      mc_username: (form[3] as HTMLInputElement).value,
       profile_picture: profilePicture,
     };
 
@@ -133,11 +132,6 @@ const RegistrationByIdPage = ({
                 id={"discord"}
                 type="text"
                 required
-              />
-              <InputElement
-                value={"Minecraft Username (optional)"}
-                id={"minecraft"}
-                type="text"
               />
             </section>
             <section className="flex flex-col items-center">

@@ -10,21 +10,14 @@ const handler = defaultHandler<NextApiRequest, NextApiResponse>().post(
   async (req, res) => {
     const registerId = req.query.registerId as string;
 
-    const {
-      password,
-      discord_tag,
-      profile_picture,
-      description,
-      position,
-      mc_username,
-    } = req.body as {
-      password: string;
-      discord_tag: string;
-      profile_picture: Buffer;
-      description?: string;
-      position?: PositionType[];
-      mc_username?: string;
-    };
+    const { password, discord_tag, profile_picture, description, position } =
+      req.body as {
+        password: string;
+        discord_tag: string;
+        profile_picture: Buffer;
+        description?: string;
+        position?: PositionType[];
+      };
 
     if (!password || !discord_tag || !profile_picture) {
       res.status(400).send("Missing fields");
@@ -67,7 +60,6 @@ const handler = defaultHandler<NextApiRequest, NextApiResponse>().post(
       profile_picture: imageLink,
       description,
       position,
-      mc_username,
     });
 
     res.status(200).json("OK");
