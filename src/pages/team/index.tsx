@@ -18,7 +18,7 @@ const TeamPage = ({
         description={"Ein Überblick über das Cubyx Team"}
       />
 
-      <main className="py-32">
+      <main className="py-48">
         <h1 className="text-center text-6xl font-extrabold">Das Cubyx Team</h1>
         <section className="flex justify-center">
           <ul className="mt-8 grid justify-items-center gap-4 p-4 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
