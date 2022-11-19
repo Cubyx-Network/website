@@ -44,6 +44,12 @@ const Footer = () => {
           <span>•</span>
 
           <Link href={"/datenschutz"}>Datenschutz</Link>
+
+          <span>•</span>
+
+          <Link href={"https://status.cubyx.eu"} target="_blank">
+            Netzwerk-Status
+          </Link>
         </div>
       </div>
     </footer>
