@@ -28,7 +28,7 @@ const RegistrationByIdPage = ({
     const form = e.target as HTMLFormElement;
 
     let profilePicture: Buffer | null = null;
-    const profilePictureFile = form[4] as HTMLInputElement;
+    const profilePictureFile = form[3] as HTMLInputElement;
 
     if (profilePictureFile.files && profilePictureFile.files[0]) {
       const fileReader = new FileReader();

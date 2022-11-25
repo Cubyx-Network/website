@@ -37,4 +37,13 @@ export async function getPterodactylUser(
   return await pterodactyl.getUser(user.id);
 }
 
+export async function deletePterodactylUser(
+  username: string
+): Promise<boolean> {
+  const user = await getPterodactylUser(username);
+  if (!user) return false;
+  await user.delete();
+  return true;
+}
+
 export default pterodactyl;

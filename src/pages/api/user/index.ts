@@ -1,5 +1,5 @@
-import { userFromRequest } from "../../services/jwt";
-import defaultHandler from "./_defaultHandler";
+import { userFromRequest } from "../../../services/jwt";
+import defaultHandler from "../_defaultHandler";
 import { NextApiRequest, NextApiResponse } from "next";
 
 const handler = defaultHandler<NextApiRequest, NextApiResponse>().get(

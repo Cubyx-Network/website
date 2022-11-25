@@ -42,3 +42,17 @@ export async function getMailbox(email: string): Promise<any> {
 
   return data;
 }
+
+export async function deleteMailbox(email: string): Promise<boolean> {
+  const { status } = await redaxios.post(
+    `${process.env.MAILCOW_HOST}/api/v1/edit/mailbox/`,
+    { items: [email], attr: { active: false } },
+    {
+      headers: {
+        "X-API-Key": process.env.MAILCOW_TOKEN as string,
+      },
+    }
+  );
+
+  return status === 200;
+}
