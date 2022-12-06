@@ -18,13 +18,17 @@ const TeamMemberCard = ({
 }: {
   member: TeamMember & { position: Position[] };
 }) => {
+  const isAdmin = member.isAdmin;
   return (
     <motion.div
       initial={{ x: -10, opacity: 0 }}
       whileInView={{ x: 0, opacity: 1 }}
       viewport={{ once: true }}
       whileTap={{ scale: 1.05 }}
-      className="min-h-full max-w-xs rounded-2xl bg-background-secondary p-4 shadow-xl dark:bg-background-secondary-dark"
+      className={
+        "min-h-full max-w-xs rounded-2xl bg-background-secondary p-4 shadow-xl dark:bg-background-secondary-dark" +
+        (isAdmin ? " border-2 border-text-secondary" : "")
+      }
     >
       <Image
         src={member.profile_picture || "/img/netzwerk.png"}
