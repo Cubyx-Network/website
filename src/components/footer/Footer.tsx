@@ -1,8 +1,17 @@
 import Image from "next/image";
 import SocialIcon from "./SocialIcon";
 import Link from "next/link";
+import { useState } from "react";
 
 const Footer = () => {
+  const [version, setVersion] = useState("0.0.0");
+
+  fetch("/api/version").then((res) => {
+    res.json().then((data) => {
+      setVersion(data.version);
+    });
+  });
+
   return (
     <footer className="flex w-full flex-col items-center gap-8">
       <div className="flex w-5/6 items-center justify-between">
@@ -38,7 +47,7 @@ const Footer = () => {
           <span className="gradient">Cubyx Network</span>
           ・Quadratisch. Praktisch. Gut.
         </p>
-        <div className="mb-4 flex w-full items-center justify-center gap-4 text-text-third">
+        <div className="mb-4 flex w-full flex-wrap items-center justify-center gap-4 p-2 text-text-third">
           <Link href={"/impressum"}>Impressum</Link>
 
           <span>•</span>
@@ -50,6 +59,10 @@ const Footer = () => {
           <Link href={"https://status.cubyx.eu"} target="_blank">
             Netzwerk-Status
           </Link>
+
+          <span>•</span>
+
+          <span>Version: {version}</span>
         </div>
       </div>
     </footer>
