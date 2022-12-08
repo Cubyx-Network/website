@@ -1,14 +1,15 @@
 import Image from "next/image";
 import SocialIcon from "./SocialIcon";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import redaxios from "redaxios";
 
 const Footer = () => {
   const [version, setVersion] = useState("0.0.0");
 
-  fetch("/api/version").then((res) => {
-    res.json().then((data) => {
-      setVersion(data.version);
+  useEffect(() => {
+    redaxios.get("/api/version").then((res) => {
+      res.data && setVersion(res.data.version);
     });
   });
 
