@@ -6,6 +6,7 @@ import Image from "next/image";
 
 import logo from "../../public/img/netzwerk.png";
 import banner from "../../public/img/home/banner.png";
+import snowyHouses from "../../public/img/home/snowy_houses.png";
 import Section from "../components/Section";
 import { motion } from "framer-motion";
 import Stats from "../components/stats/Stats";
@@ -60,8 +61,8 @@ const Home: NextPage = () => {
       <main className="p-8">
         <Section
           headline={"Was ist das Cubyx Network?"}
-          leftImage={banner}
-          alt={"Schiff in einer Bucht"}
+          leftImage={snowyHouses}
+          alt={"Verschneite Häuser"}
         >
           Das Cubyx Network ist ein Minecraft Netzwerk, welches sich auf
           verschiedene Spielmodi spezialisiert hat. Wir bieten dir eine große
