@@ -1,10 +1,8 @@
 import Header from "../../components/header/Header";
-import Footer from "../../components/footer/Footer";
 import React from "react";
 import { prisma } from "../../lib/prisma";
 import superjson from "superjson";
 import { Project, TeamMember } from "@prisma/client";
-import ProjectCard from "../../components/projects/ProjectCard";
 
 const ProjectPage = ({
   projects,
@@ -23,20 +21,27 @@ const ProjectPage = ({
           <h1 className="text-center text-6xl font-extrabold">
             Unsere Projekte
           </h1>
+          {/* <div className="flex w-full flex-wrap justify-center gap-4">*/}
+          {/*  {projects*/}
+          {/*    .sort((a, b) => {*/}
+          {/*      return (*/}
+          {/*        new Date(b.releaseDate).getTime() -*/}
+          {/*        new Date(a.releaseDate).getTime()*/}
+          {/*      );*/}
+          {/*    })*/}
+          {/*    .map((project) => (*/}
+          {/*      <ProjectCard project={project} key={project.id} />*/}
+          {/*    ))}*/}
+          {/*</div>*/}
+
           <div className="flex w-full flex-wrap justify-center gap-4">
-            {projects
-              .sort((a, b) => {
-                return (
-                  new Date(b.releaseDate).getTime() -
-                  new Date(a.releaseDate).getTime()
-                );
-              })
-              .map((project) => (
-                <ProjectCard project={project} key={project.id} />
-              ))}
+            <span className="text-red-500">
+              Leider haben wir dies nicht mehr geschafft :( <br />
+              Die Projekte Seiten werden mit der Version 1.1.0 nachgereicht
+            </span>
           </div>
         </div>
-        <Footer />
+        {/*<Footer />*/}
       </main>
     </>
   );
