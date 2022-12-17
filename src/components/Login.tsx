@@ -1,9 +1,9 @@
 import { useForm } from "react-hook-form";
 import { useMutation } from "react-query";
 import axios from "redaxios";
-import InternHeader from "./intern/InternHeader";
 import LoadingSpinner from "./loading/LoadingSpinner";
 import { useRouter } from "next/router";
+import Header from "./header/Header";
 
 function Login() {
   const {
@@ -24,7 +24,7 @@ function Login() {
 
   return (
     <>
-      <InternHeader title={"Login"} description={"Interner Bereich"} />
+      <Header noIndex={true} title={"Login"} description={"Interner Bereich"} />
 
       <div className="flex h-screen w-full flex-col items-center justify-center gap-32 lg:gap-32 xl:flex-row">
         <h1 className="text-center text-6xl font-bold md:text-left">

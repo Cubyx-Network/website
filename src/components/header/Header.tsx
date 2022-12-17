@@ -2,7 +2,6 @@ import Image from "next/image";
 import { NextSeo } from "next-seo";
 import Link from "next/link";
 import HeaderLink from "./HeaderLink";
-import HeaderDropdown from "./HeaderDropdown";
 import LoginUser from "../intern/LoginUser";
 import DarkLightModeSwitch from "./DarkLightModeSwitch";
 
@@ -37,15 +36,15 @@ const Header = ({
 
         <div className="hidden items-center gap-4 lg:flex">
           <HeaderLink link={"/"}>Home</HeaderLink>
-          <HeaderLink link={"/projekte"}>Projekte</HeaderLink>
+          {/*<HeaderLink link={"/projekte"}>Projekte</HeaderLink>*/}
           <HeaderLink link={"/team"}>Teamübersicht</HeaderLink>
-          <HeaderDropdown link={"Partner"}>
-            {[
-              { href: "/partner/tts-craft", name: "TTS-Craft" },
-              { href: "/partner/expansehost", name: "Expansehost" },
-              { href: "/partner/greatnewsde", name: "GreatNewsDE" },
-            ]}
-          </HeaderDropdown>
+          {/*<HeaderDropdown link={"Partner"}>*/}
+          {/*  {[*/}
+          {/*    { href: "/partner/tts-craft", name: "TTS-Craft" },*/}
+          {/*    { href: "/partner/expansehost", name: "Expansehost" },*/}
+          {/*    { href: "/partner/greatnewsde", name: "GreatNewsDE" },*/}
+          {/*  ]}*/}
+          {/*</HeaderDropdown>*/}
           <LoginUser />
           <DarkLightModeSwitch />
         </div>
