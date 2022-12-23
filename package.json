@@ -1,13 +1,14 @@
 {
   "name": "cubyx-website",
-  "version": "1.0.0+beta",
+  "version": "0.0.1+alpha",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "prisma generate && next build",
     "start": "next start",
     "lint": "next lint",
-    "database": "prisma db push"
+    "database": "prisma db push",
+    "prismaStudio": "prisma studio"
   },
   "dependencies": {
     "@badrap/bar-of-progress": "^0.2.2",
