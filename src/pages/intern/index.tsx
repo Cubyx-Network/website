@@ -1,21 +1,8 @@
-import { Candidate, Election, TeamMember, Vote } from "@prisma/client";
-import { GetServerSidePropsContext } from "next";
-import { userFromRequest } from "../../services/jwt";
-import superjson from "superjson";
-import { prisma } from "../../lib/prisma";
-import ElectionItem from "../../components/intern/ElectionItem";
 import Login from "../../components/Login";
-import InternHeader from "../../components/intern/InternHeader";
 import useUser from "../../hooks/useUser";
+import InternHeader from "../../components/intern/InternHeader";
 
-type Props = {
-  elections: (Election & {
-    votes: Vote[];
-    candidates: (Candidate & { user: TeamMember })[];
-  })[];
-};
-
-const InternPage = ({ elections }: Props) => {
+const InternPage = () => {
   const user = useUser();
   if (!user) return <Login />;
 
@@ -50,58 +37,9 @@ const InternPage = ({ elections }: Props) => {
             <div className="w-1/4 bg-text-primary dark:bg-text-primary-dark"></div>
           </div>
         </div>
-        <div className="flex w-full items-center justify-center">
-          <section className="flex flex-col items-center">
-            <h1 className="text-4xl font-extrabold">Aktuelle Wahlen</h1>
-            {!elections || elections.length === 0 ? (
-              <p className="mt-4 text-text-third">
-                Aktuell gibt es keine Wahlen
-              </p>
-            ) : (
-              <div className="mt-4">
-                {elections.map((election) => (
-                  <ElectionItem
-                    election={election}
-                    user={user}
-                    key={election.id}
-                  />
-                ))}
-              </div>
-            )}
-          </section>
-        </div>
       </div>
     </>
   );
 };
-
-export async function getServerSideProps(context: GetServerSidePropsContext) {
-  const user = await userFromRequest(context.req);
-
-  if (!user) return { props: {} };
-
-  const elections = await prisma.election.findMany({
-    where: {
-      endsAt: {
-        gt: new Date(),
-      },
-    },
-    include: {
-      votes: true,
-      candidates: {
-        include: {
-          user: true,
-        },
-      },
-    },
-  });
-
-  return {
-    props: superjson.serialize({
-      user,
-      elections,
-    }).json,
-  };
-}
 
 export default InternPage;

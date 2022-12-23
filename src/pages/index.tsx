@@ -60,16 +60,31 @@ const Home: NextPage = () => {
 
       <main className="p-8">
         <Section
-          headline={"Was ist das Cubyx Network?"}
+          headline={"Wir sind in der Alpha!"}
+          className={"my-12"}
+          alt={"alpha warnung"}
+        >
+          Derzeit arbeiten wir noch hart an der Realisierung unserer neuen
+          Website. Zukünftig wird es noch einiges mehr zu entdecken geben.
+          Leider konnten wir noch nicht alles fertigstellen, daher mussten wir
+          einiges einkürzen bzw. deaktivieren. Dennoch kann bereits die neue
+          Designsprache bewundert werden.
+          <br />
+          Das Cubyx Team wünscht dennoch viel Spaß auf der neuen Website!
+        </Section>
+
+        <Section
+          headline={"Cubyx - Zukunft, Gemeinsam gestalten!"}
           leftImage={snowyHouses}
           alt={"Verschneite Häuser"}
         >
-          Das Cubyx Network ist ein Minecraft Netzwerk, welches sich auf
-          verschiedene Spielmodi spezialisiert hat. Wir bieten dir eine große
-          Auswahl an Spielmodi, die du mit deinen Freunden spielen kannst. Wir
-          bieten dir eine große Auswahl an Spielmodi, die du mit deinen Freunden
-          spielen kannst. Wir bieten dir eine große Auswahl an Spielmodi, die du
-          mit deinen Freunden spielen kannst.
+          Cubyx ist ein seit Anfang 2020 bestehendes Netzwerk, welches sich um
+          das Spiel Minecraft spezialisiert hat. Wir sind jedoch mehr als nur
+          Blöckchen. Wir bieten Unterhaltung von klassischen Minecraft
+          Spielmodi, bis hin zu gehaltvollen Videos auf unserem Youtube-Kanal.
+          Cubyx ist zudem ein föderal aufgebautes, demokratisches Team. Wir
+          legen viel Wert auf ein gemeinsames Miteinander im Team und in unserer
+          Community.
         </Section>
 
         <Stats />

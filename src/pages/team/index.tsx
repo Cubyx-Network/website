@@ -22,13 +22,11 @@ const TeamPage = ({
         <h1 className="text-center text-6xl font-extrabold">Das Cubyx Team</h1>
         <section className="flex justify-center">
           <ul className="mt-8 grid justify-items-center gap-4 p-4 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
-            {teamMembers
-              .filter((t) => !t.isInactive)
-              .map((teamMember) => (
-                <li key={teamMember.id}>
-                  <TeamMemberCard member={teamMember} />
-                </li>
-              ))}
+            {teamMembers.map((teamMember) => (
+              <li key={teamMember.id}>
+                <TeamMemberCard member={teamMember} />
+              </li>
+            ))}
           </ul>
         </section>
       </main>
