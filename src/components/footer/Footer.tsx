@@ -30,13 +30,13 @@ const Footer = () => {
             <h2 className="text-4xl font-extrabold">Cubyx Network</h2>
             <span>Dein demokratisches Bauteam aus Deutschland!</span>
             <div className="flex gap-2">
-              <SocialIcon icon={"discord-fill"} link={"/r/discord"} />
-              <SocialIcon icon={"twitch-fill"} link={"/r/twitch"} />
-              <SocialIcon icon={"youtube-fill"} link={"/r/youtube"} />
-              <SocialIcon icon={"reddit-fill"} link={"/r/reddit"} />
-              <SocialIcon icon={"mastodon-fill"} link={"/r/mastodon"} />
-              <SocialIcon icon={"earth-fill"} link={"/r/planetmc"} />
-              <SocialIcon icon={"spotify-fill"} link={"/r/anchor"} />
+              <SocialIcon icon={"discord-fill"} link={"/discord"} />
+              <SocialIcon icon={"twitch-fill"} link={"/twitch"} />
+              <SocialIcon icon={"youtube-fill"} link={"/youtube"} />
+              <SocialIcon icon={"reddit-fill"} link={"/reddit"} />
+              <SocialIcon icon={"mastodon-fill"} link={"/mastodon"} />
+              <SocialIcon icon={"earth-fill"} link={"/planetmc"} />
+              <SocialIcon icon={"spotify-fill"} link={"/anchor"} />
             </div>
           </div>
         </section>
