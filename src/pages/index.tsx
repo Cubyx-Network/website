@@ -10,10 +10,13 @@ import tectaBridge from "../../public/img/home/tecta_bridge.jpg";
 import Section from "../components/Section";
 import { motion } from "framer-motion";
 import Stats from "../components/stats/Stats";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
     <>
+      <Link href={"https://social.cubyx.eu/@CubyxNetwork"} rel="me" />
+
       <Header
         title={"Home"}
         description={"Willkommen auf dem Cubyx Network!"}
