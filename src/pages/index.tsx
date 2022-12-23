@@ -5,8 +5,8 @@ import React from "react";
 import Image from "next/image";
 
 import logo from "../../public/img/netzwerk.png";
-import banner from "../../public/img/home/banner.png";
 import snowyHouses from "../../public/img/home/snowy_houses.png";
+import tectaBridge from "../../public/img/home/tecta_bridge.jpg";
 import Section from "../components/Section";
 import { motion } from "framer-motion";
 import Stats from "../components/stats/Stats";
@@ -76,8 +76,8 @@ const Home: NextPage = () => {
 
         <Section
           headline={"Was zeichnet uns aus?"}
-          rightImage={banner}
-          alt={"Netzwerk Logo"}
+          rightImage={tectaBridge}
+          alt={"Holzbrücke"}
         >
           Das Cubyx Network ist ein Minecraft Netzwerk, welches sich auf
           verschiedene Spielmodi spezialisiert hat. Wir bieten dir eine große
