@@ -34,7 +34,11 @@ const Footer = () => {
               <SocialIcon icon={"twitch-fill"} link={"/twitch"} />
               <SocialIcon icon={"youtube-fill"} link={"/youtube"} />
               <SocialIcon icon={"reddit-fill"} link={"/reddit"} />
-              <SocialIcon icon={"mastodon-fill"} link={"/mastodon"} />
+              <SocialIcon
+                icon={"mastodon-fill"}
+                link={"/mastodon"}
+                mastodon={true}
+              />
               <SocialIcon icon={"earth-fill"} link={"/planetmc"} />
               <SocialIcon icon={"spotify-fill"} link={"/anchor"} />
             </div>
