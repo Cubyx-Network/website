@@ -49,8 +49,11 @@ export const getServerSideProps = async () => {
       },
     });
 
+    const noxus = teamMembers.filter((t) => t.isAdmin);
+    const team = teamMembers.filter((t) => !t.isAdmin);
+
     return {
-      props: superjson.serialize({ teamMembers }).json,
+      props: superjson.serialize({ teamMembers: [...noxus, ...team] }).json,
     };
   }
   return {

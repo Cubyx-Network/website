@@ -40,6 +40,12 @@ const TeamMemberCard = ({
       <div className="mt-2">
         <h2 className="text-xl font-bold">{member.username}</h2>
         <IconWithText icon={"discord-fill"} text={member.discord_tag} />
+        <IconWithText
+          icon={"calendar-event-fill"}
+          text={new Date(member.createdAt).toLocaleDateString()}
+        />
+
+        <div className="mt-2" />
 
         {member.email && (
           <IconWithText icon={"mail-fill"} text={member.email} />
