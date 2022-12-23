@@ -24,7 +24,7 @@ const handler = defaultHandler<NextApiRequest, NextApiResponse>().delete(
       },
     });
 
-    const mailcow = await deleteMailbox(user.email);
+    const mailcow = user.email ? await deleteMailbox(user.email) : true;
     const pterodactyl = await deletePterodactylUser(user.username);
 
     return res.status(200).json({

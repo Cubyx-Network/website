@@ -1,8 +1,6 @@
 import { PositionType, TeamMember } from "@prisma/client";
 import { prisma } from "./prisma";
 import { encryptPassword } from "./auth/passwordUtils";
-import { createMailbox } from "../services/mailcow";
-import { createPterodactylUser } from "../services/pterodactyl";
 
 export interface UserParams {
   id: string;
@@ -48,19 +46,19 @@ export async function createUser(params: UserParams): Promise<TeamMember> {
       throw new Error(err);
     });
 
-  await createMailbox(
-    params.name,
-    params.email.replace("@cubyx.eu", ""),
-    password
-  ).catch((e) => {
-    console.error(e);
-  });
-
-  await createPterodactylUser(params.name, params.email, password).catch(
-    (e) => {
-      console.error(e);
-    }
-  );
+  // await createMailbox(
+  //   params.name,
+  //   params.email.replace("@cubyx.eu", ""),
+  //   password
+  // ).catch((e) => {
+  //   console.error(e);
+  // });
+  //
+  // await createPterodactylUser(params.name, params.email, password).catch(
+  //   (e) => {
+  //     console.error(e);
+  //   }
+  // );
 
   user.password = "";
 
