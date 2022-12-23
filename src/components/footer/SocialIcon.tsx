@@ -11,7 +11,11 @@ const SocialIcon = ({
   mastodon?: boolean;
 }) => {
   return (
-    <Link href={link} target="_blank" rel={`noreferrer ${mastodon && "me"}`}>
+    <Link
+      href={link}
+      target="_blank"
+      rel={`noreferrer${mastodon ? " me" : ""}`}
+    >
       <Icon name={icon} className="icon-2xl md:icon-3xl" />
     </Link>
   );
