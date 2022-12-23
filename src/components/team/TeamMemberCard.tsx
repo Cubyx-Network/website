@@ -40,7 +40,10 @@ const TeamMemberCard = ({
       <div className="mt-2">
         <h2 className="text-xl font-bold">{member.username}</h2>
         <IconWithText icon={"discord-fill"} text={member.discord_tag} />
-        <IconWithText icon={"mail-fill"} text={member.email} />
+
+        {member.email && (
+          <IconWithText icon={"mail-fill"} text={member.email} />
+        )}
 
         {member.youtube_username && (
           <IconWithText icon={"youtube-fill"} text={member.youtube_username} />
