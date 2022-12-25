@@ -93,16 +93,16 @@ const Home: NextPage = () => {
         <Stats />
 
         <Section
-          headline={"Was zeichnet uns aus?"}
+          headline={"Wo sind wir zu finden?"}
           rightImage={tectaBridge}
           alt={"Holzbrücke"}
         >
-          Das Cubyx Network ist ein Minecraft Netzwerk, welches sich auf
-          verschiedene Spielmodi spezialisiert hat. Wir bieten dir eine große
-          Auswahl an Spielmodi, die du mit deinen Freunden spielen kannst. Wir
-          bieten dir eine große Auswahl an Spielmodi, die du mit deinen Freunden
-          spielen kannst. Wir bieten dir eine große Auswahl an Spielmodi, die du
-          mit deinen Freunden spielen kannst.
+          Cubyx ist auf vielen Plattformen vertreten. Zum einen auf Plattformen
+          wie YouTube, Twitch oder PlanetMinecraft. Aber auch auf anderen
+          Plattformen wie Spotify, Reddit oder Discord sind wir zu finden. Zudem
+          haben wir unsere eigene Mastodon Instanz, welche wir nutzen. Twitter
+          nutzen wir seit dem 01.01.2023 nicht mehr. Wir empfehlen unsere
+          Mastodon-Instanz zu nutzen.
         </Section>
       </main>
 
