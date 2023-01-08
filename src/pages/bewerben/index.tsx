@@ -6,8 +6,12 @@ import Section from "../../components/Section";
 import snowyHouses from "../../../public/img/home/snowy_houses.png";
 
 import styles from "./bewerben.module.css";
+import ApplyFormular from "../../components/apply/ApplyFormular";
+import { AnimatePresence } from "framer-motion";
 
-const Home: NextPage = () => {
+const Apply: NextPage = () => {
+  const [isApplyFormularOpen, setIsApplyFormularOpen] = React.useState(false);
+
   return (
     <>
       <Header
@@ -15,17 +19,23 @@ const Home: NextPage = () => {
         description={"Werde jetzt Teil des Cubyx Teams!"}
       />
 
+      <AnimatePresence>
+        {isApplyFormularOpen && (
+          <ApplyFormular setOpen={setIsApplyFormularOpen} />
+        )}
+      </AnimatePresence>
+
       <div
         className={
           styles.hero + " flex h-96 w-full items-center justify-center"
         }
       >
-        <h1 className="text-center text-5xl font-bold">
+        <h1 className="p-4 text-center text-5xl font-bold">
           Bewerben beim Cubyx Team
         </h1>
       </div>
 
-      <main className="p-8">
+      <main className="overflow-none p-8">
         <Section
           headline={"Werde ein Teil des Teams!"}
           alt={"marketing_quatsch"}
@@ -39,6 +49,13 @@ const Home: NextPage = () => {
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
         </Section>
+
+        <button
+          className="input"
+          onClick={() => setIsApplyFormularOpen(!isApplyFormularOpen)}
+        >
+          Jetzt Bewerben!
+        </button>
       </main>
 
       <Footer />
@@ -46,4 +63,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default Apply;
