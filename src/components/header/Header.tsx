@@ -4,6 +4,7 @@ import Link from "next/link";
 import HeaderLink from "./HeaderLink";
 import LoginUser from "../intern/LoginUser";
 import DarkLightModeSwitch from "./DarkLightModeSwitch";
+import { useEffect, useState } from "react";
 
 const Header = ({
   title,
@@ -14,6 +15,18 @@ const Header = ({
   description: string;
   noIndex?: boolean;
 }) => {
+  const [isSolid, setIsSolid] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        setIsSolid(true);
+      } else {
+        setIsSolid(false);
+      }
+    });
+  }, []);
+
   return (
     <>
       <NextSeo
@@ -21,7 +34,15 @@ const Header = ({
         description={description}
         noindex={noIndex}
       />
-      <header className="fixed top-0 left-0 z-40 flex w-full items-center justify-between bg-background-primary p-4 dark:bg-background-primary-dark">
+
+      <header
+        className={
+          "duration-400 fixed top-0 left-0 z-40 flex w-full items-center justify-between p-4 transition-all" +
+          (isSolid
+            ? " bg-background-primary dark:bg-background-primary-dark"
+            : "")
+        }
+      >
         <Link href={"/"}>
           <div className="flex items-center gap-4 text-4xl hover:cursor-pointer">
             <Image
@@ -45,6 +66,7 @@ const Header = ({
           {/*    { href: "/partner/greatnewsde", name: "GreatNewsDE" },*/}
           {/*  ]}*/}
           {/*</HeaderDropdown>*/}
+          <HeaderLink link={"/bewerben"}>Bewerben</HeaderLink>
           <LoginUser />
           <DarkLightModeSwitch />
         </div>
