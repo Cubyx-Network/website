@@ -6,11 +6,10 @@ import Section from "../../components/Section";
 import snowyHouses from "../../../public/img/home/snowy_houses.png";
 
 import styles from "./bewerben.module.css";
-import ApplyFormular from "../../components/apply/ApplyFormular";
-import { AnimatePresence } from "framer-motion";
+import { useRouter } from "next/router";
 
 const Apply: NextPage = () => {
-  const [isApplyFormularOpen, setIsApplyFormularOpen] = React.useState(false);
+  const router = useRouter();
 
   return (
     <>
@@ -18,12 +17,6 @@ const Apply: NextPage = () => {
         title={"Bewerben"}
         description={"Werde jetzt Teil des Cubyx Teams!"}
       />
-
-      <AnimatePresence>
-        {isApplyFormularOpen && (
-          <ApplyFormular setOpen={setIsApplyFormularOpen} />
-        )}
-      </AnimatePresence>
 
       <div
         className={
@@ -52,7 +45,7 @@ const Apply: NextPage = () => {
 
         <button
           className="input"
-          onClick={() => setIsApplyFormularOpen(!isApplyFormularOpen)}
+          onClick={() => router.push("/bewerben/formular")}
         >
           Jetzt Bewerben!
         </button>
