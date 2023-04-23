@@ -1,2 +1,11 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+    import Hero from '../components/Hero/Hero.svelte';
+</script>
+
+<Hero img='/img/home/hero.png'>
+	<div class='text-center leading-[4rem] dshadow'>
+		<h1 class='tracking-[.3em] '>CUBYX NETWORK</h1>
+		<h3>Quadratisch<span class='text-accent'>.</span> Praktisch<span class='text-accent'>.</span>
+			Gut<span class='text-accent'>.</span></h3>
+	</div>
+</Hero>
