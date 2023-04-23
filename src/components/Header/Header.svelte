@@ -1,21 +1,39 @@
 <script lang="ts">
-    import HeaderLink from './HeaderLink.svelte';
+    import HeaderMobile from './HeaderMobile.svelte';
     import HeaderLinkWrapper from './HeaderLinkWrapper.svelte';
+    import HeaderLink from './HeaderLink.svelte';
     import HeaderLogo from './HeaderLogo.svelte';
+
+    export let links: { link: string, text: string }[] = [];
+
+    let leftLinks = [];
+    let rightLinks = [];
+
+    for (let i = 0; i < links.length; i++) {
+        if (i < links.length / 2) {
+            leftLinks.push(links[i]);
+        } else {
+            rightLinks.push(links[i]);
+        }
+    }
 </script>
 
-<nav class="fixed w-full h-24 flex gap-5 items-center justify-center bg-background p-1 z-10 ">
+<nav class="fixed w-full h-24 gap-5 items-center justify-center bg-background p-1 z-10 hidden lg:flex">
     <HeaderLinkWrapper justify="end">
-        <HeaderLink link="https://google.com" text="Home" />
-        <HeaderLink link="https://google.com" text="Das Team" />
-        <HeaderLink link="https://google.com" text="Projekte" />
+        {#each leftLinks as link}
+            <HeaderLink link={link.link} text={link.text} />
+        {/each}
     </HeaderLinkWrapper>
 
     <HeaderLogo />
 
     <HeaderLinkWrapper justify="start">
-        <HeaderLink link="https://google.com" text="Aktuelles" />
-        <HeaderLink link="https://google.com" text="Partner" />
-        <HeaderLink link="https://google.com" text="Discord" />
+        {#each rightLinks as link}
+            <HeaderLink link={link.link} text={link.text} />
+        {/each}
     </HeaderLinkWrapper>
+
+
 </nav>
+
+<HeaderMobile links={links} />
