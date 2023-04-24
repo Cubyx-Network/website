@@ -12,4 +12,4 @@
 </div>
 
 <!-- Ignore me, im just for tailwindcss -->
-<div class='rotate-[90deg] rotate-[270deg] rotate-[180deg] rotate-[0deg] lg:rotate-[90deg] lg:rotate-[270deg] lg:rotate-[180deg] lg:rotate-[0deg] hidden'></div>
+<div class='rotate-[90deg] rotate-[270deg] rotate-[180deg] rotate-[0deg] rotate-[-90deg] lg:rotate-[90deg] lg:rotate-[270deg] lg:rotate-[180deg] lg:rotate-[0deg] lg:rotate-[-90deg] hidden'></div>
