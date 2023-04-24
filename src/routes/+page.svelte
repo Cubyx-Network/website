@@ -1,6 +1,9 @@
 <script>
 	import Hero from '../components/Hero/Hero.svelte';
+	import HeaderDummy from '../components/Header/HeaderDummy.svelte';
 </script>
+
+<HeaderDummy />
 
 <Hero img='/img/home/hero.png'>
 	<div class='text-center leading-[2rem] md:leading-[3rem] lg:leading-[4rem] dshadow'>

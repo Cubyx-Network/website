@@ -1,7 +1,6 @@
 <script>
     import '../app.css';
     import Header from '../components/Header/Header.svelte';
-    import HeaderDummy from '../components/Header/HeaderDummy.svelte';
     import Footer from '../components/Footer/Footer.svelte';
 
     let headerConfig = [
@@ -17,7 +16,6 @@
 <Header links={headerConfig} />
 
 <main class='bg-background'>
-    <HeaderDummy />
     <slot />
 </main>
 
