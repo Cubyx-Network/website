@@ -18,7 +18,7 @@
     }
 </script>
 
-<nav class="fixed w-full h-24 gap-5 items-center justify-center bg-background p-1 z-10 hidden lg:flex">
+<nav class="fixed w-full h-24 gap-5 items-center justify-center bg-background_darker p-1 z-10 hidden lg:flex">
     <HeaderLinkWrapper justify="end">
         {#each leftLinks as link}
             <HeaderLink link={link.link} text={link.text} />
