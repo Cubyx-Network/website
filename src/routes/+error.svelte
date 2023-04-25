@@ -1,7 +1,11 @@
 <script>
 	import { page } from '$app/stores';
+	import { generateTitle } from '$lib/titleGenerator';
 </script>
 
+<svelte:head>
+	<title>{generateTitle($page.status + "")}</title>
+</svelte:head>
 
 <div class='flex items-center justify-center h-screen w-full'>
 	<div class='flex items-center justify-center gap-8 h-1/4'>

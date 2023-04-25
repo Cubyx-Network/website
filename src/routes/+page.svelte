@@ -1,7 +1,12 @@
 <script>
 	import Hero from '../components/Hero/Hero.svelte';
 	import HeaderDummy from '../components/Header/HeaderDummy.svelte';
+	import { generateTitle } from '$lib/titleGenerator';
 </script>
+
+<svelte:head>
+	<title>{generateTitle("Home")}</title>
+</svelte:head>
 
 <HeaderDummy />
 
