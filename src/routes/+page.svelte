@@ -3,6 +3,7 @@
 	import HeaderDummy from '../components/Header/HeaderDummy.svelte';
 	import { generateTitle } from '$lib/titleGenerator';
 	import SectionWithImageAndText from '../components/Common/SectionWithImageAndText.svelte';
+	import SectionSpacer from '../components/Common/SectionSpacer.svelte';
 </script>
 
 <svelte:head>
@@ -32,3 +33,13 @@
 	img='/img/home/boat.png'
 	imgAlt='Boat auf Wasser'
 />
+
+<SectionSpacer />
+
+<h2 class='text-center'>NEUIGKEITEN</h2>
+<p class='text-center'>to be released...</p>
+
+<SectionSpacer />
+
+<h2 class='text-center'>Über Cubyx</h2>
+<p class='text-center'>to be released...</p>
