@@ -2,6 +2,7 @@
 	import Hero from '../components/Hero/Hero.svelte';
 	import HeaderDummy from '../components/Header/HeaderDummy.svelte';
 	import { generateTitle } from '$lib/titleGenerator';
+	import SectionWithImageAndText from '../components/Common/SectionWithImageAndText.svelte';
 </script>
 
 <svelte:head>
@@ -17,3 +18,17 @@
 			Gut<span class='text-accent'>.</span></h3>
 	</div>
 </Hero>
+
+<div class='text-center my-12 leading-tight'>
+	<h2>Herzlich Willkommen</h2>
+	<h4>auf der Website vom Cubyx Network</h4>
+</div>
+
+<SectionWithImageAndText
+	text='Wir sind eine Gemeinschaft von begeisterten Minecraft-Spielern, die ihre Leidenschaft für das Bauen, Commanding,
+		sowie Developement und die Kreativität teilen. Hier findest du Informationen über unsere Projekte und wie du
+		Mitglied werden kannst. Wir legen Wert auf Teamarbeit und eine freundliche Umgebung. Wenn du eine Leidenschaft für
+		Minecraft hast, bist du bei uns richtig!'
+	img='/img/home/boat.png'
+	imgAlt='Boat auf Wasser'
+/>
