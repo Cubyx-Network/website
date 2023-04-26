@@ -7,8 +7,8 @@
         {text: "Home", link: "/"},
         {text: "Das Team", link: "/team"},
         {text: "Projekte", link: "/projekte"},
-        {text: "Aktuelles", link: "/news"},
         {text: "Partner", link: "/partner"},
+        {text: "Bewerben", link: "/bewerben"},
         {text: "Discord", link: "https://cubyx.eu/discord"},
     ];
 </script>
