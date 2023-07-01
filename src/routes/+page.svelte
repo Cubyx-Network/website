@@ -1,45 +1,50 @@
 <script>
 	import Hero from '../components/Hero/Hero.svelte';
-	import HeaderDummy from '../components/Header/HeaderDummy.svelte';
 	import { generateTitle } from '$lib/titleGenerator';
 	import SectionWithImageAndText from '../components/Common/SectionWithImageAndText.svelte';
 	import SectionSpacer from '../components/Common/SectionSpacer.svelte';
+	import { page } from '$app/stores';
+	import ArticlePreview from '../components/News/ArticlePreview.svelte';
 </script>
 
 <svelte:head>
-	<title>{generateTitle("Home")}</title>
+	<title>{generateTitle('Home')}</title>
 </svelte:head>
 
-<HeaderDummy />
-
-<Hero img='/img/home/hero.png'>
-	<div class='text-center leading-[2rem] md:leading-[3rem] lg:leading-[4rem] dshadow'>
-		<h1 class='tracking-[.3em] '>CUBYX NETWORK</h1>
-		<h3>Quadratisch<span class='text-accent'>.</span> Praktisch<span class='text-accent'>.</span>
-			Gut<span class='text-accent'>.</span></h3>
+<Hero img="/img/home/hero.png">
+	<div class="dshadow text-center leading-[2rem] md:leading-[3rem] lg:leading-[4rem]">
+		<h1 class="tracking-[.3em]">CUBYX NETWORK</h1>
+		<h3>
+			Quadratisch<span class="text-accent">.</span> Praktisch<span class="text-accent">.</span>
+			Gut<span class="text-accent">.</span>
+		</h3>
 	</div>
 </Hero>
 
-<div class='text-center my-12 leading-tight'>
+<div class="my-12 text-center leading-tight">
 	<h2>Herzlich Willkommen</h2>
 	<h4>auf der Website vom Cubyx Network</h4>
 </div>
 
 <SectionWithImageAndText
-	text='Wir sind eine Gemeinschaft von begeisterten Minecraft-Spielern, die ihre Leidenschaft für das Bauen, Commanding,
+	text="Wir sind eine Gemeinschaft von begeisterten Minecraft-Spielern, die ihre Leidenschaft für das Bauen, Commanding,
 		sowie Developement und die Kreativität teilen. Hier findest du Informationen über unsere Projekte und wie du
 		Mitglied werden kannst. Wir legen Wert auf Teamarbeit und eine freundliche Umgebung. Wenn du eine Leidenschaft für
-		Minecraft hast, bist du bei uns richtig!'
-	img='/img/home/boat.png'
-	imgAlt='Boat auf Wasser'
+		Minecraft hast, bist du bei uns richtig!"
+	img="/img/home/boat.png"
+	imgAlt="Boat auf Wasser"
 />
 
 <SectionSpacer />
 
-<h2 class='text-center'>NEUIGKEITEN</h2>
-<p class='text-center'>to be released...</p>
+<h2 class="text-center">NEUIGKEITEN</h2>
+<div class="m-auto grid w-full grid-cols-2 gap-8 p-8 lg:w-[90%] lg:grid-cols-3 xl:w-[70%]">
+	{#each $page.data.articles.slice(0, 3) as article}
+		<ArticlePreview {article} />
+	{/each}
+</div>
 
 <SectionSpacer />
 
-<h2 class='text-center'>Über Cubyx</h2>
-<p class='text-center'>to be released...</p>
+<h2 class="text-center">Über Cubyx</h2>
+<p class="text-center">to be released...</p>
