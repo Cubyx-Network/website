@@ -6,41 +6,47 @@
 @tailwind utilities;
 
 @layer base {
-    html {
-        @apply font-text;
-        @apply bg-background_darker;
-        @apply text-text;
-    }
+	html {
+		@apply font-text;
+		@apply bg-background_darker;
+		@apply text-text;
+	}
 
-    h1, h2, h3, h4, h5, h6 {
-        @apply font-heading;
-    }
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply font-heading;
+	}
 
-    h1 {
-        font-weight: 800;
-        @apply text-[1.7rem] md:text-[3rem] lg:text-[4rem];
-    }
+	h1 {
+		font-weight: 800;
+		@apply text-[1.7rem] md:text-[3rem] lg:text-[4rem];
+	}
 
-    h2 {
-        font-weight: 700;
-        @apply text-[1.5rem] md:text-[2rem] lg:text-[3rem];
-    }
+	h2 {
+		font-weight: 700;
+		@apply text-[1.5rem] md:text-[2rem] lg:text-[3rem];
+	}
 
-    h3 {
-        font-weight: 700;
-        @apply text-[1.3rem] md:text-[1.5rem] lg:text-[2.5rem];
-    }
+	h3 {
+		font-weight: 700;
+		@apply text-[1.3rem] md:text-[1.5rem] lg:text-[2.5rem];
+	}
 
-    h4 {
-        font-weight: 600;
-        @apply text-[1.1rem] md:text-[1.3rem] lg:text-[2rem];
-    }
+	h4 {
+		font-weight: 600;
+		@apply text-[1.1rem] md:text-[1.3rem] lg:text-[2rem];
+	}
 
-    p,a {
-        @apply text-[0.8rem] md:text-[1.2rem] lg:text-[1.5rem];
-    }
+	p,
+	a {
+		@apply text-[0.8rem] md:text-[1.2rem] lg:text-[1.5rem];
+	}
 
-    .dshadow {
-        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
-    }
+	.dshadow {
+		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+	}
 }
