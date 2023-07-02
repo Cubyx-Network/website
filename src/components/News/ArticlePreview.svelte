@@ -17,7 +17,7 @@
 		class="h-full w-full rounded-[30px] object-cover"
 	/>
 	<div class="absolute right-0 top-0 flex h-full w-full items-end justify-end leading-tight">
-		<div class="flex w-full flex-col items-end rounded-b-[30px] bg-[#00000033] p-4 leading-tight">
+		<div class="flex w-full flex-col text-right items-end rounded-b-[30px] bg-[#00000033] p-2 sm:p-4 leading-tight">
 			<span class="text-right font-bold">{article.title}</span>
 			<MetadataDisplay icon={faUser} text={article.author} />
 			<MetadataDisplay icon={faCalendarDays} text={article.createdAt.toLocaleDateString()} />
