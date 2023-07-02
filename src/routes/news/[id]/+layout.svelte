@@ -1,9 +1,9 @@
 <script>
-	import { faUser } from '@fortawesome/free-regular-svg-icons/faUser';
-	import { page } from '$app/stores';
-	import { faCalendarDays } from '@fortawesome/free-regular-svg-icons/faCalendarDays';
-	import MetadataDisplay from '../../../components/News/MetadataDisplay.svelte';
-	import { generateTitle } from '$lib/titleGenerator';
+	import { faUser } from "@fortawesome/free-regular-svg-icons/faUser";
+	import { page } from "$app/stores";
+	import { faCalendarDays } from "@fortawesome/free-regular-svg-icons/faCalendarDays";
+	import MetadataDisplay from "../../../components/News/MetadataDisplay.svelte";
+	import { generateTitle } from "$lib/titleGenerator";
 </script>
 
 <svelte:head>
@@ -12,7 +12,7 @@
 
 <div class="m-auto grid w-full grid-cols-1 gap-4 p-4 lg:grid-cols-10 xl:w-[60%]">
 	<div class="col-span-2 flex p-4 text-xl lg:justify-end">
-		<div>
+		<div class="flex flex-col items-start">
 			<MetadataDisplay icon={faUser} text={$page.data.article.author} />
 			<MetadataDisplay
 				icon={faCalendarDays}
