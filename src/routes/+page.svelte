@@ -1,10 +1,10 @@
 <script>
-	import Hero from '../components/Hero/Hero.svelte';
-	import { generateTitle } from '$lib/titleGenerator';
-	import SectionWithImageAndText from '../components/Common/SectionWithImageAndText.svelte';
-	import SectionSpacer from '../components/Common/SectionSpacer.svelte';
-	import { page } from '$app/stores';
-	import ArticlePreview from '../components/News/ArticlePreview.svelte';
+	import Hero from "../components/Hero/Hero.svelte";
+	import { generateTitle } from "$lib/titleGenerator";
+	import SectionWithImageAndText from "../components/Common/SectionWithImageAndText.svelte";
+	import SectionSpacer from "../components/Common/SectionSpacer.svelte";
+	import { page } from "$app/stores";
+	import ArticlePreview from "../components/News/ArticlePreview.svelte";
 </script>
 
 <svelte:head>
@@ -37,7 +37,7 @@
 
 <SectionSpacer />
 
-<h2 class="text-center">NEUIGKEITEN</h2>
+<h2 class="text-center">Neuigkeiten</h2>
 <div class="m-auto grid w-full grid-cols-2 gap-8 p-8 lg:w-[90%] lg:grid-cols-3 xl:w-[70%]">
 	{#each $page.data.articles.slice(0, 3) as article}
 		<ArticlePreview {article} />
