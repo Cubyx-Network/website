@@ -7,3 +7,9 @@
 	<p>•</p>
 	<a href="/kontakt">Kontakt</a>
 </div>
+
+<style>
+	a {
+		@apply text-grayedOut_light;
+	}
+</style>

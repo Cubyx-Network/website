@@ -13,6 +13,8 @@ export async function fetchAllArticles() {
 	fetchedFilesStream.on('end', async function () {
 		const fetchedMarkdownFiles = await downloadFilesFromMinio(fetchedFiles);
 
+		const ids = [];
+
 		for (const fetchedMarkdownFile of fetchedMarkdownFiles) {
 			try {
 				const parsed = parseMD(fetchedMarkdownFile);
@@ -45,6 +47,8 @@ export async function fetchAllArticles() {
 							content: Buffer.from(content).toString('base64')
 						}
 					});
+
+					ids.push(metadata.id);
 				} else {
 					await prisma.article.create({
 						data: {
@@ -56,6 +60,8 @@ export async function fetchAllArticles() {
 							content: Buffer.from(content).toString('base64')
 						}
 					});
+
+					ids.push(metadata.id);
 				}
 			} catch (e) {
 				console.log(
@@ -64,6 +70,13 @@ export async function fetchAllArticles() {
 					}`
 				);
 				console.log(e);
+			}
+		}
+
+		const articles = await prisma.article.findMany();
+		for (const article of articles) {
+			if (!ids.includes(article.id)) {
+				await prisma.article.delete({ where: { id: article.id } });
 			}
 		}
 	});

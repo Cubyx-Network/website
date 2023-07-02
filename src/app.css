@@ -12,12 +12,14 @@
 		@apply text-text;
 	}
 
+	nav a, footer a {
+		@apply text-text no-underline;
+	}
+
 	h1,
 	h2,
 	h3,
-	h4,
-	h5,
-	h6 {
+	h4 {
 		@apply font-heading;
 	}
 
@@ -42,11 +44,72 @@
 	}
 
 	p,
-	a {
+	a,
+	li,
+	th,
+	td,
+	span{
 		@apply text-[0.8rem] md:text-[1.2rem] lg:text-[1.5rem];
+	}
+
+	a {
+		@apply text-grayedOut_light underline cursor-pointer;
 	}
 
 	.dshadow {
 		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+	}
+
+	ol {
+		list-style-type: decimal;
+	}
+
+	ul {
+		list-style-type: disc;
+	}
+
+	/* Format tables nicely with border, padding in cells, ... */
+	table {
+		@apply border-2 border-text border-collapse;
+		@apply p-4 my-4;
+		@apply w-full;
+		@apply table-auto text-left;
+		@apply whitespace-nowrap;
+	}
+
+	th, td {
+		@apply border-2;
+	}
+
+	th {
+		@apply p-4;
+		@apply font-bold;
+	}
+
+	td {
+		@apply p-4;
+	}
+
+	pre {
+		@apply bg-background_darker;
+		@apply text-text;
+		@apply p-4;
+		@apply m-4;
+		@apply rounded-md;
+		@apply overflow-x-auto;
+	}
+
+	blockquote {
+		@apply border-l-4 border-text;
+		@apply bg-background_darker;
+		@apply p-4;
+		@apply m-4;
+		@apply rounded-md;
+		@apply overflow-x-auto;
+	}
+
+	hr {
+		@apply border border-text;
+		@apply my-4;
 	}
 }
