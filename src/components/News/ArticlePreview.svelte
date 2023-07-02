@@ -1,9 +1,9 @@
 <script lang="ts">
-	import type { Article } from '@prisma/client';
-	import { generateTitle } from '$lib/titleGenerator';
-	import MetadataDisplay from './MetadataDisplay.svelte';
-	import { faCalendarDays } from '@fortawesome/free-regular-svg-icons/faCalendarDays';
-	import { faUser } from '@fortawesome/free-regular-svg-icons/faUser';
+	import type { Article } from "@prisma/client";
+	import { generateTitle } from "$lib/titleGenerator";
+	import MetadataDisplay from "./MetadataDisplay.svelte";
+	import { faCalendarDays } from "@fortawesome/free-regular-svg-icons/faCalendarDays";
+	import { faUser } from "@fortawesome/free-regular-svg-icons/faUser";
 
 	export let article: Article;
 </script>
@@ -13,7 +13,7 @@
 </svelte:head>
 
 <a
-	class="relative flex aspect-square w-full items-center justify-center rounded-[30px] border-[3px] border-accent"
+	class="relative flex aspect-square w-full items-center justify-center text-text rounded-[30px] border-[3px] border-accent"
 	href={`/news/${article.id}`}
 >
 	<img

@@ -50,6 +50,7 @@
 		"@types/node": "^20.3.3",
 		"buffer": "^6.0.3",
 		"dompurify": "^3.0.4",
+		"highlight.js": "^11.8.0",
 		"marked": "^5.1.0",
 		"minio": "^7.1.1",
 		"parse-md": "^3.0.3",

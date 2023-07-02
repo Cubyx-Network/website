@@ -1,11 +1,16 @@
 <script lang="ts">
-	import { marked } from 'marked';
-	import { page } from '$app/stores';
-	import parseMD from 'parse-md';
-	import { Buffer } from 'buffer/';
+	import { marked } from "marked";
+	import { page } from "$app/stores";
+	import parseMD from "parse-md";
+	import { Buffer } from "buffer/";
+	import hljs from "highlight.js";
+	import "highlight.js/styles/github-dark.css";
+	import { onMount } from "svelte";
 
 	const input = Buffer.from($page.data.article.content, 'base64').toString('utf-8');
-	const html = marked(parseMD(input).content);
+	let html = marked(parseMD(input).content);
+
+	onMount(() => hljs.highlightAll())
 </script>
 
 <section id="contentArea">
