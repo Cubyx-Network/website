@@ -62,11 +62,11 @@
 	}
 
 	ol {
-		list-style-type: decimal;
+		@apply list-decimal list-inside;
 	}
 
 	ul {
-		list-style-type: disc;
+		@apply list-disc list-inside;
 	}
 
 	/* Format tables nicely with border, padding in cells, ... */
