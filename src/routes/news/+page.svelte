@@ -1,12 +1,12 @@
 <script>
-	import ArticlePreview from "../../components/News/ArticlePreview.svelte";
-	import { page } from "$app/stores";
-	import Hero from "../../components/Hero/Hero.svelte";
-	import { generateTitle } from "$lib/titleGenerator";
+	import ArticlePreview from '../../components/News/ArticlePreview.svelte';
+	import { page } from '$app/stores';
+	import Hero from '../../components/Hero/Hero.svelte';
+	import { generateTitle } from '$lib/titleGenerator';
 </script>
 
 <svelte:head>
-	<title>{generateTitle("Neuigkeiten")}</title>
+	<title>{generateTitle('Neuigkeiten')}</title>
 </svelte:head>
 
 <Hero img="/img/news/hero.jpg">

@@ -1,10 +1,10 @@
 <script>
-	import Hero from "../components/Hero/Hero.svelte";
-	import { generateTitle } from "$lib/titleGenerator";
-	import SectionWithImageAndText from "../components/Common/SectionWithImageAndText.svelte";
-	import SectionSpacer from "../components/Common/SectionSpacer.svelte";
-	import { page } from "$app/stores";
-	import ArticlePreview from "../components/News/ArticlePreview.svelte";
+	import Hero from '../components/Hero/Hero.svelte';
+	import { generateTitle } from '$lib/titleGenerator';
+	import SectionWithImageAndText from '../components/Common/SectionWithImageAndText.svelte';
+	import SectionSpacer from '../components/Common/SectionSpacer.svelte';
+	import { page } from '$app/stores';
+	import ArticlePreview from '../components/News/ArticlePreview.svelte';
 </script>
 
 <svelte:head>

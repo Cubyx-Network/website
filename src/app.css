@@ -12,7 +12,8 @@
 		@apply text-text;
 	}
 
-	nav a, footer a {
+	nav a,
+	footer a {
 		@apply text-text no-underline;
 	}
 
@@ -48,12 +49,12 @@
 	li,
 	th,
 	td,
-	span{
+	span {
 		@apply text-[0.8rem] md:text-[1.2rem] lg:text-[1.5rem];
 	}
 
 	a {
-		@apply text-grayedOut_light underline cursor-pointer;
+		@apply cursor-pointer text-grayedOut_light underline;
 	}
 
 	.dshadow {
@@ -70,14 +71,15 @@
 
 	/* Format tables nicely with border, padding in cells, ... */
 	table {
-		@apply border-2 border-text border-collapse;
-		@apply p-4 my-4;
+		@apply border-collapse border-2 border-text;
+		@apply my-4 p-4;
 		@apply w-full;
 		@apply table-auto text-left;
 		@apply whitespace-nowrap;
 	}
 
-	th, td {
+	th,
+	td {
 		@apply border-2;
 	}
 
