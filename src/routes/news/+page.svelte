@@ -1,7 +1,7 @@
 <script>
-	import ArticlePreview from "../../components/News/ArticlePreview.svelte";
-	import { page } from "$app/stores";
-	import Hero from "../../components/Hero/Hero.svelte";
+	import ArticlePreview from '../../components/News/ArticlePreview.svelte';
+	import { page } from '$app/stores';
+	import Hero from '../../components/Hero/Hero.svelte';
 </script>
 
 <Hero img="/img/news/hero.jpg">
