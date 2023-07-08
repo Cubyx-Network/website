@@ -1,11 +1,14 @@
-import type { LayoutServerLoad } from './$types';
-import prisma from '$lib/server/prisma';
-import { error } from '@sveltejs/kit';
+import type { LayoutServerLoad } from "./$types";
+import prisma from "$lib/server/prisma";
+import { error } from "@sveltejs/kit";
 
 export const load = (async ({ params }) => {
 	const article = await prisma.article.findUnique({
 		where: {
 			id: params.id
+		},
+		include: {
+			tags: true
 		}
 	});
 
