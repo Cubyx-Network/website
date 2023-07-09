@@ -1,10 +1,12 @@
 <script lang="ts">
-	import type { Article } from '@prisma/client';
-	import MetadataDisplay from './MetadataDisplay.svelte';
-	import { faCalendarDays } from '@fortawesome/free-regular-svg-icons/faCalendarDays';
-	import { faUser } from '@fortawesome/free-regular-svg-icons/faUser';
+	import type { Article } from "@prisma/client";
+	import MetadataDisplay from "./MetadataDisplay.svelte";
+	import { faCalendarDays } from "@fortawesome/free-regular-svg-icons/faCalendarDays";
+	import { faUser } from "@fortawesome/free-regular-svg-icons/faUser";
+	import TagDisplay from "./TagDisplay.svelte";
 
 	export let article: Article;
+	export let disableTagLink: boolean
 </script>
 
 <a
@@ -23,6 +25,7 @@
 			<span class="text-right font-bold">{article.title}</span>
 			<MetadataDisplay icon={faUser} text={article.author} />
 			<MetadataDisplay icon={faCalendarDays} text={article.createdAt.toLocaleDateString()} />
+			<TagDisplay tags={article.tags.map((tag) => tag.name)} {disableTagLink} />
 		</div>
 	</div>
 </a>

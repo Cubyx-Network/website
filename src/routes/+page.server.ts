@@ -1,10 +1,13 @@
-import type { PageServerLoad } from './$types';
-import prisma from '$lib/server/prisma';
+import type { PageServerLoad } from "./$types";
+import prisma from "$lib/server/prisma";
 
 export const load = (async () => {
 	const articles = await prisma.article.findMany({
 		orderBy: {
 			createdAt: 'desc'
+		},
+		include: {
+			tags: true
 		}
 	});
 

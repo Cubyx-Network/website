@@ -4,7 +4,7 @@
 	import { faCalendarDays } from "@fortawesome/free-regular-svg-icons/faCalendarDays";
 	import MetadataDisplay from "../../../components/News/MetadataDisplay.svelte";
 	import { generateTitle } from "$lib/titleGenerator";
-	import { faTag } from "@fortawesome/free-solid-svg-icons/faTag";
+	import TagDisplay from "../../../components/News/TagDisplay.svelte";
 </script>
 
 <svelte:head>
@@ -19,10 +19,9 @@
 				icon={faCalendarDays}
 				text={$page.data.article.createdAt.toLocaleDateString()}
 			/>
-			<MetadataDisplay
-				icon={faTag}
-				text={$page.data.article.tags.map((tag) => tag.name).join(", ")}
-			/>
+			<div class="py-4">
+				<TagDisplay tags={$page.data.article.tags.map((tag) => tag.name)} />
+			</div>
 			<!--      <MetadataDisplay icon={faEye} text={$page.data.article.clicks} />-->
 		</div>
 	</div>

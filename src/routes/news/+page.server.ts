@@ -1,11 +1,24 @@
-import type { PageServerLoad } from './$types';
-import prisma from '$lib/server/prisma';
-import { fetchAllArticles } from '$lib/server/newsArticleManager';
+import type { PageServerLoad } from "./$types";
+import prisma from "$lib/server/prisma";
+import { fetchAllArticles } from "$lib/server/newsArticleManager";
 
 export const load = (async () => {
 	const articles = await prisma.article.findMany({
 		orderBy: {
 			createdAt: 'desc'
+		},
+		include: {
+			tags: true
+		}
+	});
+
+	const tags = await prisma.tag.findMany({
+		include: {
+			articles: {
+				include: {
+					tags: true
+				}
+			}
 		}
 	});
 
@@ -13,11 +26,13 @@ export const load = (async () => {
 
 	if (!articles) {
 		return {
-			articles: []
+			articles: [],
+			tags: tags || []
 		};
 	}
 
 	return {
-		articles
+		articles,
+		tags: tags || []
 	};
 }) satisfies PageServerLoad;
