@@ -15,7 +15,7 @@
 	})
 
 	function updateArticles(f: string[]): void {
-		articles = $page.data.tags.filter(tag => f.length === 0 || f.includes(tag.name)).map(tag => tag.articles).flat();
+		articles = $page.data.articles.filter(article => f.length === 0 || f.some(tag => article.tags.map((t) => t.name).includes(tag)));
 	}
 
 	function searchBoxEnter(e: KeyboardEvent) {
