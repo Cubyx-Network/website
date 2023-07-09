@@ -5,6 +5,7 @@
 	import MetadataDisplay from "../../../components/News/MetadataDisplay.svelte";
 	import { generateTitle } from "$lib/titleGenerator";
 	import TagDisplay from "../../../components/News/TagDisplay.svelte";
+	import Hero from "../../../components/Hero/Hero.svelte";
 </script>
 
 <svelte:head>
@@ -27,6 +28,9 @@
 	</div>
 
 	<div class="col-span-8 p-4">
+		<div class="mb-4">
+			<Hero img={$page.data.article.thumbnail} rounded />
+		</div>
 		<slot />
 	</div>
 </div>
