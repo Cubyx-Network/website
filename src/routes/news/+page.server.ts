@@ -1,6 +1,5 @@
 import type { PageServerLoad } from "./$types";
 import prisma from "$lib/server/prisma";
-import { fetchAllArticles } from "$lib/server/newsArticleManager";
 
 export const load = (async () => {
 	const articles = await prisma.article.findMany({
@@ -21,8 +20,6 @@ export const load = (async () => {
 			}
 		}
 	});
-
-	fetchAllArticles().then(() => console.log('Fetched articles from Minio'));
 
 	if (!articles) {
 		return {
