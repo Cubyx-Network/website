@@ -54,7 +54,7 @@ jobs:
         run: mkdir upload
 
       - name: Copy needed files
-        run: cp -r build/ package.json yarn.lock
+        run: cp -r build/ package.json yarn.lock upload/
 
       - name: Install Dependencies
         run: cd build/ && yarn && cd ..
