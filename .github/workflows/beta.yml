@@ -1,0 +1,84 @@
+name: Beta Deploy
+
+on:
+  push:
+    branches:
+      - beta
+
+jobs:
+  build-web:
+    name: Build Web
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build Svelte app
+        run: yarn build
+        env:
+          MINIO_ENDPOINT: dummy
+          MINIO_PORT: dummy
+          MINIO_ACCESS_KEY: dummy
+          MINIO_SECRET_KEY: dummy
+          MINIO_BUCKET: dummy
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: web-artifacts
+          path: build/
+
+  upload-to-server:
+    name: Upload files to server
+    needs: build-web
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Download Artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: web-artifacts
+          path: build/
+
+      - name: Make Upload Directory
+        run: mkdir upload
+
+      - name: Copy needed files
+        run: cp -r build/ package.json yarn.lock upload/
+
+      - name: Install Dependencies
+        run: cd build/ && yarn && cd ..
+
+      - name: Upload
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+            username: ${{ secrets.FTP_USERNAME }}.${{ secrets.PANEL_DEV_SERVER_ID }}
+            server: ${{ secrets.FTP_SERVER }}
+            port: ${{ secrets.FTP_PORT }}
+            local_path: './upload/*'
+            remote_path: '/home/container'
+            sftp_only: true
+            password: ${{ secrets.FTP_PASSWORD }}
+
+  restart-dev-server:
+    name: Restart Development Server
+    needs: upload-to-server
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Restart
+        uses: outsparkled/pterodactyl-power-action@v0.1.0
+        with:
+          panel-url: ${{ secrets.PANEL_URL }}
+          server-id: ${{ secrets.PANEL_DEV_SERVER_ID }}
+          bearer-token: ${{ secrets.PANEL_BEARER_TOKEN }}
+          power-action: 'restart'

@@ -8,6 +8,6 @@
 	export let href: string;
 </script>
 
-<a href={href} target='_blank'>
-	<Icon data='{icon}' class='h-6 md:h-8 lg:h-12 w-auto text-[2em]' />
+<a {href} target="_blank">
+	<Icon data={icon} class="h-6 w-auto text-[2em] md:h-8 lg:h-12" />
 </a>

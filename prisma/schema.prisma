@@ -1,0 +1,24 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource production {
+  provider          = "mysql"
+  url               = env("DATABASE_PRISMA_URL")
+}
+
+model Article {
+    id        String      @id
+    title     String
+    createdAt DateTime    @default(now())
+    author    String
+    content   String
+    tags      Tag[]
+    clicks    Int         @default(0)
+    thumbnail String
+}
+
+model Tag {
+    name      String      @id
+    articles  Article[]
+}

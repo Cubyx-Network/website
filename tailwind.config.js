@@ -16,6 +16,5 @@ export default {
 			text: ['Kanit', 'sans-serif'],
 			heading: ['Montserrat', 'sans-serif']
 		}
-	},
-	plugins: []
+	}
 };
