@@ -23,35 +23,42 @@ jobs:
 
       - name: Build Svelte app
         run: yarn build
+        env:
+          MINIO_ENDPOINT: dummy
+          MINIO_PORT: dummy
+          MINIO_ACCESS_KEY: dummy
+          MINIO_SECRET_KEY: dummy
+          MINIO_BUCKET: dummy
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
         with:
           name: web-artifacts
           path: build/
-  
+
   upload-to-server:
     name: Upload files to server
+    needs: build-web
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-    
+
       - name: Download Artifact
         uses: actions/download-artifact@v3
         with:
           name: web-artifacts
           path: build/
-          
+
       - name: Make Upload Directory
         run: mkdir upload
-        
+
       - name: Copy needed files
         run: cp -r build/ package.json yarn.lock
-        
+
       - name: Install Dependencies
         run: cd build/ && yarn && cd ..
-      
+
       - name: Upload
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
@@ -62,9 +69,10 @@ jobs:
             remote_path: '/home/container'
             sftp_only: true
             password: ${{ secrets.FTP_PASSWORD }}
-      
+
   restart-dev-server:
     name: Restart Development Server
+    needs: upload-to-server
     runs-on: ubuntu-latest
     steps:
       - name: Send Restart

@@ -3,10 +3,8 @@ generator client {
 }
 
 datasource production {
-  provider          = "postgresql"
+  provider          = "mysql"
   url               = env("DATABASE_PRISMA_URL")
-  directUrl         = env("DATABASE_URL_NON_POOLING")
-  shadowDatabaseUrl = env("DATABASE_URL_NON_POOLING")
 }
 
 model Article {
