@@ -31,4 +31,46 @@ jobs:
           path: build/
   
   upload-to-server:
+    name: Upload files to server
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
     
+      - name: Download Artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: web-artifacts
+          path: build/
+          
+      - name: Make Upload Directory
+        run: mkdir upload
+        
+      - name: Copy needed files
+        run: cp -r build/ package.json yarn.lock
+        
+      - name: Install Dependencies
+        run: cd build/ && yarn && cd ..
+      
+      - name: Upload
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+            username: ${{ secrets.FTP_USERNAME }}.${{ secrets.PANEL_DEV_SERVER_ID }}
+            server: ${{ secrets.FTP_SERVER }}
+            port: ${{ secrets.FTP_PORT }}
+            local_path: './upload/*'
+            remote_path: '/home/container'
+            sftp_only: true
+            password: ${{ secrets.FTP_PASSWORD }}
+      
+  restart-dev-server:
+    name: Restart Development Server
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Restart
+        uses: outsparkled/pterodactyl-power-action@v0.1.0
+        with:
+          panel-url: ${{ secrets.PANEL_URL }}
+          server-id: ${{ secrets.PANEL_DEV_SERVER_ID }}
+          bearer-token: ${{ secrets.PANEL_BEARER_TOKEN }}
+          power-action: 'restart'
