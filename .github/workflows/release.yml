@@ -1,0 +1,20 @@
+name: Release Pipeline
+
+on:
+  release:
+    types:
+      - published
+
+jobs:
+  trigger-production-server:
+    if: github.event.release.prerelease == false
+    name: Restart Production Server for Rebuilding
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Restart
+        uses: outsparkled/pterodactyl-power-action@v0.1.0
+        with:
+          panel-url: ${{ secrets.PANEL_URL }}
+          server-id: ${{ secrets.PANEL_SERVER_ID }}
+          bearer-token: ${{ secrets.PANEL_BEARER_TOKEN }}
+          power-action: 'restart'
