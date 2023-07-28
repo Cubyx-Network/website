@@ -1,29 +1,31 @@
 <script lang="ts">
-	import ArticlePreview from "../../components/News/ArticlePreview.svelte";
-	import { page } from "$app/stores";
-	import Hero from "../../components/Hero/Hero.svelte";
-	import { generateTitle } from "$lib/titleGenerator";
-	import { filter } from "$lib/stores/newsStore";
-	import { onMount } from "svelte";
-	import TagDisplay from "../../components/News/TagDisplay.svelte";
+	import ArticlePreview from '../../components/News/ArticlePreview.svelte';
+	import { page } from '$app/stores';
+	import Hero from '../../components/Hero/Hero.svelte';
+	import { generateTitle } from '$lib/titleGenerator';
+	import { filter } from '$lib/stores/newsStore';
+	import { onMount } from 'svelte';
+	import TagDisplay from '../../components/News/TagDisplay.svelte';
 
 	let articles = [];
 
 	onMount(() => {
 		filter.subscribe((f) => updateArticles(f));
 		updateArticles($filter);
-	})
+	});
 
 	function updateArticles(f: string[]): void {
-		articles = $page.data.articles.filter(article => f.length === 0 || f.some(tag => article.tags.map((t) => t.name).includes(tag)));
+		articles = $page.data.articles.filter(
+			(article) => f.length === 0 || f.some((tag) => article.tags.map((t) => t.name).includes(tag))
+		);
 	}
 
 	function searchBoxEnter(e: KeyboardEvent) {
-		if (e.key === "Enter") {
+		if (e.key === 'Enter') {
 			const search = (e.target as HTMLInputElement).value.toLowerCase();
 			if (search.length > 0) {
 				$filter = [...$filter, search];
-				(e.target as HTMLInputElement).value = "";
+				(e.target as HTMLInputElement).value = '';
 			}
 		}
 	}
@@ -43,22 +45,35 @@
 	</div>
 </Hero>
 
-<div class="w-full px-2 md:w-[80%] lg:w-1/2 mx-auto my-8 flex-col items-center gap-4 justify-center">
-	<div class="lg:flex items-center gap-2">
+<div
+	class="mx-auto my-8 w-full flex-col items-center justify-center gap-4 px-2 md:w-[80%] lg:w-1/2"
+>
+	<div class="items-center gap-2 lg:flex">
 		<label for="searchbar" class="min-w-max text-xl font-medium">Nach Tag filtern:</label>
-		<input class="w-full rounded-[30px] bg-background_darker py-2 px-4 lowercase" maxlength="30" id="searchbar" on:keypress={searchBoxEnter}>
+		<input
+			class="w-full rounded-[30px] bg-background_darker px-4 py-2 lowercase"
+			maxlength="30"
+			id="searchbar"
+			on:keypress={searchBoxEnter}
+		/>
 	</div>
 
-	<div class="w-full flex justify-center mt-4">
-		<TagDisplay tags={$filter} overrideTagClick={(tag) => {$filter = $filter.filter((t) => t !== tag)}} disableResponsive />
+	<div class="mt-4 flex w-full justify-center">
+		<TagDisplay
+			tags={$filter}
+			overrideTagClick={(tag) => {
+				$filter = $filter.filter((t) => t !== tag);
+			}}
+			disableResponsive
+		/>
 	</div>
 </div>
 
 <div
-	class="mx-auto my-8 grid w-full grid-cols-2 gap-3 md:gap-8 px-2 md:grid-cols-3 lg:w-[90%] lg:grid-cols-4 xl:w-[70%]"
+	class="mx-auto my-8 grid w-full grid-cols-2 gap-3 px-2 md:grid-cols-3 md:gap-8 lg:w-[90%] lg:grid-cols-4 xl:w-[70%]"
 	data-sveltekit-preload-data="tap"
 >
 	{#each articles as article}
-		<ArticlePreview {article} disableTagLink={false}  />
+		<ArticlePreview {article} disableTagLink={false} />
 	{/each}
 </div>

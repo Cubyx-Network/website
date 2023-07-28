@@ -1,3 +1,3 @@
-<div class="w-full h-full absolute flex justify-center">
-  <div class="bg-accent w-1 h-full rounded-full"></div>
+<div class="absolute flex h-full w-full justify-center">
+	<div class="h-full w-1 rounded-full bg-accent" />
 </div>

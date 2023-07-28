@@ -1,4 +1,5 @@
 # <img src="./static/img/logo/netzwerk.png" width="35" /> Cubyx Website
+
 ## Version V3 - SvelteKit
 
 [Platzhalter Text]

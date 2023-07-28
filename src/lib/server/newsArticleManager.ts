@@ -1,7 +1,7 @@
-import { downloadFilesFromMinio, minio } from "$lib/server/minio";
-import { MINIO_BUCKET } from "$env/static/private";
-import parseMD from "parse-md";
-import prisma from "$lib/server/prisma";
+import { downloadFilesFromMinio, minio } from '$lib/server/minio';
+import { MINIO_BUCKET } from '$env/static/private';
+import parseMD from 'parse-md';
+import prisma from '$lib/server/prisma';
 
 export async function fetchAllArticles(): Promise<void> {
 	return new Promise((resolve, reject) => {
@@ -39,8 +39,8 @@ export async function fetchAllArticles(): Promise<void> {
 						thumbnail: parsedMetadata.thumbnail ? parsedMetadata.thumbnail.toString() : '#',
 						tags: parsedMetadata.tags
 							? removeDuplicates(
-								parsedMetadata.tags.toString().toLowerCase().replaceAll(' ', '').split(',')
-							)
+									parsedMetadata.tags.toString().toLowerCase().replaceAll(' ', '').split(',')
+							  )
 							: [],
 						author: parsedMetadata.author ? parsedMetadata.author.toString() : 'Unbekannt'
 					};
@@ -147,7 +147,7 @@ export async function fetchAllArticles(): Promise<void> {
 
 			resolve();
 		});
-	})
+	});
 }
 
 function removeDuplicates(array: string[]) {

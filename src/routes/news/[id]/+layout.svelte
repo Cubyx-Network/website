@@ -1,11 +1,11 @@
 <script>
-	import { faUser } from "@fortawesome/free-regular-svg-icons/faUser";
-	import { page } from "$app/stores";
-	import { faCalendarDays } from "@fortawesome/free-regular-svg-icons/faCalendarDays";
-	import MetadataDisplay from "../../../components/News/MetadataDisplay.svelte";
-	import { generateTitle } from "$lib/titleGenerator";
-	import TagDisplay from "../../../components/News/TagDisplay.svelte";
-	import Hero from "../../../components/Hero/Hero.svelte";
+	import { faUser } from '@fortawesome/free-regular-svg-icons/faUser';
+	import { page } from '$app/stores';
+	import { faCalendarDays } from '@fortawesome/free-regular-svg-icons/faCalendarDays';
+	import MetadataDisplay from '../../../components/News/MetadataDisplay.svelte';
+	import { generateTitle } from '$lib/titleGenerator';
+	import TagDisplay from '../../../components/News/TagDisplay.svelte';
+	import Hero from '../../../components/Hero/Hero.svelte';
 </script>
 
 <svelte:head>
