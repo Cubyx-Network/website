@@ -56,8 +56,9 @@
 
 <div
 	class="mx-auto my-8 grid w-full grid-cols-2 gap-3 md:gap-8 px-2 md:grid-cols-3 lg:w-[90%] lg:grid-cols-4 xl:w-[70%]"
+	data-sveltekit-preload-data="tap"
 >
 	{#each articles as article}
-		<ArticlePreview {article} disableTagLink={true} />
+		<ArticlePreview {article} disableTagLink={false}  />
 	{/each}
 </div>
