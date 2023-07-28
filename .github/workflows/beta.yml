@@ -8,7 +8,6 @@ on:
 jobs:
   trigger-dev-server:
     name: Restart Development Server for Rebuilding
-    needs: upload-to-server
     runs-on: ubuntu-latest
     steps:
       - name: Send Restart
