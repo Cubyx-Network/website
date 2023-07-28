@@ -50,7 +50,7 @@
 	th,
 	td,
 	span {
-		@apply text-[0.8rem] md:text-[1.2rem] lg:text-[1.5rem];
+		@apply text-[0.9rem] md:text-[1.2rem] lg:text-[1.5rem];
 	}
 
 	a {

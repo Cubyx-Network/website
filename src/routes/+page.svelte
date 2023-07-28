@@ -5,6 +5,7 @@
 	import SectionSpacer from "../components/Common/SectionSpacer.svelte";
 	import { page } from "$app/stores";
 	import ArticlePreview from "../components/News/ArticlePreview.svelte";
+	import AboutTimeline from "../components/Timeline/AboutTimeline.svelte";
 </script>
 
 <svelte:head>
@@ -47,4 +48,4 @@
 <SectionSpacer />
 
 <h2 class="text-center">Über Cubyx</h2>
-<p class="text-center">to be released...</p>
+<AboutTimeline />
