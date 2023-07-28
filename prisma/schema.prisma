@@ -3,7 +3,7 @@ generator client {
 }
 
 datasource production {
-  provider          = "mysql"
+  provider          = "sqlite"
   url               = env("DATABASE_PRISMA_URL")
 }
 
