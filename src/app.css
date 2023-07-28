@@ -54,7 +54,11 @@
 	}
 
 	a {
-		@apply cursor-pointer text-grayedOut_light underline;
+		@apply cursor-pointer text-grayedOut_light underline clickable;
+	}
+
+	button {
+		@apply clickable;
 	}
 
 	.dshadow {
@@ -113,5 +117,17 @@
 	hr {
 		@apply border border-text;
 		@apply my-4;
+	}
+
+	.clickable {
+		@apply transition-all duration-200 ease-in-out;
+	}
+
+	.clickable:hover {
+		@apply brightness-[.8];
+	}
+
+	.clickable:active {
+		@apply scale-[.95];
 	}
 }
