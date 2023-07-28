@@ -14,7 +14,7 @@
 		"postinstall": "prisma generate",
 		"release": "release-it",
 		"test": ""
-	},y
+	},
 	"devDependencies": {
 		"@release-it/conventional-changelog": "^7.0.0",
 		"@sveltejs/adapter-auto": "^2.0.0",
