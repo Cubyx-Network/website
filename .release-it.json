@@ -20,14 +20,14 @@
 			"preset": {
 				"name": "conventionalcommits",
 				"types": [
-					{ "type": "feat", "section": "\uD83C\uDD95 Features" },
-					{ "type": "change", "section": "\uD83D\uDD04 Changes" },
-					{ "type": "fix", "section": "\uD83E\uDEB2 Bug Fixes" },
+					{ "type": "feat", "section": "\uD83C\uDD95 Funktionen" },
+					{ "type": "change", "section": "\uD83D\uDD04 Änderungen" },
+					{ "type": "fix", "section": "\uD83E\uDEB2 Fehlerbehebungen" },
 					{ "type": "hotfix", "section": "\uD83D\uDD25 Hotfixes" },
-					{ "type": "docs", "section": "\uD83D\uDCD2 Documentation" },
-					{ "type": "style", "section": "\uD83D\uDD8C\uFE0F Styles" },
+					{ "type": "style", "section": "\uD83D\uDD8C\uFE0F Aussehen" },
 					{ "type": "refactor", "section": "\uD83D\uDCBB Code Refactoring" },
-					{ "type": "deps", "section": "⚙\uFE0F Dependencies" }
+					{ "type": "deps", "section": "⚙\uFE0F Abhängigkeiten" },
+					{ "type": "content", "section": "\uD83D\uDCD6 Inhalt" }
 				]
 			}
 		}
