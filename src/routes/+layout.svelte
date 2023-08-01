@@ -7,7 +7,7 @@
 		{ text: 'Home', link: '/' },
 		{ text: 'Das Team', link: '/team' },
 		{ text: 'Neuigkeiten', link: '/news' },
-		{ text: 'Partner', link: '/partner' },
+		{ text: '???', link: '#' },
 		{ text: 'Bewerben', link: 'https://cubyx.eu/bewerben' },
 		{ text: 'Discord', link: 'https://cubyx.eu/discord' }
 	];
