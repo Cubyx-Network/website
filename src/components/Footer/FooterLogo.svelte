@@ -1,5 +1,5 @@
 <script>
-	import FooterSocialIcons from './FooterSocialIcons.svelte';
+	import FooterSocialIcons from "./FooterSocialIcons.svelte";
 </script>
 
 <div class="flex items-center justify-center gap-4">
@@ -11,9 +11,9 @@
 	<div class="flex flex-col gap-2">
 		<div>
 			<h3 class="leading-tight">Cubyx Network</h3>
-			<h4 class="leading-tight text-grayedOut_dark">
-				Quadratisch<span class="text-accent">.</span> Praktisch<span class="text-accent">.</span>
-				Gut<span class="text-accent">.</span>
+			<h4 class="leading-tight text-neutral-focus">
+				Quadratisch<span class="text-primary">.</span> Praktisch<span class="text-primary">.</span>
+				Gut<span class="text-primary">.</span>
 			</h4>
 		</div>
 		<FooterSocialIcons />

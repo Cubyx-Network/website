@@ -1,26 +1,18 @@
 <script>
-	import Hero from '../components/Hero/Hero.svelte';
-	import { generateTitle } from '$lib/titleGenerator';
-	import SectionWithImageAndText from '../components/Common/SectionWithImageAndText.svelte';
-	import SectionSpacer from '../components/Common/SectionSpacer.svelte';
-	import { page } from '$app/stores';
-	import ArticlePreview from '../components/News/ArticlePreview.svelte';
-	import AboutTimeline from '../components/Timeline/AboutTimeline.svelte';
+	import { generateTitle } from "$lib/titleGenerator";
+	import SectionWithImageAndText from "../components/Common/SectionWithImageAndText.svelte";
+	import SectionSpacer from "../components/Common/SectionSpacer.svelte";
+	import { page } from "$app/stores";
+	import ArticlePreview from "../components/News/ArticlePreview.svelte";
+	import AboutTimeline from "../components/Timeline/AboutTimeline.svelte";
+	import HeroWithTitleAndSlogan from "../components/Common/HeroWithTitleAndSlogan.svelte";
 </script>
 
 <svelte:head>
 	<title>{generateTitle('Home')}</title>
 </svelte:head>
 
-<Hero img="/img/home/hero.png">
-	<div class="dshadow text-center leading-[2rem] md:leading-[3rem] lg:leading-[4rem]">
-		<h1 class="tracking-[.3em]">CUBYX NETWORK</h1>
-		<h3>
-			Quadratisch<span class="text-accent">.</span> Praktisch<span class="text-accent">.</span>
-			Gut<span class="text-accent">.</span>
-		</h3>
-	</div>
-</Hero>
+<HeroWithTitleAndSlogan img="/img/home/hero.png">Cubyx Network</HeroWithTitleAndSlogan>
 
 <div class="my-12 text-center leading-tight">
 	<h2>Herzlich Willkommen</h2>

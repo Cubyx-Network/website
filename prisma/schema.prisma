@@ -3,22 +3,57 @@ generator client {
 }
 
 datasource production {
-  provider          = "sqlite"
-  url               = env("DATABASE_PRISMA_URL")
+  provider = "sqlite"
+  url      = env("DATABASE_PRISMA_URL")
 }
 
 model Article {
-    id        String      @id
-    title     String
-    createdAt DateTime    @default(now())
-    author    String
-    content   String
-    tags      Tag[]
-    clicks    Int         @default(0)
-    thumbnail String
+  id        String   @id
+  title     String
+  createdAt DateTime @default(now())
+  author    String
+  content   String
+  tags      Tag[]
+  clicks    Int      @default(0)
+  thumbnail String
 }
 
 model Tag {
-    name      String      @id
-    articles  Article[]
+  name     String    @id
+  articles Article[]
+}
+
+// ------------------------------
+// Team
+// ------------------------------
+model TeamMember {
+  id        String           @id @default(uuid())
+  name      String
+  intro     String
+  avatar    String?
+  youtube   String?
+  mastodon  String?
+  discord   String?
+  twitch    String?
+  reddit    String?
+  github    String?
+  status    TeamMemberStatus @relation(fields: [statusId], references: [id])
+  statusId  String
+  subunits  Subunit[]        @relation("teamMemberSubunits")
+  leaderOf  Subunit[]        @relation("teamMemberLeaderOf")
+  createdAt DateTime         @default(now())
+}
+
+model TeamMemberStatus {
+  id      String       @id @default(uuid())
+  name    String
+  members TeamMember[]
+}
+
+model Subunit {
+  id       String       @id @default(uuid())
+  name     String
+  leader   TeamMember   @relation("teamMemberLeaderOf", fields: [leaderId], references: [id])
+  leaderId String
+  members  TeamMember[] @relation("teamMemberSubunits")
 }

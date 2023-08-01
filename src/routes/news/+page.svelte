@@ -1,11 +1,11 @@
 <script lang="ts">
-	import ArticlePreview from '../../components/News/ArticlePreview.svelte';
-	import { page } from '$app/stores';
-	import Hero from '../../components/Hero/Hero.svelte';
-	import { generateTitle } from '$lib/titleGenerator';
-	import { filter } from '$lib/stores/newsStore';
-	import { onMount } from 'svelte';
-	import TagDisplay from '../../components/News/TagDisplay.svelte';
+	import ArticlePreview from "../../components/News/ArticlePreview.svelte";
+	import { page } from "$app/stores";
+	import { generateTitle } from "$lib/titleGenerator";
+	import { filter } from "$lib/stores/newsStore";
+	import { onMount } from "svelte";
+	import TagDisplay from "../../components/News/TagDisplay.svelte";
+	import HeroWithTitleAndSlogan from "../../components/Common/HeroWithTitleAndSlogan.svelte";
 
 	let articles = [];
 
@@ -35,15 +35,7 @@
 	<title>{generateTitle('Neuigkeiten')}</title>
 </svelte:head>
 
-<Hero img="/img/news/hero.jpg">
-	<div class="dshadow text-center leading-[2rem] md:leading-[3rem] lg:leading-[4rem]">
-		<h1 class="uppercase tracking-[.3em]">Aktuelle Neuigkeiten</h1>
-		<h3>
-			Quadratisch<span class="text-accent">.</span> Praktisch<span class="text-accent">.</span>
-			Gut<span class="text-accent">.</span>
-		</h3>
-	</div>
-</Hero>
+<HeroWithTitleAndSlogan img="/img/news/hero.jpg">Aktuelle Neuigkeiten</HeroWithTitleAndSlogan>
 
 <div
 	class="mx-auto my-8 w-full flex-col items-center justify-center gap-4 px-2 md:w-[80%] lg:w-1/2"
@@ -51,7 +43,7 @@
 	<div class="items-center gap-2 lg:flex">
 		<label for="searchbar" class="min-w-max text-xl font-medium">Nach Tag filtern:</label>
 		<input
-			class="w-full rounded-[30px] bg-background_darker px-4 py-2 lowercase"
+			class="w-full rounded-[30px] bg-secondary px-4 py-2 lowercase"
 			maxlength="30"
 			id="searchbar"
 			on:keypress={searchBoxEnter}

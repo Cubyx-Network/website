@@ -1,16 +1,16 @@
 <script lang="ts">
-	import type { Article } from '@prisma/client';
-	import MetadataDisplay from './MetadataDisplay.svelte';
-	import { faCalendarDays } from '@fortawesome/free-regular-svg-icons/faCalendarDays';
-	import { faUser } from '@fortawesome/free-regular-svg-icons/faUser';
-	import TagDisplay from './TagDisplay.svelte';
+	import type { Article } from "@prisma/client";
+	import MetadataDisplay from "./MetadataDisplay.svelte";
+	import { faCalendarDays } from "@fortawesome/free-regular-svg-icons/faCalendarDays";
+	import { faUser } from "@fortawesome/free-regular-svg-icons/faUser";
+	import TagDisplay from "./TagDisplay.svelte";
 
 	export let article: Article;
 	export let disableTagLink: boolean;
 </script>
 
 <a
-	class="relative flex aspect-square w-full items-center justify-center rounded-[30px] border-[3px] border-accent text-text"
+	class="relative flex aspect-square w-full items-center justify-center rounded-[30px] border-[3px] border-primary text-base-content"
 	href={`/news/${article.id}`}
 >
 	<img

@@ -1,8 +1,7 @@
 <script>
-	import '../app.css';
-	import Header from '../components/Header/Header.svelte';
-	import Footer from '../components/Footer/Footer.svelte';
-	import HeaderDummy from '../components/Header/HeaderDummy.svelte';
+	import "../app.css";
+	import Header from "../components/Header/Header.svelte";
+	import Footer from "../components/Footer/Footer.svelte";
 
 	let headerConfig = [
 		{ text: 'Home', link: '/' },
@@ -16,8 +15,7 @@
 
 <Header links={headerConfig} />
 
-<main class="overflow-x-hidden bg-background">
-	<HeaderDummy />
+<main class="overflow-x-hidden bg-base-100">
 	<slot />
 </main>
 
