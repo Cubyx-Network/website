@@ -7,14 +7,12 @@
 
 @layer base {
 	html {
-		@apply font-text;
-		@apply bg-background_darker;
-		@apply text-text;
+		@apply bg-secondary text-base-content;
 	}
 
 	nav a,
 	footer a {
-		@apply text-text no-underline;
+		@apply no-underline;
 	}
 
 	h1,
@@ -54,7 +52,7 @@
 	}
 
 	a {
-		@apply clickable cursor-pointer text-grayedOut_light underline;
+		@apply clickable cursor-pointer text-neutral underline;
 	}
 
 	button {
@@ -75,7 +73,7 @@
 
 	/* Format tables nicely with border, padding in cells, ... */
 	table {
-		@apply border-collapse border-2 border-text;
+		@apply border-collapse border-2 border-base-content;
 		@apply my-4 p-4;
 		@apply w-full;
 		@apply table-auto text-left;
@@ -97,8 +95,7 @@
 	}
 
 	pre {
-		@apply bg-background_darker;
-		@apply text-text;
+		@apply bg-secondary;
 		@apply p-4;
 		@apply m-4;
 		@apply rounded-md;
@@ -106,8 +103,8 @@
 	}
 
 	blockquote {
-		@apply border-l-4 border-text;
-		@apply bg-background_darker;
+		@apply border-l-4 border-base-content;
+		@apply bg-secondary;
 		@apply p-4;
 		@apply m-4;
 		@apply rounded-md;
@@ -115,7 +112,7 @@
 	}
 
 	hr {
-		@apply border border-text;
+		@apply border border-base-content;
 		@apply my-4;
 	}
 

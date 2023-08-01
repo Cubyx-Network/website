@@ -17,7 +17,7 @@
 	<img
 		src={img}
 		alt={imgAlt}
-		class="dshadow w-full rounded-[30px] border-[5px] border-grayedOut_dark md:w-3/4 lg:w-2/5"
+		class="w-full rounded-[30px] border-[5px] border-neutral-focus md:w-3/4 lg:w-2/5"
 	/>
 
 	{#if mode === 'right'}

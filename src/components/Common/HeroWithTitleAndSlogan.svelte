@@ -10,8 +10,8 @@
       <slot />
     </h1>
     <h3>
-      Quadratisch<span class="text-accent">.</span> Praktisch<span class="text-accent">.</span>
-      Gut<span class="text-accent">.</span>
+      Quadratisch<span class="text-primary">.</span> Praktisch<span class="text-primary">.</span>
+      Gut<span class="text-primary">.</span>
     </h3>
   </div>
 </Hero>

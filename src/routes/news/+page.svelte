@@ -43,7 +43,7 @@
 	<div class="items-center gap-2 lg:flex">
 		<label for="searchbar" class="min-w-max text-xl font-medium">Nach Tag filtern:</label>
 		<input
-			class="w-full rounded-[30px] bg-background_darker px-4 py-2 lowercase"
+			class="w-full rounded-[30px] bg-secondary px-4 py-2 lowercase"
 			maxlength="30"
 			id="searchbar"
 			on:keypress={searchBoxEnter}

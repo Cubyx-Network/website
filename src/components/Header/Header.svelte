@@ -1,8 +1,8 @@
 <script lang="ts">
-	import HeaderMobile from './HeaderMobile.svelte';
-	import HeaderLinkWrapper from './HeaderLinkWrapper.svelte';
-	import HeaderLink from './HeaderLink.svelte';
-	import HeaderLogo from './HeaderLogo.svelte';
+	import HeaderMobile from "./HeaderMobile.svelte";
+	import HeaderLinkWrapper from "./HeaderLinkWrapper.svelte";
+	import HeaderLink from "./HeaderLink.svelte";
+	import HeaderLogo from "./HeaderLogo.svelte";
 
 	export let links: { link: string; text: string }[] = [];
 
@@ -19,7 +19,7 @@
 </script>
 
 <nav
-	class="fixed z-10 hidden h-24 w-full items-center justify-center gap-5 bg-background_darker p-1 lg:flex"
+	class="sticky top-0 z-10 hidden h-24 w-full items-center justify-center gap-5 bg-secondary p-1 lg:flex"
 >
 	<HeaderLinkWrapper justify="end">
 		{#each leftLinks as link}

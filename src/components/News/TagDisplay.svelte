@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Icon } from 'svelte-awesome';
-	import { faTag } from '@fortawesome/free-solid-svg-icons/faTag';
+	import { Icon } from "svelte-awesome";
+	import { faTag } from "@fortawesome/free-solid-svg-icons/faTag";
 
 	export let tags: string[] | undefined;
 	export let disableTagLink = false;
@@ -9,7 +9,7 @@
 
 	const styling = `${
 		disableResponsive ? '' : 'hidden md:block'
-	} px-2 py-1 text-xs font-semibold bg-accent rounded-full text-text no-underline`;
+	} px-2 py-1 text-xs font-semibold bg-primary rounded-full text-base-content no-underline`;
 </script>
 
 {#if tags}

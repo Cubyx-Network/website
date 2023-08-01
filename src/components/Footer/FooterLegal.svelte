@@ -1,4 +1,4 @@
-<div class="flex items-center justify-center gap-2 self-center text-grayedOut_dark md:gap-4">
+<div class="flex items-center justify-center gap-2 self-center text-neutral md:gap-4">
 	<a href="/impressum">Impressum</a>
 	<p>•</p>
 	<a href="/datenschutz">Datenschutz</a>
@@ -9,7 +9,7 @@
 </div>
 
 <style>
-	a {
-		@apply text-grayedOut_light;
+	p {
+		@apply text-neutral-focus;
 	}
 </style>
