@@ -27,17 +27,31 @@ model Tag {
 // Team
 // ------------------------------
 model TeamMember {
-  id        String    @id
+  id        String           @id @default(uuid())
   name      String
   intro     String
   avatar    String?
-  subunits  Subunit[] @relation("teamMemberSubunits")
-  leaderOf  Subunit[] @relation("teamMemberLeaderOf")
-  createdAt DateTime  @default(now())
+  youtube   String?
+  mastodon  String?
+  discord   String?
+  twitch    String?
+  reddit    String?
+  github    String?
+  status    TeamMemberStatus @relation(fields: [statusId], references: [id])
+  statusId  String
+  subunits  Subunit[]        @relation("teamMemberSubunits")
+  leaderOf  Subunit[]        @relation("teamMemberLeaderOf")
+  createdAt DateTime         @default(now())
+}
+
+model TeamMemberStatus {
+  id      String       @id @default(uuid())
+  name    String
+  members TeamMember[]
 }
 
 model Subunit {
-  id       String       @id
+  id       String       @id @default(uuid())
   name     String
   leader   TeamMember   @relation("teamMemberLeaderOf", fields: [leaderId], references: [id])
   leaderId String
