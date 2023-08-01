@@ -13,19 +13,16 @@ model Article {
   createdAt DateTime @default(now())
   author    String
   content   String
-  tags      Tag[]
   clicks    Int      @default(0)
   thumbnail String
+  tags      Tag[]    @relation("ArticleToTag")
 }
 
 model Tag {
   name     String    @id
-  articles Article[]
+  articles Article[] @relation("ArticleToTag")
 }
 
-// ------------------------------
-// Team
-// ------------------------------
 model TeamMember {
   id        String           @id @default(uuid())
   name      String
@@ -37,11 +34,11 @@ model TeamMember {
   twitch    String?
   reddit    String?
   github    String?
-  status    TeamMemberStatus @relation(fields: [statusId], references: [id])
   statusId  String
-  subunits  Subunit[]        @relation("teamMemberSubunits")
-  leaderOf  Subunit[]        @relation("teamMemberLeaderOf")
   createdAt DateTime         @default(now())
+  leaderOf  Subunit[]        @relation("teamMemberLeaderOf")
+  status    TeamMemberStatus @relation(fields: [statusId], references: [id])
+  subunits  Subunit[]        @relation("teamMemberSubunits")
 }
 
 model TeamMemberStatus {
@@ -53,7 +50,7 @@ model TeamMemberStatus {
 model Subunit {
   id       String       @id @default(uuid())
   name     String
-  leader   TeamMember   @relation("teamMemberLeaderOf", fields: [leaderId], references: [id])
   leaderId String
+  leader   TeamMember   @relation("teamMemberLeaderOf", fields: [leaderId], references: [id])
   members  TeamMember[] @relation("teamMemberSubunits")
 }
