@@ -1,11 +1,13 @@
-<script>
+<script lang="ts">
 	import { generateTitle } from "$lib/titleGenerator";
 	import SectionWithImageAndText from "../components/Common/SectionWithImageAndText.svelte";
 	import SectionSpacer from "../components/Common/SectionSpacer.svelte";
-	import { page } from "$app/stores";
 	import ArticlePreview from "../components/News/ArticlePreview.svelte";
 	import AboutTimeline from "../components/Timeline/AboutTimeline.svelte";
 	import HeroWithTitleAndSlogan from "../components/Common/HeroWithTitleAndSlogan.svelte";
+	import type { PageData } from "./$types";
+
+	export let data: PageData;
 </script>
 
 <svelte:head>
@@ -32,7 +34,7 @@
 
 <h2 class="text-center">Neuigkeiten</h2>
 <div class="m-auto grid w-full grid-cols-2 gap-8 p-8 lg:w-[90%] lg:grid-cols-3 xl:w-[70%]">
-	{#each $page.data.articles.slice(0, 3) as article}
+	{#each data.articles.slice(0, 3) as article}
 		<ArticlePreview {article} />
 	{/each}
 </div>
