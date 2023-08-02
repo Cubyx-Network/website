@@ -6,21 +6,21 @@
 	import TagDisplay from "./TagDisplay.svelte";
 
 	export let article: Article;
-	export let disableTagLink: boolean;
+	export let disableTagLink: boolean = false;
 </script>
 
-<a
-	class="relative flex aspect-square w-full items-center justify-center rounded-[30px] border-[3px] border-primary text-base-content"
-	href={`/news/${article.id}`}
+<div
+	class="relative flex aspect-square w-full items-center justify-center rounded-[30px] border-[3px] border-primary clickable cursor-pointer"
 >
-	<img
-		src={article.thumbnail}
-		alt="Artikel-Thumbnail"
-		class="h-full w-full rounded-[30px] object-cover"
-	/>
-	<div class="absolute right-0 top-0 flex h-full w-full items-end justify-end leading-tight">
+		<img
+			src={article.thumbnail}
+			alt="Artikel-Thumbnail"
+			class="h-full w-full rounded-[30px] object-cover"
+		/>
+
+	<div class="absolute top-0 flex h-full w-full items-end justify-end leading-tight">
 		<div
-			class="flex w-full flex-col items-end rounded-b-[30px] bg-[#00000033] p-2 text-right leading-tight sm:p-4"
+			class="flex w-full flex-col items-end z-10 rounded-b-[30px] bg-[#00000033] p-2 text-right leading-tight sm:p-4"
 		>
 			<span class="text-right font-bold">{article.title}</span>
 			<MetadataDisplay icon={faUser} text={article.author} />
@@ -28,4 +28,6 @@
 			<TagDisplay tags={article.tags.map((tag) => tag.name)} {disableTagLink} />
 		</div>
 	</div>
-</a>
+
+	<a class="w-full h-full absolute top-0 left-0" href="/news/{article.id}"></a>
+</div>
