@@ -43,6 +43,8 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@auth/core": "^0.10.0",
+		"@auth/sveltekit": "^0.3.6",
 		"@fontsource/kanit": "^4.5.10",
 		"@fontsource/montserrat": "^5.0.5",
 		"@fortawesome/fontawesome-svg-core": "^6.4.0",
