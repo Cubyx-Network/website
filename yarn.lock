@@ -4818,10 +4818,10 @@ svelte-awesome@^3.2.0:
   resolved "https://registry.yarnpkg.com/svelte-awesome/-/svelte-awesome-3.2.0.tgz#3589891086516015f321b9635a750f67bade9511"
   integrity sha512-A9gqgRDs/6EjUgMHIBHz88vJIiY4fVI7e2X9uu43O7J2EYqdVVSnHHH49TxMnNinbq6K9Z/1kMD9LCZhX7ysUQ==
 
-svelte-check@^3.4.3:
-  version "3.4.4"
-  resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-3.4.4.tgz#201850747f8b5ec3b104f69a69a034b1a742a40f"
-  integrity sha512-Uys9+R65cj8TmP8f5UpS7B2xKpNLYNxEWJsA5ZoKcWq/uwvABFF7xS6iPQGLoa7hxz0DS6xU60YFpmq06E4JxA==
+svelte-check@^3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-3.5.0.tgz#ebf2d29799bdd35d35d7c6298115726708e7e6e3"
+  integrity sha512-KHujbn4k17xKYLmtCwv0sKKM7uiHTYcQvXnvrCcNU6a7hcszh99zFTIoiu/Sp/ewAw5aJmillJ1Cs8gKLmcX4A==
   dependencies:
     "@jridgewell/trace-mapping" "^0.3.17"
     chokidar "^3.4.1"
@@ -4829,7 +4829,7 @@ svelte-check@^3.4.3:
     import-fresh "^3.2.1"
     picocolors "^1.0.0"
     sade "^1.7.4"
-    svelte-preprocess "^5.0.3"
+    svelte-preprocess "^5.0.4"
     typescript "^5.0.3"
 
 svelte-hmr@^0.15.2:
@@ -4837,10 +4837,10 @@ svelte-hmr@^0.15.2:
   resolved "https://registry.yarnpkg.com/svelte-hmr/-/svelte-hmr-0.15.2.tgz#d2f6fc82e040f2734abd54cea5cbef46828f2538"
   integrity sha512-q/bAruCvFLwvNbeE1x3n37TYFb3mTBJ6TrCq6p2CoFbSTNhDE9oAtEfpy+wmc9So8AG0Tja+X0/mJzX9tSfvIg==
 
-svelte-preprocess@^5.0.3:
-  version "5.0.3"
-  resolved "https://registry.yarnpkg.com/svelte-preprocess/-/svelte-preprocess-5.0.3.tgz#431d538d457d3a5ba470a5ae5754a5aeb76579c8"
-  integrity sha512-GrHF1rusdJVbOZOwgPWtpqmaexkydznKzy5qIC2FabgpFyKN57bjMUUUqPRfbBXK5igiEWn1uO/DXsa2vJ5VHA==
+svelte-preprocess@^5.0.4:
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/svelte-preprocess/-/svelte-preprocess-5.0.4.tgz#2123898e079a074f7f4ef1799e10e037f5bcc55b"
+  integrity sha512-ABia2QegosxOGsVlsSBJvoWeXy1wUKSfF7SWJdTjLAbx/Y3SrVevvvbFNQqrSJw89+lNSsM58SipmZJ5SRi5iw==
   dependencies:
     "@types/pug" "^2.0.6"
     detect-indent "^6.1.0"
