@@ -183,10 +183,10 @@
   resolved "https://registry.yarnpkg.com/@fontsource/kanit/-/kanit-4.5.10.tgz#603bd61ad3a648edbf5f584ed67f4bbd0c332500"
   integrity sha512-spOSUiwTw6Y7pD0mU6mzydiG5i3SUilXbzISCJKAWWDGljGpTF724lGHUdQ/QFiLrPo9KAYbThcwbNKGUx+/NA==
 
-"@fontsource/montserrat@^5.0.5":
-  version "5.0.5"
-  resolved "https://registry.yarnpkg.com/@fontsource/montserrat/-/montserrat-5.0.5.tgz#90b5420ab23076a9e76a98516200afcb6ba7de8d"
-  integrity sha512-kR4hwC44p0GZQsy1oA2X8EdFMg/lC7qwVX9jNgNBQ+uSZXKoV4Vyc1VepcRAcGRKPIgcc/3OC1j7FNQDYpFLJA==
+"@fontsource/montserrat@^5.0.8":
+  version "5.0.8"
+  resolved "https://registry.yarnpkg.com/@fontsource/montserrat/-/montserrat-5.0.8.tgz#04d162d8929d2911c126e6dafbd218e67c8bb63d"
+  integrity sha512-bNj6wfiWXXbsxb2ffatjpX+GBv30cWZ1lwNXW9qTeX2FnzPomsGRV4HdPrf3TqyTiVqX6fLo80zrQcMi7r8+fA==
 
 "@fortawesome/fontawesome-common-types@6.4.0":
   version "6.4.0"
