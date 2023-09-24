@@ -5,7 +5,7 @@
 	<p>•</p>
 	<a href="https://cubyx.eu/status" target="_blank">Statuspage</a>
 	<p>•</p>
-	<a href="/kontakt">Kontakt</a>
+	<a href="https://bio.link/cubyx">Kontakt</a>
 </div>
 
 <style>
