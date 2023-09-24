@@ -16,8 +16,6 @@
 
 <HeroWithTitleAndSlogan img="/img/team/hero.jpg">Das Cubyx Team</HeroWithTitleAndSlogan>
 
-
-
 <div class="w-full p-8 m-auto space-y-24 2xl:w-[70%]">
   <div class="w-full space-y-10">
     {#each data.statuses as status}
