@@ -7,7 +7,7 @@
 
 @layer base {
 	html {
-		@apply bg-secondary text-base-content scroll-smooth;
+		@apply scroll-smooth bg-secondary text-base-content;
 	}
 
 	nav a,
