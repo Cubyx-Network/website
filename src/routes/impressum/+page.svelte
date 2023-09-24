@@ -11,14 +11,12 @@
 
 <div class="space-y-8 p-4 lg:p-16">
 	<h3>Angaben gemäß § 5 TMG</h3>
-	<div class="flex gap-16">
-		<p>
-			Rudolf Müller<br />
-			Siedlung Roßweiner Straße 20<br />
-			Baumhaus Bewohner<br />
-			04720 Döbeln
-		</p>
-	</div>
+	<p>
+		Rudolf Müller<br />
+		Siedlung Roßweiner Straße 20<br />
+		Baumhaus Bewohner<br />
+		04720 Döbeln
+	</p>
 
 	<p class="font-bold">
 		Hinweis: Der Missbrauch von jeglichen Kontakt und personenbezogenen Daten wird zur Anzeige
