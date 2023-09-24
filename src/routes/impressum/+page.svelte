@@ -15,14 +15,8 @@
 		<p>
 			Rudolf Müller<br />
 			Siedlung Roßweiner Straße 20<br />
-			Untermieter vom Baumhaus<br />
+			Baumhaus Bewohner<br />
 			04720 Döbeln
-		</p>
-
-		<p>
-			Maurice Reyher<br />
-			Ernstweg 4<br />
-			98716 Elgersburg
 		</p>
 	</div>
 
