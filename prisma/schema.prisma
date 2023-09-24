@@ -7,22 +7,6 @@ datasource production {
   url      = env("DATABASE_PRISMA_URL")
 }
 
-model Article {
-  id        String   @id
-  title     String
-  createdAt DateTime @default(now())
-  author    String
-  content   String
-  clicks    Int      @default(0)
-  thumbnail String
-  tags      Tag[]    @relation("ArticleToTag")
-}
-
-model Tag {
-  name     String    @id
-  articles Article[] @relation("ArticleToTag")
-}
-
 model TeamMember {
   id        String           @id @default(uuid())
   name      String
