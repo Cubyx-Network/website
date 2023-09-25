@@ -10,7 +10,7 @@
 	import { faSpotify } from '@fortawesome/free-brands-svg-icons/faSpotify';
 </script>
 
-<div class="flex items-center gap-3 md:gap-4">
+<div class="flex flex-wrap items-center gap-3 md:gap-4">
 	<FooterSocialIcon icon={faDiscord} href="https://cubyx.eu/discord" />
 	<FooterSocialIcon icon={faTwitch} href="https://cubyx.eu/twitch" />
 	<FooterSocialIcon icon={faYoutube} href="https://cubyx.eu/youtube" />

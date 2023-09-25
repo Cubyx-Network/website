@@ -1,4 +1,4 @@
-<div class="flex items-center justify-center gap-2 self-center text-neutral md:gap-4">
+<div class="flex flex-wrap items-center justify-center gap-x-2 self-center text-neutral md:gap-4">
 	<a href="/impressum">Impressum</a>
 	<p>•</p>
 	<a href="/datenschutz">Datenschutz</a>
