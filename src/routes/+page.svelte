@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { generateTitle } from "$lib/titleGenerator";
-	import SectionWithImageAndText from "../components/Common/SectionWithImageAndText.svelte";
-	import SectionSpacer from "../components/Common/SectionSpacer.svelte";
-	import AboutTimeline from "../components/Timeline/AboutTimeline.svelte";
-	import HeroWithTitleAndSlogan from "../components/Common/HeroWithTitleAndSlogan.svelte";
-	import type { PageData } from "./$types";
+	import { generateTitle } from '$lib/titleGenerator';
+	import SectionWithImageAndText from '../components/Common/SectionWithImageAndText.svelte';
+	import SectionSpacer from '../components/Common/SectionSpacer.svelte';
+	import AboutTimeline from '../components/Timeline/AboutTimeline.svelte';
+	import HeroWithTitleAndSlogan from '../components/Common/HeroWithTitleAndSlogan.svelte';
+	import type { PageData } from './$types';
 
 	export let data: PageData;
 </script>

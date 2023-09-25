@@ -1,18 +1,8 @@
 import type { PageServerLoad } from './$types';
-import prisma from '$lib/server/prisma';
+import { getTeamMembers } from '$lib/server/teamMembers';
 
 export const load = (async () => {
 	return {
-		members: await prisma.teamMember.findMany({
-			include: {
-				subunits: true,
-				status: true
-			}
-		}),
-		statuses: await prisma.teamMemberStatus.findMany({
-			include: {
-				members: true
-			}
-		})
+		members: getTeamMembers()
 	};
 }) satisfies PageServerLoad;
