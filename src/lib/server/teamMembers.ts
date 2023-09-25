@@ -1,11 +1,9 @@
-import { DISCORD_TEAM_ROLE_ID } from '$env/static/private';
-import { log } from 'console';
+import { DISCORD_CUBYX_GUILD, DISCORD_TEAM_ROLE_ID } from '$env/static/private';
 import { downloadAvatar, requestDiscordAPI } from './discord';
 import prisma from './prisma';
 
 async function fetchAll(): Promise<void> {
-	log('Fetching team members...');
-	const response = await requestDiscordAPI('/guilds/665917454626717746/members?limit=1000');
+	const response = await requestDiscordAPI(`/guilds/${DISCORD_CUBYX_GUILD}/members?limit=1000`);
 	const teamMembers: any[] = response.filter((m: any) => m.roles.includes(DISCORD_TEAM_ROLE_ID));
 
 	const lastSync = new Date();
