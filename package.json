@@ -9,12 +9,12 @@
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"lint": "prettier --plugin-search-dir . --check . && eslint .",
+		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write .",
 		"prisma": "prisma migrate dev",
 		"postinstall": "prisma generate",
 		"release": "release-it",
-		"test": ""
+		"test": "exit 0"
 	},
 	"devDependencies": {
 		"@release-it/conventional-changelog": "^7.0.0",
