@@ -53,6 +53,4 @@ jobs:
         run: echo "Disabled" #bun run check
 
       - name: Run ESLint
-        uses: sibiraj-s/action-eslint@v3
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+        run: bun run lint
