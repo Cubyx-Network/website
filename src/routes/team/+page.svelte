@@ -16,7 +16,7 @@
 <div
 	class="m-auto grid w-full grid-cols-1 gap-8 p-8 sm:grid-cols-3 lg:grid-cols-4 2xl:w-[80%] 2xl:grid-cols-5"
 >
-	{#each data.members as member, i}
+	{#each data.members as member}
 		<TeamMember teamMember={member} />
 	{/each}
 </div>

@@ -4,6 +4,7 @@ import prisma from './prisma';
 
 async function fetchAll(): Promise<void> {
 	const response = await requestDiscordAPI(`/guilds/${DISCORD_CUBYX_GUILD}/members?limit=1000`);
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	const teamMembers: any[] = response.filter((m: any) => m.roles.includes(DISCORD_TEAM_ROLE_ID));
 
 	const lastSync = new Date();
@@ -53,6 +54,7 @@ async function checkForStale() {
 	if (stale.length > 0) await fetchAll();
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export async function getTeamMembers(): Promise<any[]> {
 	await checkForStale();
 	return await prisma.teamMember.findMany({
