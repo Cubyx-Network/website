@@ -51,7 +51,7 @@ async function fetchAll(): Promise<void> {
 async function checkForStale() {
 	const members = await prisma.teamMember.findMany();
 	const stale = members.filter((m) => m.lastSync < new Date(Date.now() - 1000 * 60 * 60 * 24)); // 24 hours
-	if (stale.length > 0) await fetchAll();
+	if (stale.length > 0 || members.length == 0) await fetchAll();
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
