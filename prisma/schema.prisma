@@ -8,33 +8,12 @@ datasource production {
 }
 
 model TeamMember {
-  id        String           @id @default(uuid())
-  name      String
-  intro     String
-  avatar    String?
-  youtube   String?
-  mastodon  String?
-  discord   String?
-  twitch    String?
-  reddit    String?
-  github    String?
-  statusId  String
-  createdAt DateTime         @default(now())
-  leaderOf  Subunit[]        @relation("teamMemberLeaderOf")
-  status    TeamMemberStatus @relation(fields: [statusId], references: [id])
-  subunits  Subunit[]        @relation("teamMemberSubunits")
-}
-
-model TeamMemberStatus {
-  id      String       @id @default(uuid())
+  id      String              @id @default(uuid())
   name    String
-  members TeamMember[]
-}
+  avatar  Bytes
 
-model Subunit {
-  id       String       @id @default(uuid())
-  name     String
-  leaderId String
-  leader   TeamMember   @relation("teamMemberLeaderOf", fields: [leaderId], references: [id])
-  members  TeamMember[] @relation("teamMemberSubunits")
+  discord String
+
+  createdAt DateTime @default(now())
+  lastSync  DateTime @updatedAt
 }

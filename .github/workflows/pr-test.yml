@@ -10,6 +10,10 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
+    env:
+      DISCORD_BOT_TOKEN: '1234567890'
+      DISCORD_TEAM_ROLE_ID: '706087016613281842'
+      DISCORD_CUBYX_GUILD: '665917454626717746'
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -34,6 +38,10 @@ jobs:
   eslint:
     name: Check & ESLint
     runs-on: ubuntu-latest
+    env:
+      DISCORD_BOT_TOKEN: '1234567890'
+      DISCORD_TEAM_ROLE_ID: '706087016613281842'
+      DISCORD_CUBYX_GUILD: '665917454626717746'
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
