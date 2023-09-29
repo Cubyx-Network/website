@@ -1,3 +1,85 @@
+# Changelog
+
+## [0.1.0-beta.0](https://github.com/Cubyx-Network/website/compare/v0.1.0-alpha.0...v0.1.0-beta.0) (2023-09-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* Test der Breaking Changes Funktion
+
+### 📕 Funktionen
+
+* Teamseite & daisyUI hinzugefügt ([#62](https://github.com/Cubyx-Network/website/issues/62)) ([7f2927a](https://github.com/Cubyx-Network/website/commit/7f2927a9258df22f7998b628e947319a09bae8e5))
+
+
+### 🔄 Änderungen
+
+* Mastodon Verifikations-Link hinzugefügt ([#105](https://github.com/Cubyx-Network/website/issues/105)) ([7ebecc0](https://github.com/Cubyx-Network/website/commit/7ebecc066e79b897d35c1814945a281c1ef44089))
+* Überarbeitung der Team Seite ([#115](https://github.com/Cubyx-Network/website/issues/115)) ([94566b6](https://github.com/Cubyx-Network/website/commit/94566b61a692715d0c4e99d350a8d45ef139a28e))
+* Verlinkung zum Bewerbungsformular hinzugefügt ([#60](https://github.com/Cubyx-Network/website/issues/60)) ([4601690](https://github.com/Cubyx-Network/website/commit/46016901fd7f8fc46eb4600805cc446baaf53c5d))
+* Weiterleitung zu bio.link als (vorläufiges) Kontaktformular ([#109](https://github.com/Cubyx-Network/website/issues/109)) ([f59a94e](https://github.com/Cubyx-Network/website/commit/f59a94e2a771589c5c61379fccccf3c30fb850f1))
+
+
+### 🦲 Fehlerbehebungen
+
+* Overflow in Footer behoben ([#116](https://github.com/Cubyx-Network/website/issues/116)) ([1d5b256](https://github.com/Cubyx-Network/website/commit/1d5b25633e7e7cda12ef1552bc2d0cdffe3927c7))
+* Probleme beim Laden der Website (NewsPreview) ([#76](https://github.com/Cubyx-Network/website/issues/76)) ([f60eda0](https://github.com/Cubyx-Network/website/commit/f60eda0f10724092a1a55974e85a1efda04b2594))
+
+
+### 📌️ Aussehen
+
+* Nicht korrekte Zentrierung der Punkte gefixt (Über uns Abschnitt) ([#69](https://github.com/Cubyx-Network/website/issues/69)) ([a0b1f6c](https://github.com/Cubyx-Network/website/commit/a0b1f6ce1adfbdc6458ac9698fe249b6be6ace21))
+
+
+### ⚙️ Abhängigkeiten
+
+* Aktualisierung der Abhängigkeiten ([7cd8d9d](https://github.com/Cubyx-Network/website/commit/7cd8d9d8e100a1e7435be7bcdf4fe86b10b64628))
+* bump @fontsource/montserrat from 5.0.5 to 5.0.8 ([#83](https://github.com/Cubyx-Network/website/issues/83)) ([1132b9a](https://github.com/Cubyx-Network/website/commit/1132b9a06131f04f5fceeae15aa579fef2fea90a))
+* bump @fortawesome/fontawesome-svg-core from 6.4.0 to 6.4.2 ([#78](https://github.com/Cubyx-Network/website/issues/78)) ([82762cd](https://github.com/Cubyx-Network/website/commit/82762cdb0bf86362de7a3a4351d787bba600a27a))
+* bump @sveltejs/adapter-node from 1.2.3 to 1.3.1 ([#93](https://github.com/Cubyx-Network/website/issues/93)) ([1ebce08](https://github.com/Cubyx-Network/website/commit/1ebce0899824f8c9b220e400933bc54574e508a0))
+* bump @sveltejs/kit from 1.21.0 to 1.23.0 ([#88](https://github.com/Cubyx-Network/website/issues/88)) ([f439c0d](https://github.com/Cubyx-Network/website/commit/f439c0d8e5caff0f7598d6c655f2272ce6e774c5))
+* bump @types/node from 20.3.3 to 20.4.5 ([#66](https://github.com/Cubyx-Network/website/issues/66)) ([5501f57](https://github.com/Cubyx-Network/website/commit/5501f57cfc190e24686a7036625013690026acab))
+* bump @types/node from 20.4.5 to 20.5.6 ([#92](https://github.com/Cubyx-Network/website/issues/92)) ([1f8e794](https://github.com/Cubyx-Network/website/commit/1f8e7940ef9cd8d95bdca82727e6870efa42e5f6))
+* bump @typescript-eslint/eslint-plugin from 5.59.0 to 5.62.0 ([#96](https://github.com/Cubyx-Network/website/issues/96)) ([726eac2](https://github.com/Cubyx-Network/website/commit/726eac24fa48e044db5e8c458e5b2193e5deeb84))
+* bump daisyui from 3.5.0 to 3.6.3 ([#91](https://github.com/Cubyx-Network/website/issues/91)) ([afdf471](https://github.com/Cubyx-Network/website/commit/afdf471456b2c62ae44a8e4ca3128c75965eef28))
+* bump eslint from 8.39.0 to 8.49.0 ([#101](https://github.com/Cubyx-Network/website/issues/101)) ([d874246](https://github.com/Cubyx-Network/website/commit/d8742465c1d9f6a3487dbf54b630b7f34dcd0554))
+* bump eslint from 8.39.0 to 8.50.0 ([#102](https://github.com/Cubyx-Network/website/issues/102)) ([771b97c](https://github.com/Cubyx-Network/website/commit/771b97c5f68f494a7dccf8f68d8b86a7299896ef))
+* bump marked and @types/marked ([#65](https://github.com/Cubyx-Network/website/issues/65)) ([6f111eb](https://github.com/Cubyx-Network/website/commit/6f111eb910ac9cffdf1636b148b758086d970b5f))
+* bump prettier from 2.8.7 to 2.8.8 ([#95](https://github.com/Cubyx-Network/website/issues/95)) ([508dbd5](https://github.com/Cubyx-Network/website/commit/508dbd59304e19440ddfe6bee72195ac672c7439))
+* bump release-it from 16.1.3 to 16.1.5 ([#97](https://github.com/Cubyx-Network/website/issues/97)) ([c38c4f4](https://github.com/Cubyx-Network/website/commit/c38c4f4b590d14bea28f9f01ab6fbb61350953a2))
+* bump svelte from 4.0.1 to 4.1.1 ([#63](https://github.com/Cubyx-Network/website/issues/63)) ([cbf092a](https://github.com/Cubyx-Network/website/commit/cbf092aa9b945723214e80ae503a2846dd102a20))
+* bump svelte-check from 3.4.4 to 3.5.1 ([#100](https://github.com/Cubyx-Network/website/issues/100)) ([ed6f832](https://github.com/Cubyx-Network/website/commit/ed6f832f22910f114c08e1c10f40f7833f6628b9))
+* bump svelte-check from 3.4.4 to 3.5.2 ([#103](https://github.com/Cubyx-Network/website/issues/103)) ([77f35f9](https://github.com/Cubyx-Network/website/commit/77f35f909e4ce463836cf690c386576739fb8d34))
+* bump tailwindcss from 3.3.1 to 3.3.3 ([#80](https://github.com/Cubyx-Network/website/issues/80)) ([8319f28](https://github.com/Cubyx-Network/website/commit/8319f287fee413b1a802616c89ef7724c023ec77))
+* bump the fortawesome group with 3 updates ([#90](https://github.com/Cubyx-Network/website/issues/90)) ([d54abf2](https://github.com/Cubyx-Network/website/commit/d54abf292fd96c5eafc695a309da1e8a8b6e50cc))
+* bump tslib from 2.5.0 to 2.6.2 ([#86](https://github.com/Cubyx-Network/website/issues/86)) ([1147adb](https://github.com/Cubyx-Network/website/commit/1147adb898e129da7978da00c718c6b96dc1b721))
+* bump vite from 4.3.9 to 4.4.7 ([#64](https://github.com/Cubyx-Network/website/issues/64)) ([d528fda](https://github.com/Cubyx-Network/website/commit/d528fda98a53987c2d888942908749ddd822c747))
+* bump vite from 4.4.7 to 4.4.9 ([#94](https://github.com/Cubyx-Network/website/issues/94)) ([981d182](https://github.com/Cubyx-Network/website/commit/981d18213ac52e9cccfef4e8b6b6ae7d89ef0cb1))
+* updated some dependencies because dependabot is a bit dumb ([bd17257](https://github.com/Cubyx-Network/website/commit/bd1725701d156143b544eb4ad1331420ca66884f))
+
+
+### 📖 Inhalt
+
+* Impressum und Datenschutzerklärung hinzugefügt ([#61](https://github.com/Cubyx-Network/website/issues/61)) ([#72](https://github.com/Cubyx-Network/website/issues/72)) ([25d208e](https://github.com/Cubyx-Network/website/commit/25d208e8b72f9dd846559267c43a7795ebb47d8f))
+* Löscht Z0eybys Daten aus der Webseite (Impressum) ([#111](https://github.com/Cubyx-Network/website/issues/111)) ([4a4c80e](https://github.com/Cubyx-Network/website/commit/4a4c80ef15dd03cf17917b16c1a9182e315c0365))
+
+
+### 🔧 Sonstiges
+
+* 0.1.0-beta.0 ([55516fd](https://github.com/Cubyx-Network/website/commit/55516fdf4dce810017456185323fbb8dac73b83b))
+* added vscode to gitignore ([3736ecd](https://github.com/Cubyx-Network/website/commit/3736ecd8b88e23adbb1f0ba60e4b7deff8f34d16))
+* Änderungen an release-it Konfiguration ([db2bfa2](https://github.com/Cubyx-Network/website/commit/db2bfa205feddbe2fd9e7cf2c7faa5390832cc87))
+* Dateiformatierung ([bf4826e](https://github.com/Cubyx-Network/website/commit/bf4826eb10ffdf42befeb8aefa7c2b979d5bc405))
+* **deps:** bump @fontsource/montserrat from 4.5.14 to 5.0.5 ([#67](https://github.com/Cubyx-Network/website/issues/67)) ([7834bbc](https://github.com/Cubyx-Network/website/commit/7834bbc71866175684858c0ff677ca1eea0d71e8))
+* Entfernung des Neuigkeiten Features ([#107](https://github.com/Cubyx-Network/website/issues/107)) ([86fbe7b](https://github.com/Cubyx-Network/website/commit/86fbe7bffef7fe6498e848f2095b2c40958d6703))
+* format CHANGELOG.md ([fe64795](https://github.com/Cubyx-Network/website/commit/fe64795c0cf523a859b971e4ac83e4a3153d8b1b))
+* format files ([9b657e6](https://github.com/Cubyx-Network/website/commit/9b657e6e4247556fec1e4bf97899710d9cbba051))
+* Neuigkeiten Feature - Fehlende Löschungen nachgeholt ([#110](https://github.com/Cubyx-Network/website/issues/110)) ([b89319d](https://github.com/Cubyx-Network/website/commit/b89319d0dfc6d7e4619790dcc12959662486f891))
+* prepare release 0.1.0 ([fa9e032](https://github.com/Cubyx-Network/website/commit/fa9e0329abb2b4f7a64061c8d597001dc86b3d0d))
+* remove yarn.lock ([3cecee5](https://github.com/Cubyx-Network/website/commit/3cecee59a34ff3ba65052bc67d284847af4dcf9a))
+* some changes ([6d90c7b](https://github.com/Cubyx-Network/website/commit/6d90c7b24b5ab93a41b1123153d82e448aa2f813))
+* Test der Breaking Changes Funktion ([9bf9f16](https://github.com/Cubyx-Network/website/commit/9bf9f167f68af56bc67be6a29905163f04aa04d4))
+
 ## [0.1.0-alpha.0](https://github.com/Cubyx-Network/website/compare/v0.0.1+alpha...v0.1.0-alpha.0) (2023-07-28)
 
 ### 🆕 Features
