@@ -18,5 +18,5 @@ jobs:
           release-type: node
           package-name: website
           token: ${{ secrets.RELEASEPLEASE_TOKEN }}
-          changelog-types: '[{ "type": "feat", "section": "\uD83C\uDD95 Funktionen" },{ "type": "change", "section": "\uD83D\uDD04 Änderungen" },{ "type": "fix", "section": "\uD83E\uDEB2 Fehlerbehebungen" },{ "type": "hotfix", "section": "\uD83D\uDD25 Hotfixes" },{ "type": "style", "section": "\uD83D\uDD8C\uFE0F Aussehen" },{ "type": "refactor", "section": "\uD83D\uDCBB Code Refactoring" },{ "type": "deps", "section": "⚙\uFE0F Abhängigkeiten" },{ "type": "content", "section": "\uD83D\uDCD6 Inhalt" }]'
+          changelog-types: '[{ "type": "feat", "section": "\uD83C\uDD95 Funktionen" },{ "type": "change", "section": "\uD83D\uDD04 Änderungen" },{ "type": "fix", "section": "\uD83E\uDEB2 Fehlerbehebungen" },{ "type": "hotfix", "section": "\uD83D\uDD25 Hotfixes" },{ "type": "style", "section": "\uD83D\uDD8C\uFE0F Aussehen" },{ "type": "refactor", "section": "\uD83D\uDCBB Code Refactoring" },{ "type": "deps", "section": "⚙\uFE0F Abhängigkeiten" },{ "type": "content", "section": "\uD83D\uDCD6 Inhalt" }, { "type": "chore", "hidden": true }]'
           pull-request-header: 'Neuer Release - Zum Veröffentlichen bitte Mergen'
