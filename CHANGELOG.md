@@ -1,5 +1,27 @@
 # Changelog
 
+## [0.1.0](https://github.com/Cubyx-Network/website/compare/v0.1.0-beta.0...v0.1.0) (2023-09-30)
+
+
+### 🪲 Fehlerbehebungen
+
+* **ci:** Commit/PR Test lief auf falschem Main-Branch ([ecf3df1](https://github.com/Cubyx-Network/website/commit/ecf3df1de490a23a1b3b6c1823ac5a2137cf578f))
+* **ci:** Release Please erstellt nun Draft Pull Requests ([#120](https://github.com/Cubyx-Network/website/issues/120)) ([25623e6](https://github.com/Cubyx-Network/website/commit/25623e628b9ca4d144fd6c4b79e3f4c1ae8ded9f))
+
+
+### 🔧 Code Refactoring
+
+* Behebt alle Fehler von Lint und Svelte Check ([#119](https://github.com/Cubyx-Network/website/issues/119)) ([77581a2](https://github.com/Cubyx-Network/website/commit/77581a2192ed89db8513d05483b536ef6425f4a7))
+
+
+### 🔧 Sonstiges
+
+* CHANGELOG.md zur .prettierignore hinzugefügt ([186859d](https://github.com/Cubyx-Network/website/commit/186859d314de2877a6f5bf65045fc7a6a7b92f38))
+* **changelog:** Änderung des Icons für Fehlerbehebungen ([25f89e0](https://github.com/Cubyx-Network/website/commit/25f89e0450786bdd69955d625eabafd87af4b458))
+* prepare 0.1.0 ([3abb6b8](https://github.com/Cubyx-Network/website/commit/3abb6b8d2e0aead7b3462dbf2ef7282926b6392c))
+* **prisma:** Alle Datenbanken nun durch gitignore abgedeckt ([009595a](https://github.com/Cubyx-Network/website/commit/009595a633fc8b9f5f87382b105ebe996167db3f))
+* README.md aktualisiert ([bf6cdcf](https://github.com/Cubyx-Network/website/commit/bf6cdcfdfc143e27da1648cb4a5296ba36415609))
+
 ## [0.1.0-beta.0](https://github.com/Cubyx-Network/website/compare/v0.1.0-alpha.0...v0.1.0-beta.0) (2023-09-29)
 
 
