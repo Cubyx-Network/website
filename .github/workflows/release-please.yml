@@ -20,3 +20,4 @@ jobs:
           token: ${{ secrets.RELEASEPLEASE_TOKEN }}
           changelog-types: '[{ "type": "feat", "section": "📕 Funktionen" },{ "type": "change", "section": "🔄 Änderungen" },{ "type": "fix", "section": "🪲 Fehlerbehebungen" },{ "type": "hotfix", "section": "🔥 Hotfixes" },{ "type": "style", "section": "📌️ Aussehen" },{ "type": "refactor", "section": "🔧 Code Refactoring" },{ "type": "deps", "section": "⚙️ Abhängigkeiten" },{ "type": "content", "section": "📖 Inhalt" }, { "type": "chore", "section": "🔧 Sonstiges" }]'
           pull-request-header: 'Neuer Release - Zum Veröffentlichen bitte Mergen'
+          draft-pull-request: true
