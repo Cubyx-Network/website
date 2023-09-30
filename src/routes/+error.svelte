@@ -17,7 +17,13 @@
 		<div class="h-2/3 w-[2px] rounded-full bg-white" />
 		<div>
 			<h1>Fehler {$page.status}</h1>
-			<h4 class="text-grayedOut_dark">{$page.error.message}</h4>
+			<h4 class="text-grayedOut_dark">
+				{#if $page.error}
+					{$page.error.message}
+				{:else}
+					Ein unbekannter Fehler ist aufgetreten.
+				{/if}
+			</h4>
 		</div>
 	</div>
 </div>

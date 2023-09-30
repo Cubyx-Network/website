@@ -1,13 +1,15 @@
-<script lang="ts">
-	import TimelineLine from './TimelineLine.svelte';
-	import TimelineItem from './TimelineItem.svelte';
-
+<script lang="ts" context="module">
 	export type TimelineItemType = {
 		title: string;
-		description: string;
+		description?: string;
 		date: string;
 		position: 'left' | 'right';
 	};
+</script>
+
+<script lang="ts">
+	import TimelineLine from './TimelineLine.svelte';
+	import TimelineItem from './TimelineItem.svelte';
 
 	export let items: TimelineItemType[];
 </script>
