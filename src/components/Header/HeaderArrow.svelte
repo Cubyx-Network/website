@@ -9,8 +9,8 @@
 <div
 	class="flex h-20 w-20 items-center justify-center transition-all duration-[500ms] rotate-[{rotation}deg] lg:rotate-[{largeRotation}deg]"
 >
-	<Icon data={faChevronLeft} scale="2" />
-	<Icon data={faChevronLeft} scale="3" />
+	<Icon data={faChevronLeft} scale={2} />
+	<Icon data={faChevronLeft} scale={3} />
 </div>
 
 <!-- Ignore me, im just for tailwindcss -->

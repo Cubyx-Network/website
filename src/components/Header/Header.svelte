@@ -1,13 +1,15 @@
 <script lang="ts">
-	import HeaderMobile from "./HeaderMobile.svelte";
-	import HeaderLinkWrapper from "./HeaderLinkWrapper.svelte";
-	import HeaderLink from "./HeaderLink.svelte";
-	import HeaderLogo from "./HeaderLogo.svelte";
+	import HeaderMobile from './HeaderMobile.svelte';
+	import HeaderLinkWrapper from './HeaderLinkWrapper.svelte';
+	import HeaderLink from './HeaderLink.svelte';
+	import HeaderLogo from './HeaderLogo.svelte';
 
-	export let links: { link: string; text: string }[] = [];
+	type Link = { link: string; text: string };
 
-	let leftLinks = [];
-	let rightLinks = [];
+	export let links: Link[] = [];
+
+	let leftLinks: Link[] = [];
+	let rightLinks: Link[] = [];
 
 	for (let i = 0; i < links.length; i++) {
 		if (i < links.length / 2) {

@@ -1,7 +1,7 @@
-<script>
-	import Timeline from './Timeline.svelte';
+<script lang="ts">
+	import Timeline, { type TimelineItemType } from './Timeline.svelte';
 
-	let items = [
+	let items: TimelineItemType[] = [
 		{
 			title: 'Cubyx wird als reines Bauteam eröffnet',
 			date: 'Januar 2020',
