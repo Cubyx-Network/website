@@ -18,6 +18,6 @@ jobs:
           release-type: node
           package-name: website
           token: ${{ secrets.RELEASEPLEASE_TOKEN }}
-          changelog-types: '[{ "type": "feat", "section": "📕 Funktionen" },{ "type": "change", "section": "🔄 Änderungen" },{ "type": "fix", "section": "🪲 Fehlerbehebungen" },{ "type": "hotfix", "section": "🔥 Hotfixes" },{ "type": "style", "section": "📌️ Aussehen" },{ "type": "refactor", "section": "🔧 Code Refactoring" },{ "type": "deps", "section": "⚙️ Abhängigkeiten" },{ "type": "content", "section": "📖 Inhalt" }, { "type": "chore", "section": "🔧 Sonstiges" }]'
+          changelog-types: '[{ "type": "feat", "section": "📕 Funktionen" },{ "type": "change", "section": "🔄 Änderungen" },{ "type": "fix", "section": "🪲 Fehlerbehebungen" },{ "type": "docs", "section": "📝 Dokumentation" },{ "type": "style", "section": "🎨 Designänderungen" },{ "type": "refactor", "section": "🔧 Code-Refactoring" },{ "type": "deps", "section": "⚙️ Abhängigkeiten" },{ "type": "content", "section": "📖 Inhaltsänderungen" },{ "type": "chore", "section": "🔧 Sonstige Änderungen" },{ "type": "test", "section": "🧪 Änderungen am Testing" },{ "type": "ci", "section": "🚀 CI/CD-Änderungen" }]'
           pull-request-header: 'Neuer Release - Zum Veröffentlichen bitte Mergen'
           draft-pull-request: true
