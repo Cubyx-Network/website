@@ -1,5 +1,27 @@
 # Changelog
 
+## [0.1.1](https://github.com/Cubyx-Network/website/compare/v0.1.0...v0.1.1) (2023-10-09)
+
+
+### ⚙️ Abhängigkeiten
+
+* bump @fontsource/kanit from 5.0.12 to 5.0.15 ([#133](https://github.com/Cubyx-Network/website/issues/133)) ([002a7de](https://github.com/Cubyx-Network/website/commit/002a7dea989823044e62201a32542e19a5f90cf1))
+* bump @sveltejs/kit from 1.25.0 to 1.25.1 ([#121](https://github.com/Cubyx-Network/website/issues/121)) ([0421aea](https://github.com/Cubyx-Network/website/commit/0421aeaed12feb904a6a86ec882b0768d52b317e))
+* bump @types/node from 20.6.4 to 20.8.0 ([#125](https://github.com/Cubyx-Network/website/issues/125)) ([d3af7df](https://github.com/Cubyx-Network/website/commit/d3af7df619f91ae8e295e3b188a77a4795dece1b))
+* bump @types/node from 20.8.0 to 20.8.3 ([#132](https://github.com/Cubyx-Network/website/issues/132)) ([8c4753f](https://github.com/Cubyx-Network/website/commit/8c4753f3fd4707d47908337d2d5ba56326bd7a00))
+* bump @typescript-eslint/eslint-plugin from 6.7.2 to 6.7.3 ([#124](https://github.com/Cubyx-Network/website/issues/124)) ([c413eb4](https://github.com/Cubyx-Network/website/commit/c413eb4cda27615577580e5af1ad8c7fb7b72386))
+* bump @typescript-eslint/eslint-plugin from 6.7.3 to 6.7.4 ([#129](https://github.com/Cubyx-Network/website/issues/129)) ([8f71f25](https://github.com/Cubyx-Network/website/commit/8f71f257ab44db991fe13e121bd8841acab5182f))
+* bump @typescript-eslint/parser from 6.7.2 to 6.7.4 ([#130](https://github.com/Cubyx-Network/website/issues/130)) ([0b27c7f](https://github.com/Cubyx-Network/website/commit/0b27c7fa5e54b6375e79300efeba004cfcdabdd7))
+* bump daisyui from 3.7.7 to 3.9.1 ([#127](https://github.com/Cubyx-Network/website/issues/127)) ([233b586](https://github.com/Cubyx-Network/website/commit/233b5867f3db19e3eecbc06d7625758a30cc7ed9))
+* bump postcss from 8.4.30 to 8.4.31 ([#123](https://github.com/Cubyx-Network/website/issues/123)) ([c323339](https://github.com/Cubyx-Network/website/commit/c323339c363963de159931596c37729d9293d8a0))
+* bump prisma from 5.3.1 to 5.4.1 ([#131](https://github.com/Cubyx-Network/website/issues/131)) ([57f43cf](https://github.com/Cubyx-Network/website/commit/57f43cf9a1d9e355cf29ada624bdc24e0211addc))
+* update prisma ([5d9d7e5](https://github.com/Cubyx-Network/website/commit/5d9d7e509e69022bc81e9b69e0c133561492d104))
+
+
+### 🚀 CI/CD-Änderungen
+
+* Aktualisierung der Changelogkategorien ([14c337c](https://github.com/Cubyx-Network/website/commit/14c337c8983422e70bda711ed5679beeb277631f))
+
 ## [0.1.0](https://github.com/Cubyx-Network/website/compare/v0.1.0-beta.0...v0.1.0) (2023-09-30)
 
 
