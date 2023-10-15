@@ -10,11 +10,57 @@ jobs:
     if: github.event.release.prerelease == false
     name: Restart Production Server for Rebuilding
     runs-on: ubuntu-latest
+    env:
+      DISCORD_BOT_TOKEN: '1234567890'
+      DISCORD_TEAM_ROLE_ID: '706087016613281842'
+      DISCORD_CUBYX_GUILD: '665917454626717746'
     steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Svelte app
+        run: npm run build
+
+      - name: Test Svelte app
+        run: npm run test
+
+      - name: Prepare for Production
+        run: |
+          rm -rf node_modules
+          rm -rf .git
+          rm -rf .github
+          rm -rf .vscode
+          rm -rf .gitignore
+          rm -rf src
+          rm -rf static
+          rm -rf .svelte-kit
+
+      - name: Deploy to Production Server with sftp
+        uses: wangyucode/sftp-upload-action@v2.0.2
+        with:
+          host: ${{secrets.PRODUCTION_HOST}}
+          port: ${{secrets.PRODUCTION_PORT}}
+          username: ${{ secrets.PRODUCTION_USERNAME }}.${{secrets.PANEL_SERVER_ID}}
+          password: ${{ secrets.PRODUCTION_PASSWORD }}
+          privateKey:
+          passphrase:
+          localDir: ./
+          remoteDir: /
+          removeExtraFilesOnServer: true
+          exclude: '.env'
+
       - name: Send Restart
         uses: outsparkled/pterodactyl-power-action@v0.1.0
         with:
           panel-url: ${{ secrets.PANEL_URL }}
-          server-id: ${{ secrets.PANEL_SERVER_ID }}
+          server-id: ${{ secrets.PANEL_DEV_SERVER_ID }}
           bearer-token: ${{ secrets.PANEL_BEARER_TOKEN }}
           power-action: 'restart'
