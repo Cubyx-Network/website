@@ -55,7 +55,7 @@ jobs:
           localDir: ./
           remoteDir: /
           removeExtraFilesOnServer: true
-          exclude: '.env'
+          exclude: '.env,prisma/*.db'
 
       - name: Send Restart
         uses: outsparkled/pterodactyl-power-action@v0.1.0
