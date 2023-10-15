@@ -8,7 +8,7 @@ on:
 jobs:
   trigger-production-server:
     if: github.event.release.prerelease == false
-    name: Restart Production Server for Rebuilding
+    name: Final build and deploy to production server
     runs-on: ubuntu-latest
     env:
       DISCORD_BOT_TOKEN: '1234567890'
