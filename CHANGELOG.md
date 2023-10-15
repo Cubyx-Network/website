@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/Cubyx-Network/website/compare/v0.1.1...v0.1.2) (2023-10-15)
+
+
+### 🚀 CI/CD-Änderungen
+
+* Neue CI-Pipeline für Production Deployment ([7cc1095](https://github.com/Cubyx-Network/website/commit/7cc109588e7bcc96bfe1d2474041a4332c25b86d))
+
 ## [0.1.1](https://github.com/Cubyx-Network/website/compare/v0.1.0...v0.1.1) (2023-10-09)
 
 
