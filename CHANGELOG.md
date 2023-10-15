@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.1.2](https://github.com/Cubyx-Network/website/compare/v0.1.1...v0.1.2) (2023-10-15)
+
+
+### 🪲 Fehlerbehebungen
+
+* **ci:** Falsche Server ID im Server Restart ([45b5689](https://github.com/Cubyx-Network/website/commit/45b5689e3241623d295ef73e4207577140a99157))
+
+
+### 🚀 CI/CD-Änderungen
+
+* Neue CI-Pipeline für Production ([0c58df6](https://github.com/Cubyx-Network/website/commit/0c58df643b008f93ce804a57a6a8a75e9d7c1a6e))
+
 ## [0.1.1](https://github.com/Cubyx-Network/website/compare/v0.1.0...v0.1.1) (2023-10-09)
 
 
