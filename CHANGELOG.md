@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.3](https://github.com/Cubyx-Network/website/compare/v0.1.2...v0.1.3) (2023-10-15)
+
+
+### 🚀 CI/CD-Änderungen
+
+* Anpassungen an Release-Pipeline ([8ac49a0](https://github.com/Cubyx-Network/website/commit/8ac49a015047a3c599b5601ca070805a04aa9b94))
+* Release-Pipeline umbenannt ([732455d](https://github.com/Cubyx-Network/website/commit/732455d5672e671396ed14216b5df327c8fe0239))
+
 ## [0.1.2](https://github.com/Cubyx-Network/website/compare/v0.1.1...v0.1.2) (2023-10-15)
 
 
