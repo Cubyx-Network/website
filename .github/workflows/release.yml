@@ -61,6 +61,6 @@ jobs:
         uses: outsparkled/pterodactyl-power-action@v0.1.0
         with:
           panel-url: ${{ secrets.PANEL_URL }}
-          server-id: ${{ secrets.PANEL_DEV_SERVER_ID }}
+          server-id: ${{ secrets.PANEL_SERVER_ID }}
           bearer-token: ${{ secrets.PANEL_BEARER_TOKEN }}
           power-action: 'restart'
