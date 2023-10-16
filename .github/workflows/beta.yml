@@ -27,13 +27,21 @@ jobs:
       - name: Build SvelteKit app
         run: npm run build
 
+      - name: Set Up SSH
+        run: |
+          mkdir -p ~/.ssh
+          # Create a config file for SSH
+          echo -e "Host custom-ssh\n  HostName ${{ secrets.DEPLOY_HOST }}\n  Port ${{ secrets.DEPLOY_PORT }}\n  User ${{ secrets.DEPLOY_USERNAME }}.${{ secrets.DEPLOY_DEVSERVER_ID }}\n  PasswordAuthentication yes" > ~/.ssh/config
+        env:
+          SSH_PASSWORD: ${{ secrets.DEPLOY_PASSWORD }}
+
       - name: Sync with Webserver (git version)
         run: |
-          rsync -avz --delete ./build/ ${{ secrets.DEPLOY_USERNAME }}.${{ secrets.DEPLOY_DEVSERVER_ID }}@${{ secrets.DEPLOY_HOST }}:${{ secrets.DEPLOY_PORT || 22}}:/
-          rsync -avz --delete package.json package-lock.json ${{ secrets.DEPLOY_USERNAME }}.${{ secrets.DEPLOY_DEVSERVER_ID }}@${{ secrets.DEPLOY_HOST }}:${{ secrets.DEPLOY_PORT || 22}}:/
-          rsync -avz --delete prisma/ ${{ secrets.DEPLOY_USERNAME }}.${{ secrets.DEPLOY_DEVSERVER_ID }}@${{ secrets.DEPLOY_HOST }}:${{ secrets.DEPLOY_PORT || 22}}:/
+          rsync -avz --delete ./build/ custom-ssh:/
+          rsync -avz --delete package.json package-lock.json custom-ssh:/
+          rsync -avz --delete prisma/ custom-ssh:/
         env:
-          SSHPASS: ${{ secrets.DEPLOY_PASSWORD }}
+          SSH_PASSWORD: ${{ secrets.DEPLOY_PASSWORD }}
 
       - name: Send Restart
         uses: outsparkled/pterodactyl-power-action@v0.1.0
