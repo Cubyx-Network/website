@@ -27,22 +27,13 @@ jobs:
       - name: Build SvelteKit app
         run: npm run build
 
-      - name: Set Up SSH
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.DEPLOY_SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -t rsa ${{ secrets.DEPLOY_HOST }} >> ~/.ssh/known_hosts
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_SSH_PRIVATE_KEY }}
-
       - name: Sync with Production Server
         run: |
           rsync -avz --delete ./build/ ${{ secrets.DEPLOY_USERNAME }}.${{ secrets.DEPLOY_SERVER_ID }}@${{ secrets.DEPLOY_HOST }}:${{ secrets.DEPLOY_PORT || 22}}:/
           rsync -avz --delete package.json package-lock.json ${{ secrets.DEPLOY_USERNAME }}.${{ secrets.DEPLOY_DEVSERVER_ID }}@${{ secrets.DEPLOY_HOST }}:${{ secrets.DEPLOY_PORT || 22}}:/
           rsync -avz --delete prisma/ ${{ secrets.DEPLOY_USERNAME }}.${{ secrets.DEPLOY_SERVER_ID }}@${{ secrets.DEPLOY_HOST }}:${{ secrets.DEPLOY_PORT || 22}}:/
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_SSH_PRIVATE_KEY }}
+          SSHPASS: ${{ secrets.DEPLOY_PASSWORD }}
 
       - name: Send Restart
         uses: outsparkled/pterodactyl-power-action@v0.1.0
