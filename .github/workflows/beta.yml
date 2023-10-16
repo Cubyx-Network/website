@@ -1,4 +1,4 @@
-name: Beta Deploy
+name: Git Deploy SvelteKit App
 
 on:
   push:
@@ -6,14 +6,39 @@ on:
       - main
 
 jobs:
-  trigger-dev-server:
-    name: Restart Development Server for Rebuilding
+  git-deploy:
     runs-on: ubuntu-latest
+    env:
+      DISCORD_BOT_TOKEN: '1234567890'
+      DISCORD_TEAM_ROLE_ID: '706087016613281842'
+      DISCORD_CUBYX_GUILD: '665917454626717746'
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build SvelteKit app
+        run: npm run build
+
+      - name: Sync with Webserver (git version)
+        run: |
+          rsync -avz --delete ./build/ ${{ secrets.DEPLOY_USERNAME }}.${{ secrets.DEPLOY_DEVSERVER_ID }}@${{ secrets.DEPLOY_HOST }}:/
+          rsync -avz --delete package.json package-lock.json ${{ secrets.DEPLOY_USERNAME }}.${{ secrets.DEPLOY_DEVSERVER_ID }}@${{ secrets.DEPLOY_HOST }}:/
+          rsync -avz --delete prisma/ ${{ secrets.DEPLOY_USERNAME }}.${{ secrets.DEPLOY_DEVSERVER_ID }}@${{ secrets.DEPLOY_HOST }}:/
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_SSH_PRIVATE_KEY }}
+
       - name: Send Restart
         uses: outsparkled/pterodactyl-power-action@v0.1.0
         with:
           panel-url: ${{ secrets.PANEL_URL }}
-          server-id: ${{ secrets.PANEL_DEV_SERVER_ID }}
+          server-id: ${{ secrets.DEPLOY_DEVSERVER_ID }}
           bearer-token: ${{ secrets.PANEL_BEARER_TOKEN }}
           power-action: 'restart'
