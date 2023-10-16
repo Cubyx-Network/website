@@ -3,8 +3,9 @@ generator client {
 }
 
 datasource production {
-  provider = "sqlite"
+  provider = "mysql"
   url      = env("DATABASE_PRISMA_URL")
+  shadowDatabaseUrl = env("DATABASE_PRISMA_SHADOW_URL")
 }
 
 model TeamMember {
