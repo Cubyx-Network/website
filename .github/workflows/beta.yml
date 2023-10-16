@@ -38,9 +38,9 @@ jobs:
 
       - name: Sync with Webserver (git version)
         run: |
-          rsync -avz --delete ./build/ ${{ secrets.DEPLOY_USERNAME }}.${{ secrets.DEPLOY_DEVSERVER_ID }}@${{ secrets.DEPLOY_HOST }}:/
-          rsync -avz --delete package.json package-lock.json ${{ secrets.DEPLOY_USERNAME }}.${{ secrets.DEPLOY_DEVSERVER_ID }}@${{ secrets.DEPLOY_HOST }}:/
-          rsync -avz --delete prisma/ ${{ secrets.DEPLOY_USERNAME }}.${{ secrets.DEPLOY_DEVSERVER_ID }}@${{ secrets.DEPLOY_HOST }}:/
+          rsync -avz --delete ./build/ ${{ secrets.DEPLOY_USERNAME }}.${{ secrets.DEPLOY_DEVSERVER_ID }}@${{ secrets.DEPLOY_HOST }}:${{ secrets.DEPLOY_PORT || 22}}:/
+          rsync -avz --delete package.json package-lock.json ${{ secrets.DEPLOY_USERNAME }}.${{ secrets.DEPLOY_DEVSERVER_ID }}@${{ secrets.DEPLOY_HOST }}:${{ secrets.DEPLOY_PORT || 22}}:/
+          rsync -avz --delete prisma/ ${{ secrets.DEPLOY_USERNAME }}.${{ secrets.DEPLOY_DEVSERVER_ID }}@${{ secrets.DEPLOY_HOST }}:${{ secrets.DEPLOY_PORT || 22}}:/
         env:
           SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_SSH_PRIVATE_KEY }}
 
