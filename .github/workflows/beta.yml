@@ -32,7 +32,7 @@ jobs:
 
       - name: Sync with Webserver (git version)
         run: |
-          lftp -c "set sftp:auto-confirm yes; open -u ${{ secrets.DEPLOY_USERNAME }}.${{ secrets.DEPLOY_DEVSERVER_ID }},${{ secrets.DEPLOY_PASSWORD }} sftp://${{ secrets.DEPLOY_HOST}}:${{secrets.DEPLOY_PORT }}; mirror --transfer-all -Rnav --delete --ignore-time --parallel=10 --exclude .git/ --exclude node_modules/ --exclude .svelte-kit/ --exclude .github/ --exclude .cache/ --exclude src/ --exclude static/ --exclude ./.env --exclude .npm/ ./ /; exit"
+          lftp -c "set sftp:auto-confirm yes; open -u ${{ secrets.DEPLOY_USERNAME }}.${{ secrets.DEPLOY_DEVSERVER_ID }},${{ secrets.DEPLOY_PASSWORD }} sftp://${{ secrets.DEPLOY_HOST}}:${{secrets.DEPLOY_PORT }}; mirror --transfer-all -Rnav --delete --ignore-time --parallel=10 --exclude .git/ --exclude node_modules/ --exclude .svelte-kit/ --exclude .github/ --exclude .cache/ --exclude src/ --exclude static/ --exclude ./.env --exclude .env --exclude .npm/ ./ /; exit"
 
       - name: Send Restart
         uses: outsparkled/pterodactyl-power-action@v0.1.0
