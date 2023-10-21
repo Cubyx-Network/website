@@ -1,14 +1,14 @@
 <script lang="ts">
-	import { generateTitle } from '$lib/titleGenerator';
 	import SectionWithImageAndText from '../components/Common/SectionWithImageAndText.svelte';
 	import SectionSpacer from '../components/Common/SectionSpacer.svelte';
 	import AboutTimeline from '../components/Timeline/AboutTimeline.svelte';
 	import HeroWithTitleAndSlogan from '../components/Common/HeroWithTitleAndSlogan.svelte';
-</script>
+	import { metadata } from '$lib/seo';
 
-<svelte:head>
-	<title>{generateTitle('Home')}</title>
-</svelte:head>
+	$metadata = {
+		title: 'Home'
+	};
+</script>
 
 <HeroWithTitleAndSlogan img="/img/home/hero.png">Cubyx Network</HeroWithTitleAndSlogan>
 
