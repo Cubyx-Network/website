@@ -1,5 +1,32 @@
 # Changelog
 
+## [0.1.4](https://github.com/Cubyx-Network/website/compare/v0.1.3...v0.1.4) (2023-10-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* **db:** Datenbankadapter zu MySQL geändert
+
+### 🔄 Änderungen
+
+* **db:** Datenbankadapter zu MySQL geändert ([4b1e680](https://github.com/Cubyx-Network/website/commit/4b1e680f7808d3b5062ed7ceb5a93906e7514e22))
+
+
+### 🔧 Sonstige Änderungen
+
+* Anpassung der Version ([dbdb5dd](https://github.com/Cubyx-Network/website/commit/dbdb5ddeb8089f63468f61f95e805e702428b012))
+
+
+### 🚀 CI/CD-Änderungen
+
+* Akualisierte Pipeline, Verbessertes SSH ([a385d54](https://github.com/Cubyx-Network/website/commit/a385d54456eefdb1d9914db7decda4aae5d53d14))
+* Deploy mit lftp hinzugefügt ([68192e8](https://github.com/Cubyx-Network/website/commit/68192e8ed3c08d749edeaf80151c251878b0058a))
+* Deploy Port hinzugefügt ([9de5140](https://github.com/Cubyx-Network/website/commit/9de51409dae18f400d9977ddd51b52e961552bd7))
+* Env Datei sollte von lftp ignoriert werden ([fdb7a51](https://github.com/Cubyx-Network/website/commit/fdb7a51538c7e18860d6a5ebdceb4555a825c180))
+* Neue CI Pipeline ([fcef331](https://github.com/Cubyx-Network/website/commit/fcef3310685ca8d5dbe295ff6ca8df9338a2d799))
+* Überarbeitung der SSH Einrichtung ([18d3e60](https://github.com/Cubyx-Network/website/commit/18d3e6007c2804cfd2aff841ea47e81be2fc20bb))
+* Wechsel auf SSH Passwort für Deployment ([78cf95c](https://github.com/Cubyx-Network/website/commit/78cf95c541f6dd0b90bfbed92d91fbd4d25f73af))
+
 ## [0.1.3](https://github.com/Cubyx-Network/website/compare/v0.1.2...v0.1.3) (2023-10-15)
 
 
