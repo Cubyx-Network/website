@@ -4,6 +4,7 @@
 		description?: string;
 		date: string;
 		position: 'left' | 'right';
+		urllink?: string;
 	};
 </script>
 
