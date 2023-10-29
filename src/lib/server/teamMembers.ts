@@ -77,7 +77,8 @@ export async function getTeamMembers(): Promise<any[]> {
 			avatar: false,
 			createdAt: true,
 			lastSync: true,
-			discord: true
+			discord: true,
+			labels: true
 		}
 	});
 }
