@@ -32,7 +32,8 @@ Anschließend müssen die Dependencies mit `npm install` installiert werden.
 npm install
 ```
 
-> ⚠️ Bitte beachte die Nutzung von NPM als Package Manager. Andernfalls könnten fremde lock Dateien (bspw. yarn.lock) in das Repository gelangen.
+> [!WARNING]
+> Bitte beachte die Nutzung von NPM als Package Manager. Andernfalls könnten fremde lock Dateien (bspw. yarn.lock) in das Repository gelangen.
 
 ### Konfiguration und Datenbank
 
