@@ -2,10 +2,7 @@ import { DISCORD_BOT_TOKEN } from '$env/static/private';
 
 const base = 'https://discord.com/api/v10';
 
-export async function requestDiscordAPI(
-	endpoint: string,
-	options: RequestInit = {}
-): Promise<object[]> {
+export async function requestDiscordAPI(endpoint: string, options: RequestInit = {}) {
 	return await fetch(`${base}/${endpoint}`, {
 		headers: {
 			Authorization: `Bot ${DISCORD_BOT_TOKEN}`,
@@ -13,7 +10,7 @@ export async function requestDiscordAPI(
 			...options.headers
 		},
 		...options
-	}).then((res) => res.json());
+	});
 }
 
 export async function downloadAvatar(userId: string, avatarId: string): Promise<Blob> {
