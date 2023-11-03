@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.1.6](https://github.com/Cubyx-Network/website/compare/v0.1.5...v0.1.6) (2023-11-03)
+
+
+### 🪲 Fehlerbehebungen
+
+* Falscher DiscordAPI Endpoint in Teammitglieder-Abfrage ([#172](https://github.com/Cubyx-Network/website/issues/172)) ([6b79fc5](https://github.com/Cubyx-Network/website/commit/6b79fc5d1f4d84750fe9da61ec20b05b2d78f99c))
+* Fehler von der Discord API werden nun abgefangen ([#172](https://github.com/Cubyx-Network/website/issues/172)) ([6b79fc5](https://github.com/Cubyx-Network/website/commit/6b79fc5d1f4d84750fe9da61ec20b05b2d78f99c))
+
+
+### 🔧 Sonstige Änderungen
+
+* Update README.md ([a9f233c](https://github.com/Cubyx-Network/website/commit/a9f233ce097283d9c615fe5657fdafed682c2161))
+
 ## [0.1.5](https://github.com/Cubyx-Network/website/compare/v0.1.4...v0.1.5) (2023-10-29)
 
 
