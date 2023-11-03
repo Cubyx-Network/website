@@ -5,10 +5,11 @@ import prisma from './prisma';
 async function fetchAll(): Promise<void> {
 	const response = await requestDiscordAPI(`guilds/${DISCORD_CUBYX_GUILD}/members?limit=1000`);
 
-	if (!response.ok)
+	if (!response.ok) {
 		throw new Error(
 			`Discord API returned ${response.status} ${response.statusText} (${response.url})`
 		);
+	}
 
 	const json = await response.json();
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
