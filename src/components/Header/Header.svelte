@@ -1,15 +1,13 @@
 <script lang="ts">
 	import HeaderMobile from './HeaderMobile.svelte';
 	import HeaderLinkWrapper from './HeaderLinkWrapper.svelte';
-	import HeaderLink from './HeaderLink.svelte';
+	import HeaderLink, { type HeaderLinkType } from './HeaderLink.svelte';
 	import HeaderLogo from './HeaderLogo.svelte';
 
-	type Link = { link: string; text: string };
+	export let links: HeaderLinkType[] = [];
 
-	export let links: Link[] = [];
-
-	let leftLinks: Link[] = [];
-	let rightLinks: Link[] = [];
+	let leftLinks: HeaderLinkType[] = [];
+	let rightLinks: HeaderLinkType[] = [];
 
 	for (let i = 0; i < links.length; i++) {
 		if (i < links.length / 2) {
@@ -25,7 +23,7 @@
 >
 	<HeaderLinkWrapper justify="end">
 		{#each leftLinks as link}
-			<HeaderLink link={link.link} text={link.text} />
+			<HeaderLink {link} />
 		{/each}
 	</HeaderLinkWrapper>
 
@@ -33,7 +31,7 @@
 
 	<HeaderLinkWrapper justify="start">
 		{#each rightLinks as link}
-			<HeaderLink link={link.link} text={link.text} />
+			<HeaderLink {link} />
 		{/each}
 	</HeaderLinkWrapper>
 </nav>
