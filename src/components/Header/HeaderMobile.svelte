@@ -1,9 +1,9 @@
 <script lang="ts">
-	import HeaderLogo from "./HeaderLogo.svelte";
-	import { fly } from "svelte/transition";
-	import HeaderLink from "./HeaderLink.svelte";
+	import HeaderLogo from './HeaderLogo.svelte';
+	import { fly } from 'svelte/transition';
+	import HeaderLink, { type HeaderLinkType } from './HeaderLink.svelte';
 
-	export let links: { link: string; text: string }[] = [];
+	export let links: HeaderLinkType[] = [];
 
 	let isOpen = false;
 
@@ -25,7 +25,7 @@
 			class="absolute top-0 z-0 flex h-screen w-full flex-col items-center justify-center gap-5 bg-secondary"
 		>
 			{#each links as link}
-				<HeaderLink link={link.link} text={link.text} onClick={handleClick} />
+				<HeaderLink {link} onClick={handleClick} />
 			{/each}
 		</div>
 	{/if}
