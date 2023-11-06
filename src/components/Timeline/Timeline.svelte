@@ -4,7 +4,7 @@
 		description?: string;
 		date: string;
 		position: 'left' | 'right';
-		href?: string; 
+		href?: string;
 	};
 </script>
 
