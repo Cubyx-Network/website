@@ -23,8 +23,8 @@
 	<meta property="og:type" content="website" />
 
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:site" content="@CubyxNetwork" />
-	<meta name="twitter:creator" content="@CubyxNetwork" />
+	<meta name="twitter:site" content="@CubyxTeam" />
+	<meta name="twitter:creator" content="@CubyxTeam" />
 	<meta name="twitter:title" content={title} />
 	<meta name="twitter:description" content={description} />
 	<meta name="twitter:image" content={image} />
