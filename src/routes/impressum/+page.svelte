@@ -1,17 +1,9 @@
 <script>
 	import HeroWithTitleAndSlogan from '../../components/Common/HeroWithTitleAndSlogan.svelte';
-
-	import { metadata } from '$lib/seo';
-
-	$metadata = {
-		title: 'Impressum',
-		description: 'Das Impressum vom Cubyx Network.',
-		openGraph: {
-			title: 'Impressum',
-			description: 'Das Impressum vom Cubyx Network.'
-		}
-	};
+	import Seo from '../../components/Common/Seo.svelte';
 </script>
+
+<Seo title="Impressum" description="Das Impressum vom Cubyx Network." />
 
 <HeroWithTitleAndSlogan img="/img/legal/hero.jpg">Impressum</HeroWithTitleAndSlogan>
 

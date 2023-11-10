@@ -3,17 +3,10 @@
 	import SectionSpacer from '../components/Common/SectionSpacer.svelte';
 	import AboutTimeline from '../components/Timeline/AboutTimeline.svelte';
 	import HeroWithTitleAndSlogan from '../components/Common/HeroWithTitleAndSlogan.svelte';
-	import { metadata } from '$lib/seo';
-
-	$metadata = {
-		title: 'Home',
-		description: 'Willkommen auf der Website vom Cubyx Network.',
-		openGraph: {
-			title: 'Home',
-			description: 'Willkommen auf der Website vom Cubyx Network.'
-		}
-	};
+	import Seo from '../components/Common/Seo.svelte';
 </script>
+
+<Seo title="Home" description="Willkommen auf der Website vom Cubyx Network." />
 
 <HeroWithTitleAndSlogan img="/img/home/hero.png">Cubyx Network</HeroWithTitleAndSlogan>
 

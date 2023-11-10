@@ -1,16 +1,9 @@
 <script>
 	import HeroWithTitleAndSlogan from '../../components/Common/HeroWithTitleAndSlogan.svelte';
-	import { metadata } from '$lib/seo';
-
-	$metadata = {
-		title: 'Datenschutz',
-		description: 'Die Datenschutzerklärung der Webseite.',
-		openGraph: {
-			title: 'Datenschutz',
-			description: 'Die Datenschutzerklärung der Webseite.'
-		}
-	};
+	import Seo from '../../components/Common/Seo.svelte';
 </script>
+
+<Seo title="Datenschutz" description="Datenschutzerklärung des Cubyx Network." />
 
 <HeroWithTitleAndSlogan img="/img/legal/hero.jpg">Datenschutz</HeroWithTitleAndSlogan>
 
