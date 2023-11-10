@@ -1,15 +1,20 @@
 <script lang="ts">
-	import { generateTitle } from '$lib/titleGenerator';
 	import HeroWithTitleAndSlogan from '../../components/Common/HeroWithTitleAndSlogan.svelte';
 	import TeamMember from '../../components/Team/TeamMemberCard.svelte';
 	import type { PageData } from './$types';
+	import { metadata } from '$lib/seo';
+
+$metadata = {
+	title: 'Das Team',
+
+	openGraph: {
+		title: 'Das Team',
+		description: 'Aktuelle Teammitglieder des Cubyx Teams.',
+	}
+};
 
 	export let data: PageData;
 </script>
-
-<svelte:head>
-	<title>{generateTitle('Das Team')}</title>
-</svelte:head>
 
 <HeroWithTitleAndSlogan img="/img/team/hero.jpg">Das Cubyx Team</HeroWithTitleAndSlogan>
 

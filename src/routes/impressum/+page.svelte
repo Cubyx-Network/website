@@ -1,11 +1,17 @@
 <script>
-	import { generateTitle } from "$lib/titleGenerator";
 	import HeroWithTitleAndSlogan from "../../components/Common/HeroWithTitleAndSlogan.svelte";
-</script>
 
-<svelte:head>
-	<title>{generateTitle('Impressum')}</title>
-</svelte:head>
+	import { metadata } from '$lib/seo';
+
+$metadata = {
+	title: 'Impressum',
+
+	openGraph:{
+		title: 'Impressum',
+		description: 'Das Impressum vom Cubyx Network.',
+	}
+};
+</script>
 
 <HeroWithTitleAndSlogan img="/img/legal/hero.jpg">Impressum</HeroWithTitleAndSlogan>
 

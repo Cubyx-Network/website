@@ -13,7 +13,8 @@
 	];
 </script>
 
-<MetaTags
+<svelte:head>
+	<MetaTags
 	title="Cubyx Network"
 	titleTemplate="%s - Cubyx Network"
 	description="Die offizielle Website vom Cubyx Network."
@@ -34,6 +35,7 @@
 	}}
 	{...$metadata}
 />
+</svelte:head>
 
 <Header links={headerConfig} />
 
