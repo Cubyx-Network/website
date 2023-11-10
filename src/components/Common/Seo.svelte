@@ -2,7 +2,7 @@
 	export let title = 'Cubyx Network';
 	export let description = 'Die offizielle Website vom Cubyx Network.';
 	export let canonical = 'https://www.cubyx.eu';
-	export let index = true;
+	export let index = process.env.NODE_ENV === 'production';
 
 	export let image = 'https://www.cubyx.eu/img/logo/netzwerk.png';
 </script>
