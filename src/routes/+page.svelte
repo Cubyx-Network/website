@@ -6,7 +6,12 @@
 	import { metadata } from '$lib/seo';
 
 	$metadata = {
-		title: 'Home'
+		title: 'Home',
+		description: 'Willkommen auf der Website vom Cubyx Network.',
+		openGraph: {
+			title: 'Home',
+			description: 'Willkommen auf der Website vom Cubyx Network.'
+		}
 	};
 </script>
 

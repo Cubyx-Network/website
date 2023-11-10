@@ -1,11 +1,18 @@
 <script>
 	import { page } from '$app/stores';
-	import { generateTitle } from '$lib/titleGenerator';
-</script>
+	import { metadata } from '$lib/seo';
 
-<svelte:head>
-	<title>{generateTitle($page.status + '')}</title>
-</svelte:head>
+	$metadata = {
+		title: `${$page.status}`,
+		description: `${$page.error ? $page.error.message : 'Ein unbekannter Fehler ist aufgetreten.'}`,
+		openGraph: {
+			title: `${$page.status}`,
+			description: `${
+				$page.error ? $page.error.message : 'Ein unbekannter Fehler ist aufgetreten.'
+			}`
+		}
+	};
+</script>
 
 <div class="flex h-screen w-full items-center justify-center">
 	<div class="flex h-1/4 items-center justify-center gap-8">

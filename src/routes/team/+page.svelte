@@ -4,14 +4,14 @@
 	import type { PageData } from './$types';
 	import { metadata } from '$lib/seo';
 
-$metadata = {
-	title: 'Das Team',
-
-	openGraph: {
+	$metadata = {
 		title: 'Das Team',
 		description: 'Aktuelle Teammitglieder des Cubyx Teams.',
-	}
-};
+		openGraph: {
+			title: 'Das Team',
+			description: 'Aktuelle Teammitglieder des Cubyx Teams.'
+		}
+	};
 
 	export let data: PageData;
 </script>
