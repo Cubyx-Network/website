@@ -1,42 +1,31 @@
 <script lang="ts">
-	import { MetaTags, type MetaTagsProps } from 'svelte-meta-tags';
-
 	export let title = 'Cubyx Network';
 	export let description = 'Die offizielle Website vom Cubyx Network.';
 	export let canonical = 'https://www.cubyx.eu';
 	export let index = true;
 
 	export let image = 'https://www.cubyx.eu/img/logo/netzwerk.png';
-	export let imageAlt = 'Cubyx Network Logo';
-
-	export let overwrite: MetaTagsProps = {};
 </script>
 
 <svelte:head>
-	<MetaTags
-		title={`${title} - Cubyx Network`}
-		{description}
-		{canonical}
-		robots={index ? 'index, follow' : 'noindex, nofollow'}
-		openGraph={{
-			url: canonical,
-			title,
-			description,
-			images: [
-				{
-					url: image,
-					width: 1024,
-					height: 1024,
-					alt: imageAlt
-				}
-			]
-		}}
-		twitter={{
-			title,
-			description,
-			image,
-			imageAlt
-		}}
-		{...overwrite}
-	/>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>{title} - Cubyx Network</title>
+	<meta name="description" content={description} />
+	<meta name="keywords" content="Cubyx Network, Cubyx, Network, Minecraft, Server, Netzwerk" />
+	<meta name="author" content="Cubyx Network" />
+	<meta name="robots" content={index ? 'index, follow' : 'noindex, nofollow'} />
+
+	<meta property="og:title" content={title} />
+	<meta property="og:description" content={description} />
+	<meta property="og:image" content={image} />
+	<meta property="og:url" content={canonical} />
+	<meta property="og:site_name" content="Cubyx Network" />
+	<meta property="og:type" content="website" />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@CubyxNetwork" />
+	<meta name="twitter:creator" content="@CubyxNetwork" />
+	<meta name="twitter:title" content={title} />
+	<meta name="twitter:description" content={description} />
+	<meta name="twitter:image" content={image} />
 </svelte:head>
