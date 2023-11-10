@@ -1,5 +1,41 @@
 # Changelog
 
+## [0.2.0](https://github.com/Cubyx-Network/website/compare/v0.1.6...v0.2.0) (2023-11-10)
+
+
+### 📕 Funktionen
+
+* Labels für Team Mitglieder in der Übersicht hinzugefügt ([#169](https://github.com/Cubyx-Network/website/issues/169)) ([a9d4579](https://github.com/Cubyx-Network/website/commit/a9d4579e8f990cfb9787bd44148fd5cececa28fc))
+* Option für Verlinkungen in Timeline hinzugefügt ([#171](https://github.com/Cubyx-Network/website/issues/171)) ([e4aafd1](https://github.com/Cubyx-Network/website/commit/e4aafd1130f05f13fb326f8a708c6e18ca4f902d))
+* SEO Verbesserungen ([#156](https://github.com/Cubyx-Network/website/issues/156)) ([4b480d4](https://github.com/Cubyx-Network/website/commit/4b480d46b90b720bf2f8fdf1c281ce5c670dbf06))
+* Weiterleitungshinweise im Footer hinzugefügt ([#182](https://github.com/Cubyx-Network/website/issues/182)) ([101d3cd](https://github.com/Cubyx-Network/website/commit/101d3cd55868fffb9095c3a01d3aa127b5677bc1))
+* Weiterleitungshinweise im Header hinzugefügt ([#181](https://github.com/Cubyx-Network/website/issues/181)) ([6f60535](https://github.com/Cubyx-Network/website/commit/6f605357e009dd9de37bf26ac825a2ca464e058a))
+
+
+### 🪲 Fehlerbehebungen
+
+* Websiten im Dev-Modus werden nun nicht mehr indexiert ([4d90448](https://github.com/Cubyx-Network/website/commit/4d904486d40a6e34c3afdd0ca35a31162a8f1b41))
+
+
+### ⚙️ Abhängigkeiten
+
+* bump @sveltejs/adapter-auto from 2.1.0 to 2.1.1 ([#174](https://github.com/Cubyx-Network/website/issues/174)) ([a88ab89](https://github.com/Cubyx-Network/website/commit/a88ab89c5c3f8e4c790e50f29cdbaed672e0fd59))
+* bump @types/node from 20.8.9 to 20.8.10 ([#176](https://github.com/Cubyx-Network/website/issues/176)) ([68ac4b8](https://github.com/Cubyx-Network/website/commit/68ac4b86ebeb21afd4de956fc724d84b70a52980))
+* bump @typescript-eslint/parser from 6.7.5 to 6.9.1 ([#175](https://github.com/Cubyx-Network/website/issues/175)) ([f89e8c7](https://github.com/Cubyx-Network/website/commit/f89e8c7c8375a2e47597110a449845427c6e9704))
+* bump eslint from 8.52.0 to 8.53.0 ([#177](https://github.com/Cubyx-Network/website/issues/177)) ([e00cbb0](https://github.com/Cubyx-Network/website/commit/e00cbb0ffdfba8d14d58d2a7bbda5a3480368a12))
+* bump eslint-plugin-svelte from 2.34.0 to 2.34.1 ([#178](https://github.com/Cubyx-Network/website/issues/178)) ([4d3a0b6](https://github.com/Cubyx-Network/website/commit/4d3a0b684332694aa64f6b255454830e9357b506))
+
+
+### 📖 Inhaltsänderungen
+
+* Überarbeitung der Timeline auf der Startseite ([#171](https://github.com/Cubyx-Network/website/issues/171)) ([e4aafd1](https://github.com/Cubyx-Network/website/commit/e4aafd1130f05f13fb326f8a708c6e18ca4f902d))
+
+
+### 🚀 CI/CD-Änderungen
+
+* Netlify für Branch & PR Deployments hinzugefügt ([59c2c13](https://github.com/Cubyx-Network/website/commit/59c2c132c4968a666c2094f8d4e09f68562eb67f))
+* **netlify:** netlify.toml angepasst ([32fa0fe](https://github.com/Cubyx-Network/website/commit/32fa0fe51d2173ea2951884f94911b73a6a8e4be))
+
 ## [0.1.6](https://github.com/Cubyx-Network/website/compare/v0.1.5...v0.1.6) (2023-11-03)
 
 
