@@ -1,14 +1,12 @@
 <script lang="ts">
-	import { generateTitle } from '$lib/titleGenerator';
 	import SectionWithImageAndText from '../components/Common/SectionWithImageAndText.svelte';
 	import SectionSpacer from '../components/Common/SectionSpacer.svelte';
 	import AboutTimeline from '../components/Timeline/AboutTimeline.svelte';
 	import HeroWithTitleAndSlogan from '../components/Common/HeroWithTitleAndSlogan.svelte';
+	import Seo from '../components/Common/Seo.svelte';
 </script>
 
-<svelte:head>
-	<title>{generateTitle('Home')}</title>
-</svelte:head>
+<Seo title="Home" description="Willkommen auf der Website vom Cubyx Network." />
 
 <HeroWithTitleAndSlogan img="/img/home/hero.png">Cubyx Network</HeroWithTitleAndSlogan>
 
