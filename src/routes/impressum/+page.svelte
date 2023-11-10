@@ -1,11 +1,9 @@
 <script>
-	import { generateTitle } from "$lib/titleGenerator";
-	import HeroWithTitleAndSlogan from "../../components/Common/HeroWithTitleAndSlogan.svelte";
+	import HeroWithTitleAndSlogan from '../../components/Common/HeroWithTitleAndSlogan.svelte';
+	import Seo from '../../components/Common/Seo.svelte';
 </script>
 
-<svelte:head>
-	<title>{generateTitle('Impressum')}</title>
-</svelte:head>
+<Seo title="Impressum" description="Das Impressum vom Cubyx Network." />
 
 <HeroWithTitleAndSlogan img="/img/legal/hero.jpg">Impressum</HeroWithTitleAndSlogan>
 

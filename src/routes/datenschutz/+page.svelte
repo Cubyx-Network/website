@@ -1,11 +1,9 @@
 <script>
-	import { generateTitle } from "$lib/titleGenerator";
-	import HeroWithTitleAndSlogan from "../../components/Common/HeroWithTitleAndSlogan.svelte";
+	import HeroWithTitleAndSlogan from '../../components/Common/HeroWithTitleAndSlogan.svelte';
+	import Seo from '../../components/Common/Seo.svelte';
 </script>
 
-<svelte:head>
-	<title>{generateTitle('Datenschutzerklärung')}</title>
-</svelte:head>
+<Seo title="Datenschutz" description="Datenschutzerklärung des Cubyx Network." />
 
 <HeroWithTitleAndSlogan img="/img/legal/hero.jpg">Datenschutz</HeroWithTitleAndSlogan>
 
@@ -319,42 +317,43 @@
 			<p>
 				Unsere Internetseiten verwenden so genannte &bdquo;Cookies&ldquo;. Cookies sind kleine
 				Datenpakete und richten auf Ihrem Endger&auml;t keinen Schaden an. Sie werden entweder
-				vor&uuml;bergehend f&uuml;r die Dauer einer Sitzung (Session-Cookies) oder dauerhaft (permanente
-				Cookies) auf Ihrem Endger&auml;t gespeichert. Session-Cookies werden nach Ende Ihres Besuchs
-				automatisch gel&ouml;scht. Permanente Cookies bleiben auf Ihrem Endger&auml;t gespeichert, bis
-				Sie diese selbst l&ouml;schen&nbsp;oder eine automatische L&ouml;schung durch Ihren Webbrowser
-				erfolgt.
+				vor&uuml;bergehend f&uuml;r die Dauer einer Sitzung (Session-Cookies) oder dauerhaft
+				(permanente Cookies) auf Ihrem Endger&auml;t gespeichert. Session-Cookies werden nach Ende
+				Ihres Besuchs automatisch gel&ouml;scht. Permanente Cookies bleiben auf Ihrem Endger&auml;t
+				gespeichert, bis Sie diese selbst l&ouml;schen&nbsp;oder eine automatische L&ouml;schung
+				durch Ihren Webbrowser erfolgt.
 			</p>
 			<p>
 				Teilweise k&ouml;nnen auch Cookies von Drittunternehmen auf Ihrem Endger&auml;t gespeichert
-				werden, wenn Sie unsere Seite betreten (Third-Party-Cookies). Diese erm&ouml;glichen uns oder
-				Ihnen die Nutzung bestimmter Dienstleistungen des Drittunternehmens (z.&nbsp;B. Cookies zur
-				Abwicklung von Zahlungsdienstleistungen).
+				werden, wenn Sie unsere Seite betreten (Third-Party-Cookies). Diese erm&ouml;glichen uns
+				oder Ihnen die Nutzung bestimmter Dienstleistungen des Drittunternehmens (z.&nbsp;B. Cookies
+				zur Abwicklung von Zahlungsdienstleistungen).
 			</p>
 			<p>
-				Cookies haben verschiedene Funktionen. Zahlreiche Cookies sind technisch notwendig, da bestimmte
-				Websitefunktionen ohne diese nicht funktionieren w&uuml;rden (z.&nbsp;B. die Warenkorbfunktion
-				oder die Anzeige von Videos). Andere Cookies dienen dazu, das Nutzerverhalten
-				auszuwerten&nbsp;oder Werbung anzuzeigen.
+				Cookies haben verschiedene Funktionen. Zahlreiche Cookies sind technisch notwendig, da
+				bestimmte Websitefunktionen ohne diese nicht funktionieren w&uuml;rden (z.&nbsp;B. die
+				Warenkorbfunktion oder die Anzeige von Videos). Andere Cookies dienen dazu, das
+				Nutzerverhalten auszuwerten&nbsp;oder Werbung anzuzeigen.
 			</p>
 			<p>
-				Cookies, die zur Durchf&uuml;hrung des elektronischen Kommunikationsvorgangs, zur Bereitstellung
-				bestimmter, von Ihnen erw&uuml;nschter Funktionen (z.&nbsp;B. f&uuml;r die Warenkorbfunktion)
-				oder zur Optimierung der Website (z.&nbsp;B. Cookies zur Messung des Webpublikums) erforderlich
-				sind (notwendige Cookies), werden auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO gespeichert,
-				sofern keine andere Rechtsgrundlage angegeben wird. Der Websitebetreiber hat ein berechtigtes
-				Interesse an der Speicherung von notwendigen Cookies zur technisch fehlerfreien und optimierten
-				Bereitstellung seiner Dienste. Sofern eine Einwilligung zur Speicherung von Cookies und
-				vergleichbaren Wiedererkennungstechnologien abgefragt wurde, erfolgt die Verarbeitung
-				ausschlie&szlig;lich auf Grundlage dieser Einwilligung (Art. 6 Abs. 1 lit. a DSGVO und &sect; 25
-				Abs. 1 TTDSG); die Einwilligung ist jederzeit widerrufbar.
+				Cookies, die zur Durchf&uuml;hrung des elektronischen Kommunikationsvorgangs, zur
+				Bereitstellung bestimmter, von Ihnen erw&uuml;nschter Funktionen (z.&nbsp;B. f&uuml;r die
+				Warenkorbfunktion) oder zur Optimierung der Website (z.&nbsp;B. Cookies zur Messung des
+				Webpublikums) erforderlich sind (notwendige Cookies), werden auf Grundlage von Art. 6 Abs. 1
+				lit. f DSGVO gespeichert, sofern keine andere Rechtsgrundlage angegeben wird. Der
+				Websitebetreiber hat ein berechtigtes Interesse an der Speicherung von notwendigen Cookies
+				zur technisch fehlerfreien und optimierten Bereitstellung seiner Dienste. Sofern eine
+				Einwilligung zur Speicherung von Cookies und vergleichbaren Wiedererkennungstechnologien
+				abgefragt wurde, erfolgt die Verarbeitung ausschlie&szlig;lich auf Grundlage dieser
+				Einwilligung (Art. 6 Abs. 1 lit. a DSGVO und &sect; 25 Abs. 1 TTDSG); die Einwilligung ist
+				jederzeit widerrufbar.
 			</p>
 			<p>
 				Sie k&ouml;nnen Ihren Browser so einstellen, dass Sie &uuml;ber das Setzen von Cookies
 				informiert werden und Cookies nur im Einzelfall erlauben, die Annahme von Cookies f&uuml;r
-				bestimmte F&auml;lle oder generell ausschlie&szlig;en sowie das automatische L&ouml;schen der
-				Cookies beim Schlie&szlig;en des Browsers aktivieren. Bei der Deaktivierung von Cookies kann die
-				Funktionalit&auml;t dieser Website eingeschr&auml;nkt sein.
+				bestimmte F&auml;lle oder generell ausschlie&szlig;en sowie das automatische L&ouml;schen
+				der Cookies beim Schlie&szlig;en des Browsers aktivieren. Bei der Deaktivierung von Cookies
+				kann die Funktionalit&auml;t dieser Website eingeschr&auml;nkt sein.
 			</p>
 			<p>
 				Soweit Cookies von Drittunternehmen oder zu Analysezwecken eingesetzt werden, werden wir Sie
@@ -379,8 +378,9 @@
 			<p>Eine Zusammenf&uuml;hrung dieser Daten mit anderen Datenquellen wird nicht vorgenommen.</p>
 			<p>
 				Die Erfassung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Der
-				Websitebetreiber hat ein berechtigtes Interesse an der technisch fehlerfreien Darstellung und
-				der Optimierung seiner Website &ndash; hierzu m&uuml;ssen die Server-Log-Files erfasst werden.
+				Websitebetreiber hat ein berechtigtes Interesse an der technisch fehlerfreien Darstellung
+				und der Optimierung seiner Website &ndash; hierzu m&uuml;ssen die Server-Log-Files erfasst
+				werden.
 			</p>
 		</div>
 		<div>
@@ -392,43 +392,45 @@
 				nicht ohne Ihre Einwilligung weiter.
 			</p>
 			<p>
-				Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre
-				Anfrage mit der Erf&uuml;llung eines Vertrags zusammenh&auml;ngt oder zur Durchf&uuml;hrung
-				vorvertraglicher Ma&szlig;nahmen erforderlich ist. In allen &uuml;brigen F&auml;llen beruht die
-				Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns
-				gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO) oder auf Ihrer Einwilligung (Art. 6 Abs. 1
-				lit. a DSGVO) sofern diese abgefragt wurde; die Einwilligung ist jederzeit widerrufbar.
+				Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern
+				Ihre Anfrage mit der Erf&uuml;llung eines Vertrags zusammenh&auml;ngt oder zur
+				Durchf&uuml;hrung vorvertraglicher Ma&szlig;nahmen erforderlich ist. In allen &uuml;brigen
+				F&auml;llen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven
+				Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO) oder auf Ihrer
+				Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sofern diese abgefragt wurde; die Einwilligung ist
+				jederzeit widerrufbar.
 			</p>
 			<p>
 				Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei uns, bis Sie uns zur
-				L&ouml;schung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck f&uuml;r
-				die Datenspeicherung entf&auml;llt (z.&nbsp;B. nach abgeschlossener Bearbeitung Ihrer Anfrage).
-				Zwingende gesetzliche Bestimmungen &ndash; insbesondere Aufbewahrungsfristen &ndash; bleiben
-				unber&uuml;hrt.
+				L&ouml;schung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck
+				f&uuml;r die Datenspeicherung entf&auml;llt (z.&nbsp;B. nach abgeschlossener Bearbeitung
+				Ihrer Anfrage). Zwingende gesetzliche Bestimmungen &ndash; insbesondere Aufbewahrungsfristen
+				&ndash; bleiben unber&uuml;hrt.
 			</p>
 		</div>
 		<div>
 			<h3>Anfrage per E-Mail, Telefon oder Telefax</h3>
 			<p>
-				Wenn Sie uns per E-Mail, Telefon oder Telefax kontaktieren, wird Ihre Anfrage inklusive aller
-				daraus hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zwecke der Bearbeitung Ihres
-				Anliegens bei uns gespeichert und verarbeitet. Diese Daten geben wir nicht ohne Ihre
-				Einwilligung weiter.
+				Wenn Sie uns per E-Mail, Telefon oder Telefax kontaktieren, wird Ihre Anfrage inklusive
+				aller daraus hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zwecke der
+				Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet. Diese Daten geben wir nicht
+				ohne Ihre Einwilligung weiter.
 			</p>
 			<p>
-				Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre
-				Anfrage mit der Erf&uuml;llung eines Vertrags zusammenh&auml;ngt oder zur Durchf&uuml;hrung
-				vorvertraglicher Ma&szlig;nahmen erforderlich ist. In allen &uuml;brigen F&auml;llen beruht die
-				Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns
-				gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO) oder auf Ihrer Einwilligung (Art. 6 Abs. 1
-				lit. a DSGVO) sofern diese abgefragt wurde; die Einwilligung ist jederzeit widerrufbar.
+				Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern
+				Ihre Anfrage mit der Erf&uuml;llung eines Vertrags zusammenh&auml;ngt oder zur
+				Durchf&uuml;hrung vorvertraglicher Ma&szlig;nahmen erforderlich ist. In allen &uuml;brigen
+				F&auml;llen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven
+				Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO) oder auf Ihrer
+				Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sofern diese abgefragt wurde; die Einwilligung ist
+				jederzeit widerrufbar.
 			</p>
 			<p>
-				Die von Ihnen an uns per Kontaktanfragen &uuml;bersandten Daten verbleiben bei uns, bis Sie uns
-				zur L&ouml;schung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck
-				f&uuml;r die Datenspeicherung entf&auml;llt (z.&nbsp;B. nach abgeschlossener Bearbeitung Ihres
-				Anliegens). Zwingende gesetzliche Bestimmungen &ndash; insbesondere gesetzliche
-				Aufbewahrungsfristen &ndash; bleiben unber&uuml;hrt.
+				Die von Ihnen an uns per Kontaktanfragen &uuml;bersandten Daten verbleiben bei uns, bis Sie
+				uns zur L&ouml;schung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der
+				Zweck f&uuml;r die Datenspeicherung entf&auml;llt (z.&nbsp;B. nach abgeschlossener
+				Bearbeitung Ihres Anliegens). Zwingende gesetzliche Bestimmungen &ndash; insbesondere
+				gesetzliche Aufbewahrungsfristen &ndash; bleiben unber&uuml;hrt.
 			</p>
 		</div>
 	</section>

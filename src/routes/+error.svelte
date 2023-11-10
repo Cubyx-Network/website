@@ -1,11 +1,12 @@
 <script>
 	import { page } from '$app/stores';
-	import { generateTitle } from '$lib/titleGenerator';
+	import Seo from '../components/Common/Seo.svelte';
 </script>
 
-<svelte:head>
-	<title>{generateTitle($page.status + '')}</title>
-</svelte:head>
+<Seo
+	title={$page.status.toString()}
+	description={$page.error ? $page.error.message : 'Ein unbekannter Fehler ist aufgetreten.'}
+/>
 
 <div class="flex h-screen w-full items-center justify-center">
 	<div class="flex h-1/4 items-center justify-center gap-8">
