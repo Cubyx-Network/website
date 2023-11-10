@@ -8,8 +8,8 @@
 	let headerConfig = [
 		{ text: 'Home', link: '/' },
 		{ text: 'Das Team', link: '/team' },
-		{ text: 'Bewerben', link: 'https://cubyx.eu/bewerben' },
-		{ text: 'Discord', link: 'https://cubyx.eu/discord' }
+		{ text: 'Bewerben', link: 'https://cubyx.eu/bewerben', external: true },
+		{ text: 'Discord', link: 'https://cubyx.eu/discord', external: true }
 	];
 </script>
 

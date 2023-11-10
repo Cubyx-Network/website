@@ -1,5 +1,40 @@
 # Changelog
 
+## [0.1.6](https://github.com/Cubyx-Network/website/compare/v0.1.5...v0.1.6) (2023-11-03)
+
+
+### 🪲 Fehlerbehebungen
+
+* Falscher DiscordAPI Endpoint in Teammitglieder-Abfrage ([#172](https://github.com/Cubyx-Network/website/issues/172)) ([6b79fc5](https://github.com/Cubyx-Network/website/commit/6b79fc5d1f4d84750fe9da61ec20b05b2d78f99c))
+* Fehler von der Discord API werden nun abgefangen ([#172](https://github.com/Cubyx-Network/website/issues/172)) ([6b79fc5](https://github.com/Cubyx-Network/website/commit/6b79fc5d1f4d84750fe9da61ec20b05b2d78f99c))
+
+
+### 🔧 Sonstige Änderungen
+
+* Update README.md ([a9f233c](https://github.com/Cubyx-Network/website/commit/a9f233ce097283d9c615fe5657fdafed682c2161))
+
+## [0.1.5](https://github.com/Cubyx-Network/website/compare/v0.1.4...v0.1.5) (2023-10-29)
+
+
+### ⚙️ Abhängigkeiten
+
+* bump @fontsource/montserrat from 5.0.13 to 5.0.15 ([#158](https://github.com/Cubyx-Network/website/issues/158)) ([b514759](https://github.com/Cubyx-Network/website/commit/b51475995988a0dba9b081275a3e7f016e9d915f))
+* bump @fontsource/montserrat from 5.0.8 to 5.0.13 ([#148](https://github.com/Cubyx-Network/website/issues/148)) ([97e9a75](https://github.com/Cubyx-Network/website/commit/97e9a75e6e7ddac260d5e5fcdceba0a2706165e9))
+* bump @prisma/client from 5.4.2 to 5.5.2 ([#164](https://github.com/Cubyx-Network/website/issues/164)) ([1111c00](https://github.com/Cubyx-Network/website/commit/1111c003c234095605fe572601b50f6ad8d59878))
+* bump @types/node from 20.8.3 to 20.8.9 ([#168](https://github.com/Cubyx-Network/website/issues/168)) ([5c82fd0](https://github.com/Cubyx-Network/website/commit/5c82fd048f0bcdb46069905c9865f8d733371f91))
+* bump @typescript-eslint/eslint-plugin from 6.7.4 to 6.8.0 ([#161](https://github.com/Cubyx-Network/website/issues/161)) ([7d4a261](https://github.com/Cubyx-Network/website/commit/7d4a261df38c8d0efc7cff7298d6f721e36c04bc))
+* bump @typescript-eslint/eslint-plugin from 6.7.4 to 6.9.0 ([#162](https://github.com/Cubyx-Network/website/issues/162)) ([09910d0](https://github.com/Cubyx-Network/website/commit/09910d024a5ba1febcecc24449fafbd84166ba38))
+* bump @typescript-eslint/parser from 6.7.4 to 6.7.5 ([#149](https://github.com/Cubyx-Network/website/issues/149)) ([2ad689c](https://github.com/Cubyx-Network/website/commit/2ad689c1681b721500fce23ac35f13fb055b8686))
+* bump daisyui from 3.9.1 to 3.9.3 ([#160](https://github.com/Cubyx-Network/website/issues/160)) ([28ecaa6](https://github.com/Cubyx-Network/website/commit/28ecaa627ff29f360289431d49b4f81d17d86b72))
+* bump eslint from 8.50.0 to 8.52.0 ([#159](https://github.com/Cubyx-Network/website/issues/159)) ([cf1c799](https://github.com/Cubyx-Network/website/commit/cf1c799b0dd23746341db157f07b8c90e2f29b8e))
+* bump eslint-plugin-svelte from 2.33.2 to 2.34.0 ([#165](https://github.com/Cubyx-Network/website/issues/165)) ([bbd89a9](https://github.com/Cubyx-Network/website/commit/bbd89a952a26a1fc6b82a4d985c1bf9d14b6857a))
+* bump prettier-plugin-tailwindcss from 0.5.4 to 0.5.6 ([#145](https://github.com/Cubyx-Network/website/issues/145)) ([4d8031a](https://github.com/Cubyx-Network/website/commit/4d8031a49771267e68fc2ac19d22a6ed60ec2e36))
+* bump prisma from 5.4.2 to 5.5.2 ([#167](https://github.com/Cubyx-Network/website/issues/167)) ([e112c60](https://github.com/Cubyx-Network/website/commit/e112c605b66d5a2dd4f2ce94a4fb1578c9138b38))
+* bump svelte from 4.2.1 to 4.2.2 ([#157](https://github.com/Cubyx-Network/website/issues/157)) ([a70d7db](https://github.com/Cubyx-Network/website/commit/a70d7dbe191617bf6cda6eafb4ed59c0682aafcc))
+* bump tailwind-merge from 1.14.0 to 2.0.0 ([#166](https://github.com/Cubyx-Network/website/issues/166)) ([2b9ecc2](https://github.com/Cubyx-Network/website/commit/2b9ecc2c9cf69ef75abe86c96b79ba803fa6bfc6))
+* bump undici and @sveltejs/kit ([#152](https://github.com/Cubyx-Network/website/issues/152)) ([d90897c](https://github.com/Cubyx-Network/website/commit/d90897cf5d37ec0362a096de89bfb6fcc231d7d5))
+* bump vite from 4.4.9 to 4.5.0 ([#153](https://github.com/Cubyx-Network/website/issues/153)) ([92d5329](https://github.com/Cubyx-Network/website/commit/92d5329624947a2ca663130f7e02586d9241b60f))
+
 ## [0.1.4](https://github.com/Cubyx-Network/website/compare/v0.1.3...v0.1.4) (2023-10-21)
 
 

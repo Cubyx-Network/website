@@ -3,9 +3,17 @@ import { downloadAvatar, requestDiscordAPI } from './discord';
 import prisma from './prisma';
 
 async function fetchAll(): Promise<void> {
-	const response = await requestDiscordAPI(`/guilds/${DISCORD_CUBYX_GUILD}/members?limit=1000`);
+	const response = await requestDiscordAPI(`guilds/${DISCORD_CUBYX_GUILD}/members?limit=1000`);
+
+	if (!response.ok) {
+		throw new Error(
+			`Discord API returned ${response.status} ${response.statusText} (${response.url})`
+		);
+	}
+
+	const json = await response.json();
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	const teamMembers: any[] = response.filter((m: any) => m.roles.includes(DISCORD_TEAM_ROLE_ID));
+	const teamMembers: any[] = json.filter((m: any) => m.roles.includes(DISCORD_TEAM_ROLE_ID));
 
 	const lastSync = new Date();
 
@@ -51,7 +59,12 @@ async function fetchAll(): Promise<void> {
 async function checkForStale() {
 	const members = await prisma.teamMember.findMany();
 	const stale = members.filter((m) => m.lastSync < new Date(Date.now() - 1000 * 60 * 60 * 24)); // 24 hours
-	if (stale.length > 0 || members.length == 0) await fetchAll();
+
+	try {
+		if (stale.length < 0 || members.length == 0) await fetchAll();
+	} catch (error) {
+		console.error(error);
+	}
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -64,7 +77,8 @@ export async function getTeamMembers(): Promise<any[]> {
 			avatar: false,
 			createdAt: true,
 			lastSync: true,
-			discord: true
+			discord: true,
+			labels: true
 		}
 	});
 }

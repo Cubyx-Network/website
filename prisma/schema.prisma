@@ -3,18 +3,28 @@ generator client {
 }
 
 datasource production {
-  provider = "mysql"
-  url      = env("DATABASE_PRISMA_URL")
+  provider          = "mysql"
+  url               = env("DATABASE_PRISMA_URL")
   shadowDatabaseUrl = env("DATABASE_PRISMA_SHADOW_URL")
 }
 
 model TeamMember {
-  id      String              @id @default(uuid())
-  name    String
-  avatar  Bytes
+  id     String            @id @default(uuid())
+  name   String
+  avatar Bytes
+  labels TeamMemberLabel[]
 
   discord String
 
   createdAt DateTime @default(now())
   lastSync  DateTime @updatedAt
+}
+
+model TeamMemberLabel {
+  id       String  @id @default(uuid())
+  name     String
+  bordered Boolean @default(false)
+
+  member   TeamMember @relation(fields: [memberId], references: [id])
+  memberId String
 }
