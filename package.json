@@ -51,7 +51,7 @@
 		"@fortawesome/free-brands-svg-icons": "^6.4.2",
 		"@fortawesome/free-regular-svg-icons": "^6.4.2",
 		"@fortawesome/free-solid-svg-icons": "^6.4.2",
-		"@prisma/client": "^5.5.2",
+		"@prisma/client": "^5.6.0",
 		"@types/node": "^20.8.10",
 		"buffer": "^6.0.3",
 		"dotenv": "^16.3.1",
