@@ -45,7 +45,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@fontsource/kanit": "^5.0.15",
+		"@fontsource/kanit": "^5.0.17",
 		"@fontsource/montserrat": "^5.0.15",
 		"@fortawesome/fontawesome-svg-core": "^6.4.2",
 		"@fortawesome/free-brands-svg-icons": "^6.4.2",
