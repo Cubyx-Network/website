@@ -15,7 +15,6 @@ export default {
 					primary: '#23AA08',
 					secondary: '#1D3432',
 					neutral: '#969696',
-					'neutral-focus': '#797979',
 					'base-100': '#284744',
 					'base-content': '#ffffff'
 				}
