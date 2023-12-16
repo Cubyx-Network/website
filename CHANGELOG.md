@@ -1,5 +1,30 @@
 # Changelog
 
+## [0.2.1](https://github.com/Cubyx-Network/website/compare/v0.2.0...v0.2.1) (2023-11-25)
+
+
+### ⚙️ Abhängigkeiten
+
+* bump @fontsource/kanit from 5.0.15 to 5.0.17 ([#195](https://github.com/Cubyx-Network/website/issues/195)) ([3595d7c](https://github.com/Cubyx-Network/website/commit/3595d7cf7dc4949da33fe8f8a11470afc86cf461))
+* bump @sveltejs/kit from 1.26.0 to 1.27.5 ([#186](https://github.com/Cubyx-Network/website/issues/186)) ([03cb6a6](https://github.com/Cubyx-Network/website/commit/03cb6a61b9f8c8e9f91a19d96701efedcafd142b))
+* bump @typescript-eslint/eslint-plugin from 6.9.0 to 6.11.0 ([#190](https://github.com/Cubyx-Network/website/issues/190)) ([89bca93](https://github.com/Cubyx-Network/website/commit/89bca9318f9251c0e5352594425261cb7224749d))
+* bump daisyui from 3.9.3 to 4.4.2 ([#189](https://github.com/Cubyx-Network/website/issues/189)) ([5e5b3fe](https://github.com/Cubyx-Network/website/commit/5e5b3fe14662bc44a8d9c42a9ffd90bd8045e186))
+* bump eslint-plugin-svelte from 2.34.1 to 2.35.0 ([#193](https://github.com/Cubyx-Network/website/issues/193)) ([1315195](https://github.com/Cubyx-Network/website/commit/131519513a33f8f133e4d0b1cc271d49bc33944b))
+* bump prettier-plugin-tailwindcss from 0.5.6 to 0.5.7 ([#185](https://github.com/Cubyx-Network/website/issues/185)) ([f6e22df](https://github.com/Cubyx-Network/website/commit/f6e22df4db4d320e7c2531f03b42a6417e4d62c2))
+* bump prisma from 5.5.2 to 5.6.0 ([41495db](https://github.com/Cubyx-Network/website/commit/41495dbbef63af15e9dcd542fed848275a10c16e))
+* bump svelte-check from 3.5.2 to 3.6.0 ([#183](https://github.com/Cubyx-Network/website/issues/183)) ([4867478](https://github.com/Cubyx-Network/website/commit/4867478c174b6da9d5b6a50876e57fdff204b4b4))
+* bump tailwindcss from 3.3.3 to 3.3.5 ([#194](https://github.com/Cubyx-Network/website/issues/194)) ([7e13b76](https://github.com/Cubyx-Network/website/commit/7e13b76ef831f0fb64ac2be541842b35387d99eb))
+
+
+### 🔧 Sonstige Änderungen
+
+* Imports im FooterSocialIcon.svelte verbessert ([#197](https://github.com/Cubyx-Network/website/issues/197)) ([5e73f43](https://github.com/Cubyx-Network/website/commit/5e73f432ef4ab514bc971c36d8b8c18dfe4e8bbe))
+
+
+### 🚀 CI/CD-Änderungen
+
+* Dev Deployment auf eigenen Server entfernt, wird nun durch Netlify gemacht ([e304efd](https://github.com/Cubyx-Network/website/commit/e304efd2754b0f48a0e6e42c443bedf5567ffa25))
+
 ## [0.2.0](https://github.com/Cubyx-Network/website/compare/v0.1.6...v0.2.0) (2023-11-10)
 
 
