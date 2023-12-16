@@ -1,9 +1,10 @@
 {
+	"bootstrap-sha": "8cdce26c2f642a4dc13f3c89b6a0eb55234552d2",
 	"release-type": "node",
 
 	"draft-pull-request": true,
 	"pull-request-title-pattern": "chore: release ${version}",
-	"pull-request-header": "📦 Release: ${version}",
+	"pull-request-header": "📦 Release PR",
 	"pull-request-footer": "🤖 Dieser Pull-Request wurde automatisch generiert. Um die Version zu veröffentlichen, bitte Pull-Request mergen.",
 
 	"changelog-sections": [
