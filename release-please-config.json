@@ -2,8 +2,8 @@
 	"release-type": "node",
 
 	"draft-pull-request": true,
-	"pull-request-title-pattern": "chore: release {{currentTag}}",
-	"pull-request-header": "📦 Release: {{currentTag}}",
+	"pull-request-title-pattern": "chore: release ${version}",
+	"pull-request-header": "📦 Release: ${version}",
 	"pull-request-footer": "🤖 Dieser Pull-Request wurde automatisch generiert. Um die Version zu veröffentlichen, bitte Pull-Request mergen.",
 
 	"changelog-sections": [
