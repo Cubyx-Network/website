@@ -4,6 +4,7 @@
 	import AboutTimeline from '../components/Timeline/AboutTimeline.svelte';
 	import HeroWithTitleAndSlogan from '../components/Common/HeroWithTitleAndSlogan.svelte';
 	import Seo from '../components/Common/Seo.svelte';
+	import Zones from '../components/SupportCubyx/Zones.svelte';
 </script>
 
 <Seo title="Home" description="Willkommen auf der Website vom Cubyx Network." />
@@ -28,3 +29,6 @@
 
 <h2 class="text-center">Über Cubyx</h2>
 <AboutTimeline />
+
+<h4 class="my-10 text-left leading-tight ml-4">Unterstütze Cubyx</h4>
+<Zones />
