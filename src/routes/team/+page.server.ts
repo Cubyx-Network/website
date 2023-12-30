@@ -3,6 +3,6 @@ import { getTeamMembers } from '$lib/server/teamMembers';
 
 export const load = (async () => {
 	return {
-		members: getTeamMembers()
+		members: await getTeamMembers()
 	};
 }) satisfies PageServerLoad;
