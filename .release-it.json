@@ -1,7 +1,13 @@
 {
 	"github": {
 		"release": true,
-		"commitMessage": "chore(release): v${version}"
+		"commitMessage": "chore(release): v${version}",
+		"draft": true,
+		"comments": {
+			"submit": true,
+			"issue": ":rocket: _Dieses Issue wurde mit der Version v${version} veröffentlicht. Siehe [${releaseName}](${releaseUrl}) für die Changelogs._",
+			"pr": ":rocket: Dieser Pull Request wurde mit der Version v${version} veröffentlicht. Siehe [${releaseName}](${releaseUrl}) für die Changelogs."
+		}
 	},
 	"plugins": {
 		"@release-it/conventional-changelog": {
