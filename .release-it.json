@@ -1,12 +1,13 @@
 {
 	"github": {
 		"release": true,
-		"commitMessage": "chore(release): v${version}"
+		"commitMessage": "chore(release): v${version}",
+		"web": true
 	},
 	"plugins": {
 		"@release-it/conventional-changelog": {
 			"preset": {
-				"name": "cubyx",
+				"name": "conventionalcommits",
 				"types": [
 					{ "type": "feat", "section": "📕 Funktionen" },
 					{ "type": "change", "section": "🔄 Änderungen" },
