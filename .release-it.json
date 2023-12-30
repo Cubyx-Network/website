@@ -1,0 +1,26 @@
+{
+	"github": {
+		"release": true
+	},
+	"plugins": {
+		"@release-it/conventional-changelog": {
+			"preset": {
+				"name": "cubyx",
+				"types": [
+					{ "type": "feat", "section": "📕 Funktionen" },
+					{ "type": "change", "section": "🔄 Änderungen" },
+					{ "type": "fix", "section": "🪲 Fehlerbehebungen" },
+					{ "type": "docs", "section": "📝 Dokumentation" },
+					{ "type": "style", "section": "🎨 Designänderungen" },
+					{ "type": "refactor", "section": "🔧 Code-Refactoring" },
+					{ "type": "deps", "section": "⚙️ Abhängigkeiten" },
+					{ "type": "content", "section": "📖 Inhaltsänderungen" },
+					{ "type": "chore", "section": "🔧 Sonstige Änderungen" },
+					{ "type": "test", "section": "🧪 Änderungen am Testing" },
+					{ "type": "ci", "section": "🚀 CI/CD-Änderungen" }
+				]
+			},
+			"infile": "CHANGELOG.md"
+		}
+	}
+}
