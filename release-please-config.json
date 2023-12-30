@@ -7,6 +7,8 @@
 	"pull-request-header": "📦 Release PR",
 	"pull-request-footer": "🤖 Dieser Pull-Request wurde automatisch generiert. Um die Version zu veröffentlichen, bitte Pull-Request mergen.",
 
+	"include-component-in-tag": false,
+
 	"changelog-sections": [
 		{ "type": "feat", "section": "📕 Funktionen" },
 		{ "type": "change", "section": "🔄 Änderungen" },
