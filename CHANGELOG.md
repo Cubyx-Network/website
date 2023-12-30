@@ -1,5 +1,32 @@
 # Changelog
 
+## [0.2.2](https://github.com/Cubyx-Network/website/compare/website-v0.2.1...website-v0.2.2) (2023-12-30)
+
+
+### 🪲 Fehlerbehebungen
+
+* Fehlende Release-Please-Manifest Datei hinzugefügt ([e84aa7d](https://github.com/Cubyx-Network/website/commit/e84aa7d5ad377ba5886a3fbc4cce6553b3efab3d))
+
+
+### ⚙️ Abhängigkeiten
+
+* bump @sveltejs/kit from 1.27.5 to 2.0.6 ([#225](https://github.com/Cubyx-Network/website/issues/225)) ([9bd5501](https://github.com/Cubyx-Network/website/commit/9bd5501370f8e2389cbef372e30e8113d9d9ae1b))
+* bump @typescript-eslint/eslint-plugin from 6.11.0 to 6.14.0 ([#218](https://github.com/Cubyx-Network/website/issues/218)) ([28ba065](https://github.com/Cubyx-Network/website/commit/28ba065d4cff05911e4c589e9c41695026b8d788))
+* bump @typescript-eslint/parser from 6.9.1 to 6.14.0 ([#216](https://github.com/Cubyx-Network/website/issues/216)) ([e1888e7](https://github.com/Cubyx-Network/website/commit/e1888e79229cbc133cdd500b9178b5c37ca48920))
+* bump eslint from 8.53.0 to 8.56.0 ([#215](https://github.com/Cubyx-Network/website/issues/215)) ([76571e1](https://github.com/Cubyx-Network/website/commit/76571e118d46fde081c0b1d38eba862f8a60c032))
+* bump eslint-plugin-svelte from 2.35.0 to 2.35.1 ([#222](https://github.com/Cubyx-Network/website/issues/222)) ([52c9ca9](https://github.com/Cubyx-Network/website/commit/52c9ca907af78d0a71d11371c28468eb7829fe06))
+* bump prettier from 3.0.3 to 3.1.1 ([#221](https://github.com/Cubyx-Network/website/issues/221)) ([3b65c10](https://github.com/Cubyx-Network/website/commit/3b65c10ab9f3908bdad10c7c051c0dd84107245a))
+* bump svelte-awesome from 3.2.1 to 3.3.0 ([#223](https://github.com/Cubyx-Network/website/issues/223)) ([9207936](https://github.com/Cubyx-Network/website/commit/9207936b4484f92f7b2098f5ff5eb1d76f98b062))
+* bump the fortawesome group with 4 updates ([#220](https://github.com/Cubyx-Network/website/issues/220)) ([8a66e78](https://github.com/Cubyx-Network/website/commit/8a66e78db2455f867a0ed16e21b102f345443f01))
+* bump vite from 4.5.0 to 4.5.1 ([#208](https://github.com/Cubyx-Network/website/issues/208)) ([4431ced](https://github.com/Cubyx-Network/website/commit/4431ced0465f6d1f9a5c235af331f1b6cfa1f340))
+
+
+### 🚀 CI/CD-Änderungen
+
+* Release-Please neustukturiert ([342167c](https://github.com/Cubyx-Network/website/commit/342167c3dc1c34ca0b6c990a17162818d5783856))
+* **release-please:** Update der Release-Please Konfiguration ([cf9d111](https://github.com/Cubyx-Network/website/commit/cf9d111982c7a06af9054d84a0a82dd08d9f238e))
+* **release-please:** Verbesserung der Release-Please Konfiguration ([bedd4fd](https://github.com/Cubyx-Network/website/commit/bedd4fd5e3b5339770934de507cc2856ae8426d7))
+
 ## [0.2.1](https://github.com/Cubyx-Network/website/compare/v0.2.0...v0.2.1) (2023-11-25)
 
 
