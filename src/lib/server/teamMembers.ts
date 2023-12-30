@@ -1,4 +1,5 @@
 import { DISCORD_CUBYX_GUILD, DISCORD_TEAM_ROLE_ID } from '$env/static/private';
+import type { TeamMember, TeamMemberLabel } from '@prisma/client';
 import { downloadAvatar, requestDiscordAPI } from './discord';
 import prisma from './prisma';
 
@@ -67,8 +68,9 @@ async function checkForStale() {
 	}
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export async function getTeamMembers(): Promise<any[]> {
+type TeamMemberWithLabels = Omit<TeamMember, 'avatar'> & { labels: TeamMemberLabel[] };
+
+export async function getTeamMembers(): Promise<TeamMemberWithLabels[]> {
 	await checkForStale();
 	return await prisma.teamMember.findMany({
 		select: {

@@ -14,7 +14,7 @@ export const GET: RequestHandler = async (request) => {
 	if (!teamMember) throw error("Team member doesn't exist", { status: 404 });
 
 	if (teamMember.avatar.length == 0) {
-		throw redirect(302, '/img/logo/netzwerk.png');
+		redirect(302, '/img/logo/netzwerk.png');
 	}
 
 	return new Response(teamMember.avatar, {

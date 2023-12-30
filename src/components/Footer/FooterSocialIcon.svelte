@@ -1,8 +1,8 @@
 <script lang="ts">
+	import type { IconDefinition } from '@fortawesome/fontawesome-common-types';
 	import { Icon } from 'svelte-awesome';
-	import type { FaIconDefinition } from 'svelte-awesome/components/Icon.svelte';
 
-	export let icon: FaIconDefinition;
+	export let icon: IconDefinition;
 	export let href: string;
 </script>
 
