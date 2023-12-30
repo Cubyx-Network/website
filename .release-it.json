@@ -1,8 +1,7 @@
 {
 	"github": {
 		"release": true,
-		"commitMessage": "chore(release): v${version}",
-		"web": true
+		"commitMessage": "chore(release): v${version}"
 	},
 	"plugins": {
 		"@release-it/conventional-changelog": {
