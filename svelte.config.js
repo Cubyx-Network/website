@@ -12,7 +12,7 @@ const config = {
 		adapter: process.env.NETLIFY
 			? netlifyAdapter({
 					edge: false
-			  })
+				})
 			: adapter()
 	}
 };
