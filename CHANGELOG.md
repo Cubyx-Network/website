@@ -1,5 +1,26 @@
 # Changelog
 
+## [0.2.3](https://github.com/Cubyx-Network/website/compare/v0.2.2...v0.2.3) (2023-12-31)
+
+
+### 🪲 Fehlerbehebungen
+
+* **release-please:** Changelogs werden nun korrekt generiert ([d9a5918](https://github.com/Cubyx-Network/website/commit/d9a591863823908aebb85d73ce9300e173fd4eaf))
+
+
+### ⚙️ Abhängigkeiten
+
+* bump @prisma/client from 5.6.0 to 5.7.1 ([#231](https://github.com/Cubyx-Network/website/issues/231)) ([40ef87d](https://github.com/Cubyx-Network/website/commit/40ef87d4cd82d49230ed1fb05ed72fa4900574df))
+* bump @types/node from 20.10.4 to 20.10.6 ([#229](https://github.com/Cubyx-Network/website/issues/229)) ([315387d](https://github.com/Cubyx-Network/website/commit/315387d3ac787115a7b5fad4a35b899f766e07d8))
+* bump eslint-config-prettier from 9.0.0 to 9.1.0 ([#232](https://github.com/Cubyx-Network/website/issues/232)) ([5ee224a](https://github.com/Cubyx-Network/website/commit/5ee224a1c256cc8c915b6ce595d14ff68e9bfe18))
+* bump svelte from 4.2.2 to 4.2.8 ([#234](https://github.com/Cubyx-Network/website/issues/234)) ([3ac0ed8](https://github.com/Cubyx-Network/website/commit/3ac0ed8597778f4abc990d3fbc20f3df6d90f74f))
+* bump svelte-check from 3.6.0 to 3.6.2 ([#228](https://github.com/Cubyx-Network/website/issues/228)) ([f0875ea](https://github.com/Cubyx-Network/website/commit/f0875ea449ba9c771cbef9cc00355eae2d823a10))
+
+
+### 🚀 CI/CD-Änderungen
+
+* **release-please:** Tags werden nun ohne "website-" Prefix erstellt ([7898d56](https://github.com/Cubyx-Network/website/commit/7898d561f6c0a3db3fb86aa95e20deda045c4396))
+
 ## [0.2.2](https://github.com/Cubyx-Network/website/compare/website-v0.2.1...website-v0.2.2) (2023-12-30)
 
 
