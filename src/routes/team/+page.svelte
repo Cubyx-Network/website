@@ -11,9 +11,7 @@
 
 <HeroWithTitleAndSlogan img="/img/team/hero.jpg">Das Cubyx Team</HeroWithTitleAndSlogan>
 
-<div
-	class="m-auto grid w-full grid-cols-1 gap-8 p-8 sm:grid-cols-3 lg:grid-cols-4 2xl:w-[80%] 2xl:grid-cols-5"
->
+<div class="m-auto grid w-full grid-cols-1 gap-8 p-8 lg:grid-cols-2 2xl:w-[80%]">
 	{#each data.members as member}
 		<TeamMember teamMember={member} labels={member.labels} />
 	{/each}
